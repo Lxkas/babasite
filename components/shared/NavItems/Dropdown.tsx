@@ -1,5 +1,5 @@
 import { Menu } from "@headlessui/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
@@ -28,13 +28,13 @@ export default function Dropdown(props: { text: string; options: DropdownNavItem
 		// TODO: make it work on mobile
 		<div className="relative" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)} onClick={() => setDropdownOpen(true)}>
 			<Menu>
-				<Menu.Button>
+				<Menu.Button className={"font-roboto"}>
 					{text}
 					<span className="ml-1">
 						<FontAwesomeIcon icon={faCaretDown} color="#999999" />
 					</span>
 				</Menu.Button>
-				<div className="absolute w-full">
+				<div className="absolute w-full font-roboto">
 					<Menu.Items static>
 						{dropdownOpen && (
 							<div className="flex flex-col items-start w-full">
