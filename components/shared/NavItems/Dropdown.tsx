@@ -1,10 +1,40 @@
 import { Menu } from "@headlessui/react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 import { DropdownNavItemOptions } from "@/types/NavigationBarTypes";
+
+// function useOnClickOutside(ref: any, handler: any) {
+// 	useEffect(
+// 		() => {
+// 			const listener = (event: any) => {
+// 				// Do nothing if clicking ref's element or descendent elements
+// 				if (!ref.current || ref.current.contains(event.target)) {
+// 					return;
+// 				}
+
+// 				handler(event);
+// 			};
+
+// 			document.addEventListener("mousedown", listener);
+// 			document.addEventListener("touchstart", listener);
+
+// 			return () => {
+// 				document.removeEventListener("mousedown", listener);
+// 				document.removeEventListener("touchstart", listener);
+// 			};
+// 		},
+// 		// Add ref and handler to effect dependencies
+// 		// It's worth noting that because passed in handler is a new ...
+// 		// ... function on every render that will cause this effect ...
+// 		// ... callback/cleanup to run every render. It's not a big deal ...
+// 		// ... but to optimize you can wrap handler in useCallback before ...
+// 		// ... passing it into this hook.
+// 		[ref, handler]
+// 	);
+// }
 
 function DropdownItem(props: { text: string; href: string }) {
 	const { text, href } = props;
@@ -24,9 +54,18 @@ export default function Dropdown(props: { text: string; options: DropdownNavItem
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const { text, options } = props;
 
+	// const dropdownRef = useRef(null);
+
+	// useOnClickOutside(dropdownRef, () => setDropdownOpen(false));
+
 	return (
-		// TODO: make it work on mobile
-		<div className="relative" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)} onClick={() => setDropdownOpen(true)}>
+		<div
+			// ref={dropdownRef}
+			className="relative"
+			onMouseEnter={() => setDropdownOpen(true)}
+			onMouseLeave={() => setDropdownOpen(false)}
+			onClick={() => setDropdownOpen(true)}
+		>
 			<Menu>
 				<Menu.Button className={"font-roboto"}>
 					{text}

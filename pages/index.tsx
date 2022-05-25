@@ -6,6 +6,7 @@ import { Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import Calendar from "@/components/shared/Calendar";
 
 const Home: NextPage = () => {
 	return (
@@ -102,7 +103,6 @@ const Home: NextPage = () => {
 					/>
 
 					<div className="relative flex flex-col items-center justify-center w-full h-full py-4">
-						<div className="absolute w-full h-full bg-gray-700 opacity-25"></div>
 						<div className="z-10 mx-auto text-6xl font-extrabold text-center text-white">
 							<p className="mb-4">Learn meditation now</p>
 							<p className="w-1/2 text-2xl font-normal translate-x-1/2">
@@ -120,24 +120,25 @@ const Home: NextPage = () => {
 					<Image
 						src={"https://brahmakumaris.org.au/new/wp-content/uploads/2021/01/unnamed-3.jpg"}
 						alt="Forest"
-						className="object-cover"
+						className="object-cover -z-20"
 						layout="fill"
 					/>
 
-					<div className="relative w-full h-full">
-						<div className="relative z-10 w-1/2 -top-1/8">
-							<div className="absolute w-full h-full bg-white opacity-90"></div>
-							<div className="relative flex flex-col p-4">
-								<span className="font-sans text-4xl font-bold text-orange-600">New Center</span>
-								<span className="mt-4 font-sans text-xl font-thin">
-									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis debitis doloribus nam modi expedita deleniti itaque
-									voluptate nostrum architecto a! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio facere perferendis
-									aliquam obcaecati nulla et recusandae expedita nostrum eos quia!
-								</span>
-								<button className="relative w-1/4 p-4 mt-8 ml-auto font-sans font-extrabold text-white bg-orange-600 rounded-md">
-									Browse Now
-								</button>
+					<div className="relative flex items-center justify-center w-full h-full xl:block">
+						<div className="relative flex flex-col w-full mx-4 h-2/3 xl:-right-[10%] xl:top-[10%] xl:w-1/3">
+							<div className="absolute w-full h-full bg-white rounded-md -z-10 opacity-95"></div>
+							<div className="p-4">
+								<div className="font-sans text-6xl font-extrabold text-orange-600">
+									New
+									<br />
+									Virtual Center
+								</div>
+								<div className="mt-8 font-sans">
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, ab iusto. Quasi nulla cumque veritatis ducimus tempore fugit
+									nostrum voluptatibus? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum eius ad officiis!
+								</div>
 							</div>
+							<button className="absolute p-4 font-sans text-white bg-orange-600 rounded-md opacity-100 -bottom-16 text-bold">Browse Now</button>
 						</div>
 					</div>
 				</div>
@@ -152,6 +153,8 @@ const Home: NextPage = () => {
 					<span className="px-3 text-2xl font-medium text-gray-900 bg-white">Events</span>
 				</div>
 			</div>
+
+			<Calendar />
 		</div>
 	);
 };
