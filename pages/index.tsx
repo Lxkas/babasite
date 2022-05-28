@@ -7,6 +7,7 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import Calendar from "@/components/shared/Calendar";
+import Stats from "@/components/shared/Stats";
 
 const Home: NextPage = () => {
 	return (
@@ -155,6 +156,8 @@ const Home: NextPage = () => {
 			</div>
 
 			<Calendar />
+
+			<Stats />
 		</div>
 	);
 };
