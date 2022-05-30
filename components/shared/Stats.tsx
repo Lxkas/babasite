@@ -37,7 +37,7 @@ export default function Stats() {
 										<FontAwesomeIcon icon={faPeopleGroup} className="w-12 h-12" />
 									</dt>
 									<dt className="order-3 mt-2 text-lg font-medium leading-6 text-gray-500">Students</dt>
-									<dd className="order-2 text-4xl font-extrabold text-gray-600 sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl">1000,000+</dd>
+									<dd className="order-2 text-4xl font-extrabold text-gray-600 sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl">1,000,000+</dd>
 								</div>
 								<div className="flex flex-col p-6 text-center border-t border-b border-gray-100 sm:border-l sm:border-b-2 hover:border-b-orange-600">
 									<dt className="order-1 mb-2 text-lg font-medium leading-6 text-gray-500">
