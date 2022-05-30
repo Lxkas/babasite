@@ -1,0 +1,12 @@
+{
+	"translation": [
+		{
+			"locale": "en-US",
+			"text": "This is the about page in English!"
+		},
+		{
+			"locale": "th-TH",
+			"text": "This is the about page in Thai!"
+		}
+	]
+}

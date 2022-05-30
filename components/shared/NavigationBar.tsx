@@ -6,12 +6,88 @@ import React, { Fragment, useEffect, useState } from "react";
 import Dropdown from "./NavItems/Dropdown";
 
 import { faX, faBars, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/router";
 
-function classNames(...classes: string[]) {
-	return classes.filter(Boolean).join(" ");
+import { NavItemPropType } from "@/types/NavigationBarTypes";
+import { classNames } from "@/utils/classNames";
+
+const navItems: NavItemPropType[] = [
+	{ text: "Home", href: "/" },
+	{ text: "Courses, Classes & Meditations", href: "/courses" },
+	{
+		text: "Locations",
+		href: "/locations",
+		navType: "dropdown",
+		data: [
+			{
+				dropdownType: "normal",
+				text: "Local Centers",
+				href: "/local-locations",
+			},
+			{
+				dropdownType: "normal",
+				text: "Global Center Locator",
+				href: "https://www.brahmakumaris.org/centre-locator/",
+			},
+		],
+	},
+	{
+		text: "About Us",
+		href: "#",
+		navType: "dropdown",
+		data: [
+			{
+				dropdownType: "normal",
+				text: "About Us",
+				href: "/about",
+			},
+			{
+				dropdownType: "innerdropdown",
+				title: "Our Headquarters",
+				options: [
+					{ text: "Pandav Bhavan", href: "https://brahmakumaris.org.au/new/about-us/our-headquarters/pandav-bhavan/" },
+					{ text: "Gyan Sarovar", href: "https://brahmakumaris.org.au/new/about-us/our-headquarters/gyan-sarovar/" },
+					{ text: "Shantivan", href: "https://brahmakumaris.org.au/new/about-us/our-headquarters/shantivan/" },
+				],
+			},
+		],
+	},
+	{
+		text: "Meditation",
+		href: "#",
+		navType: "dropdown",
+		data: [
+			{
+				dropdownType: "innerdropdown",
+				title: "Wisdom",
+				options: [
+					{ text: "Raja Yoga", href: "/wisdom/raja-yoga" },
+					{ text: "Soul", href: "/wisdom/soul" },
+				],
+			},
+		],
+	},
+];
+
+function NavItem(props: NavItemPropType) {
+	const router = useRouter();
+	const { text, href } = props;
+
+	return (
+		<Link href={href}>
+			<a
+				className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:text-gray-700 ${
+					router.pathname == href ? "border-orange-500" : "hover:border-gray-300"
+				}`}
+			>
+				{text}
+			</a>
+		</Link>
+	);
 }
 
 export default function NavigationBar() {
+	const { locale, locales, asPath } = useRouter();
 	const [hasScrolled, setHasScrolled] = useState(false);
 
 	function handleScroll() {
@@ -69,10 +145,27 @@ export default function NavigationBar() {
 								</div>
 								<div className="hidden sm:ml-auto sm:flex sm:space-x-8">
 									{/* Current: "border-orange-500 text-gray-900", Default: "border-transparent  hover:border-gray-300 hover:text-gray-700" */}
-									<Link href={"/"}>
+									{/* <Link href={"/"}>
 										<a className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-orange-500">Home</a>
-									</Link>
-									<a
+									</Link> */}
+
+									{navItems.map((navItem, i) => {
+										switch (navItem.navType) {
+											case "dropdown":
+												return (
+													<div
+														key={navItem.text + i}
+														className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:text-gray-700"
+													>
+														<Dropdown text={navItem.text} data={navItem.data} />
+													</div>
+												);
+											default:
+												return <NavItem key={navItem.href + i} text={navItem.text} href={navItem.href} navType={navItem.navType} />;
+										}
+									})}
+
+									{/* <a
 										href="#"
 										className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
 									>
@@ -89,9 +182,9 @@ export default function NavigationBar() {
 										className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
 									>
 										About Us
-									</a>
+									</a> */}
 
-									<div className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:text-gray-700">
+									{/* <div className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:text-gray-700">
 										<Dropdown
 											text={"Meditation"}
 											options={[
@@ -99,10 +192,24 @@ export default function NavigationBar() {
 												{ text: "Test 2", href: "Test2" },
 											]}
 										/>
-									</div>
+									</div> */}
 								</div>
 							</div>
 							<div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+								{/* Language Switch */}
+
+								<div className="font-roboto">
+									{locales!.map((l, i) => {
+										return (
+											<span key={l + i} className={classNames(l === locale ? "underline" : "", "mx-2 uppercase")}>
+												<Link href={asPath} locale={l}>
+													{l}
+												</Link>
+											</span>
+										);
+									})}
+								</div>
+
 								{/* Profile dropdown */}
 								{/* <Menu as="div" className="relative ml-3">
 									<div>

@@ -1,90 +1,141 @@
-import { Menu } from "@headlessui/react";
-import React, { useEffect, useRef, useState } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 import { DropdownNavItemOptions } from "@/types/NavigationBarTypes";
+import Link from "next/link";
+import { classNames } from "@/utils/classNames";
 
-// function useOnClickOutside(ref: any, handler: any) {
-// 	useEffect(
-// 		() => {
-// 			const listener = (event: any) => {
-// 				// Do nothing if clicking ref's element or descendent elements
-// 				if (!ref.current || ref.current.contains(event.target)) {
-// 					return;
-// 				}
+function useOnClickOutside(ref: any, handler: any) {
+	useEffect(
+		() => {
+			const listener = (event: any) => {
+				// Do nothing if clicking ref's element or descendent elements
+				if (!ref.current || ref.current.contains(event.target)) {
+					return;
+				}
 
-// 				handler(event);
-// 			};
+				handler(event);
+			};
 
-// 			document.addEventListener("mousedown", listener);
-// 			document.addEventListener("touchstart", listener);
+			document.addEventListener("mousedown", listener);
+			document.addEventListener("touchstart", listener);
 
-// 			return () => {
-// 				document.removeEventListener("mousedown", listener);
-// 				document.removeEventListener("touchstart", listener);
-// 			};
-// 		},
-// 		// Add ref and handler to effect dependencies
-// 		// It's worth noting that because passed in handler is a new ...
-// 		// ... function on every render that will cause this effect ...
-// 		// ... callback/cleanup to run every render. It's not a big deal ...
-// 		// ... but to optimize you can wrap handler in useCallback before ...
-// 		// ... passing it into this hook.
-// 		[ref, handler]
-// 	);
-// }
-
-function DropdownItem(props: { text: string; href: string }) {
-	const { text, href } = props;
-
-	return (
-		<Menu.Item>
-			{({ active }) => (
-				<a className={`w-full pr-2 pt-2 transition-all duration-100 ${active && "translate-x-2 underline"}`} href={href}>
-					{text}
-				</a>
-			)}
-		</Menu.Item>
+			return () => {
+				document.removeEventListener("mousedown", listener);
+				document.removeEventListener("touchstart", listener);
+			};
+		},
+		// Add ref and handler to effect dependencies
+		// It's worth noting that because passed in handler is a new ...
+		// ... function on every render that will cause this effect ...
+		// ... callback/cleanup to run every render. It's not a big deal ...
+		// ... but to optimize you can wrap handler in useCallback before ...
+		// ... passing it into this hook.
+		[ref, handler]
 	);
 }
 
-export default function Dropdown(props: { text: string; options: DropdownNavItemOptions[] }) {
+function DropdownItem(props: { title: string; options: DropdownNavItemOptions[] }) {
+	const { title, options } = props;
+
+	return (
+		<Disclosure>
+			{({ open }) => (
+				<>
+					<Disclosure.Button className="flex justify-between w-full p-2 text-sm font-medium text-left focus:outline-none">
+						<div className="flex flex-row w-full">
+							<span>{title}</span>
+
+							<span className="ml-auto">
+								<FontAwesomeIcon icon={open ? faCaretDown : faCaretRight} color="#999999" />
+							</span>
+						</div>
+					</Disclosure.Button>
+					<Disclosure.Panel className="pl-4 text-sm text-gray-500">
+						<div className="flex flex-col w-full pl-2">
+							{options.map((option, i) => {
+								return (
+									<Link key={option.text + i} href={option.href} passHref>
+										<a className="p-1" href={option.href}>
+											{option.text}
+										</a>
+									</Link>
+								);
+							})}
+						</div>
+					</Disclosure.Panel>
+				</>
+			)}
+		</Disclosure>
+	);
+}
+
+export default function Dropdown(props: { text: string; data: any }) {
+	const [forcedOpen, setForcedOpen] = useState(false);
 	const [dropdownOpen, setDropdownOpen] = useState(false);
-	const { text, options } = props;
 
-	// const dropdownRef = useRef(null);
+	const { text, data } = props;
 
-	// useOnClickOutside(dropdownRef, () => setDropdownOpen(false));
+	const dropdownRef = useRef(null);
+
+	const handleMouseEnter = () => {
+		setDropdownOpen(true);
+	};
+
+	const handleMouseClick = () => {
+		if (!dropdownOpen) {
+			setForcedOpen(true);
+			setDropdownOpen(true);
+		}
+	};
+
+	useOnClickOutside(dropdownRef, () => {
+		setForcedOpen(false);
+		setDropdownOpen(false);
+	});
+
+	const handleMouseLeave = () => {
+		if (!forcedOpen) {
+			setDropdownOpen(false);
+		}
+	};
 
 	return (
 		<div
-			// ref={dropdownRef}
-			className="relative"
-			onMouseEnter={() => setDropdownOpen(true)}
-			onMouseLeave={() => setDropdownOpen(false)}
-			onClick={() => setDropdownOpen(true)}
+			ref={dropdownRef}
+			className="relative cursor-default"
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}
+			onMouseDown={handleMouseClick}
 		>
-			<Menu>
-				<Menu.Button className={"font-roboto"}>
-					{text}
-					<span className="ml-1">
-						<FontAwesomeIcon icon={faCaretDown} color="#999999" />
-					</span>
-				</Menu.Button>
-				<div className="absolute w-full font-roboto">
-					<Menu.Items static>
-						{dropdownOpen && (
-							<div className="flex flex-col items-start w-full">
-								{options.map((option) => {
-									return <DropdownItem key={"dropdownitem" + option.href} text={option.text} href={option.href} />;
-								})}
-							</div>
-						)}
-					</Menu.Items>
+			{/* Text and icon */}
+			<div className="flex flex-row">
+				<span>{text}</span>
+				<span className="ml-2">
+					<FontAwesomeIcon icon={faCaretDown} color="#999999" />
+				</span>
+			</div>
+
+			{/* Dropdown body */}
+			<div className={classNames(dropdownOpen ? "" : "hidden", "absolute top-full bg-white left-0 w-44 h-min")}>
+				<div className="flex flex-col">
+					{data.map((item: any, i: number) => {
+						switch (item.dropdownType) {
+							case "normal":
+								return (
+									<Link key={item.text + i} href={item.href}>
+										<a className="p-2">{item.text}</a>
+									</Link>
+								);
+							case "innerdropdown":
+								return <DropdownItem key={item.text + i} title={item.title} options={item.options} />;
+						}
+					})}
 				</div>
-			</Menu>
+			</div>
 		</div>
 	);
 }
