@@ -9,6 +9,7 @@ import { Fragment } from "react";
 // } from '@heroicons/react/solid'
 
 import { Menu, Transition } from "@headlessui/react";
+import { classNames } from "@/utils/classNames";
 
 const days = [
 	{ date: "2021-12-27", events: [] },
@@ -82,10 +83,6 @@ const days = [
 	{ date: "2022-02-06", events: [] },
 ];
 const selectedDay = days.find((day) => day.isSelected);
-
-function classNames(...classes: (string | boolean | undefined)[]) {
-	return classes.filter(Boolean).join(" ");
-}
 
 export default function Example() {
 	return (
@@ -373,20 +370,20 @@ export default function Example() {
 								type="button"
 								className={classNames(
 									day.isCurrentMonth ? "bg-white" : "bg-gray-50",
-									(day.isSelected || day.isToday) && "font-semibold",
-									day.isSelected && "text-white",
-									!day.isSelected && day.isToday && "text-indigo-600",
-									!day.isSelected && day.isCurrentMonth && !day.isToday && "text-gray-900",
-									!day.isSelected && !day.isCurrentMonth && !day.isToday && "text-gray-500",
+									day.isSelected || day.isToday ? "font-semibold" : "",
+									day.isSelected ? "text-white" : "",
+									!day.isSelected && day.isToday ? "text-indigo-600" : "",
+									!day.isSelected && day.isCurrentMonth && !day.isToday ? "text-gray-900" : "",
+									!day.isSelected && !day.isCurrentMonth && !day.isToday ? "text-gray-500" : "",
 									"flex h-14 flex-col py-2 px-3 hover:bg-gray-100 focus:z-10"
 								)}
 							>
 								<time
 									dateTime={day.date}
 									className={classNames(
-										day.isSelected && "flex h-6 w-6 items-center justify-center rounded-full",
-										day.isSelected && day.isToday && "bg-indigo-600",
-										day.isSelected && !day.isToday && "bg-gray-900",
+										day.isSelected ? "flex h-6 w-6 items-center justify-center rounded-full" : "",
+										day.isSelected && day.isToday ? "bg-indigo-600" : "",
+										day.isSelected && !day.isToday ? "bg-gray-900" : "",
 										"ml-auto"
 									)}
 								>
