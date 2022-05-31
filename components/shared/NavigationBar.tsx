@@ -21,29 +21,29 @@ const navItems: NavItemPropType[] = [
 			{
 				dropdownType: "normal",
 				text: "What is Raja Yoga Meditation",
-				href: "/",
+				href: "/meditation/what-is-raja-yoga",
 			},
 			{
 				dropdownType: "normal",
 				text: "How to Meditate",
-				href: "/",
+				href: "/meditation/how-to",
 			},
 			{
 				dropdownType: "normal",
 				text: "Experience Meditation",
-				href: "/",
+				href: "/meditation/experience",
 			},
 
 			{
 				dropdownType: "normal",
 				text: "Where to Meditate",
-				href: "/",
+				href: "/meditation/where",
 			},
 
 			{
 				dropdownType: "normal",
 				text: "Register Online For Courses",
-				href: "/",
+				href: "/meditation/register",
 			},
 		],
 	},
@@ -110,6 +110,30 @@ const navItems: NavItemPropType[] = [
 				text: "Soul",
 				href: "/wisdom/soul",
 			},
+
+			{
+				dropdownType: "normal",
+				text: "Tree in Time",
+				href: "/wisdom/tree",
+			},
+
+			{
+				dropdownType: "normal",
+				text: "Wheel of Life",
+				href: "/wisdom/wheel-of-life",
+			},
+
+			{
+				dropdownType: "normal",
+				text: "Karma",
+				href: "/wisdom/karma",
+			},
+
+			{
+				dropdownType: "normal",
+				text: "God Knows",
+				href: "/wisdom/god-knows",
+			},
 		],
 	},
 ];
@@ -129,6 +153,21 @@ function NavItem(props: NavItemPropType) {
 			>
 				{text}
 			</a>
+		</Link>
+	);
+}
+
+function MobileNavItem(props: NavItemPropType) {
+	const { text, href } = props;
+	return (
+		<Link href={href}>
+			<Disclosure.Button
+				as="a"
+				href="#"
+				className="block border-l-4 border-orange-500 bg-orange-50 py-2 pl-3 pr-4 text-base font-medium text-orange-700"
+			>
+				{text}
+			</Disclosure.Button>
 		</Link>
 	);
 }
@@ -347,7 +386,31 @@ export default function NavigationBar() {
 					<Disclosure.Panel className="bg-white font-roboto text-black sm:hidden">
 						<div className="space-y-1 pt-2 pb-4">
 							{/* Current: "bg-orange-50 border-orange-500 text-orange-700", Default: "border-transparent  hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
-							<Disclosure.Button
+
+							{navItems.map((navItem, i) => {
+								switch (navItem.navType) {
+									case "dropdown":
+										return (
+											<div
+												key={navItem.text + i}
+												className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-gray-700"
+											>
+												TODO: DROPDOWN
+											</div>
+										);
+									default:
+										return (
+											<MobileNavItem
+												key={"mob" + navItem.href + i}
+												text={navItem.text}
+												href={navItem.href}
+												navType={navItem.navType}
+											/>
+										);
+								}
+							})}
+
+							{/* <Disclosure.Button
 								as="a"
 								href="#"
 								className="block border-l-4 border-orange-500 bg-orange-50 py-2 pl-3 pr-4 text-base font-medium text-orange-700"
@@ -375,7 +438,7 @@ export default function NavigationBar() {
 								className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
 							>
 								About Us
-							</Disclosure.Button>
+							</Disclosure.Button> */}
 
 							<Disclosure>
 								{({ open }) => (
