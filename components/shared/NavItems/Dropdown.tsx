@@ -2,7 +2,11 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import React, { Fragment, useEffect, useRef, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import {
+	faCaretDown,
+	faCaretLeft,
+	faCaretRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { DropdownNavItemOptions } from "@/types/NavigationBarTypes";
 import Link from "next/link";
@@ -38,27 +42,37 @@ function useOnClickOutside(ref: any, handler: any) {
 	);
 }
 
-function DropdownItem(props: { title: string; options: DropdownNavItemOptions[] }) {
+function DropdownItem(props: {
+	title: string;
+	options: DropdownNavItemOptions[];
+}) {
 	const { title, options } = props;
 
 	return (
 		<Disclosure>
 			{({ open }) => (
 				<>
-					<Disclosure.Button className="flex justify-between w-full p-2 text-sm font-medium text-left focus:outline-none">
-						<div className="flex flex-row w-full">
+					<Disclosure.Button className="flex w-full justify-between p-2 text-left text-sm font-medium focus:outline-none">
+						<div className="flex w-full flex-row">
 							<span>{title}</span>
 
 							<span className="ml-auto">
-								<FontAwesomeIcon icon={open ? faCaretDown : faCaretRight} color="#999999" />
+								<FontAwesomeIcon
+									icon={open ? faCaretDown : faCaretRight}
+									color="#999999"
+								/>
 							</span>
 						</div>
 					</Disclosure.Button>
 					<Disclosure.Panel className="pl-4 text-sm text-gray-500">
-						<div className="flex flex-col w-full pl-2">
+						<div className="flex w-full flex-col pl-2">
 							{options.map((option, i) => {
 								return (
-									<Link key={option.text + i} href={option.href} passHref>
+									<Link
+										key={option.text + i}
+										href={option.href}
+										passHref
+									>
 										<a className="p-1" href={option.href}>
 											{option.text}
 										</a>
@@ -120,7 +134,12 @@ export default function Dropdown(props: { text: string; data: any }) {
 			</div>
 
 			{/* Dropdown body */}
-			<div className={classNames(dropdownOpen ? "" : "hidden", "absolute top-full bg-white left-0 w-44 h-min")}>
+			<div
+				className={classNames(
+					dropdownOpen ? "" : "hidden",
+					"absolute top-full left-0 h-min w-44 bg-white"
+				)}
+			>
 				<div className="flex flex-col">
 					{data.map((item: any, i: number) => {
 						switch (item.dropdownType) {
@@ -131,7 +150,13 @@ export default function Dropdown(props: { text: string; data: any }) {
 									</Link>
 								);
 							case "innerdropdown":
-								return <DropdownItem key={item.text + i} title={item.title} options={item.options} />;
+								return (
+									<DropdownItem
+										key={item.text + i}
+										title={item.title}
+										options={item.options}
+									/>
+								);
 						}
 					})}
 				</div>

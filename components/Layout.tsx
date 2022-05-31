@@ -6,10 +6,13 @@ export default function Layout({ children }: any) {
 		<>
 			<Head>
 				<title>Brahma Kumaris TH</title>
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta
+					name="viewport"
+					content="initial-scale=1.0, width=device-width"
+				/>
 			</Head>
 			<NavigationBar />
-			<div className="block h-32 mb-2"></div>
+			<div className="mb-2 block h-32"></div>
 			<main>{children}</main>
 		</>
 	);

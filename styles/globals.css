@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "ROBOTO";
-    src: url("../public/fonts/Roboto/Roboto-Thin.ttf");
+	font-family: "ROBOTO";
+	src: url("../public/fonts/Roboto/Roboto-Thin.ttf");
 }

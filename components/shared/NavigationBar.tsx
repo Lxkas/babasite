@@ -45,9 +45,18 @@ const navItems: NavItemPropType[] = [
 				dropdownType: "innerdropdown",
 				title: "Our Headquarters",
 				options: [
-					{ text: "Pandav Bhavan", href: "https://brahmakumaris.org.au/new/about-us/our-headquarters/pandav-bhavan/" },
-					{ text: "Gyan Sarovar", href: "https://brahmakumaris.org.au/new/about-us/our-headquarters/gyan-sarovar/" },
-					{ text: "Shantivan", href: "https://brahmakumaris.org.au/new/about-us/our-headquarters/shantivan/" },
+					{
+						text: "Pandav Bhavan",
+						href: "https://brahmakumaris.org.au/new/about-us/our-headquarters/pandav-bhavan/",
+					},
+					{
+						text: "Gyan Sarovar",
+						href: "https://brahmakumaris.org.au/new/about-us/our-headquarters/gyan-sarovar/",
+					},
+					{
+						text: "Shantivan",
+						href: "https://brahmakumaris.org.au/new/about-us/our-headquarters/shantivan/",
+					},
 				],
 			},
 		],
@@ -76,8 +85,10 @@ function NavItem(props: NavItemPropType) {
 	return (
 		<Link href={href}>
 			<a
-				className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:text-gray-700 ${
-					router.pathname == href ? "border-orange-500" : "hover:border-gray-300"
+				className={`inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-gray-700 ${
+					router.pathname == href
+						? "border-orange-500"
+						: "hover:border-gray-300"
 				}`}
 			>
 				{text}
@@ -108,33 +119,50 @@ export default function NavigationBar() {
 	}, []);
 
 	return (
-		<Disclosure as="nav" className={`bg-white text-black ${hasScrolled ? "shadow-lg" : "shadow-sm"} fixed z-30 w-full h-28 font-roboto`}>
+		<Disclosure
+			as="nav"
+			className={`bg-white text-black ${
+				hasScrolled ? "shadow-lg" : "shadow-sm"
+			} fixed z-30 h-28 w-full font-roboto`}
+		>
 			{({ open }) => (
 				<>
-					<div className="px-2 mx-auto mt-4 max-w-7xl sm:px-6 lg:px-8">
-						<div className="relative flex justify-between h-16">
+					<div className="mx-auto mt-4 max-w-7xl px-2 sm:px-6 lg:px-8">
+						<div className="relative flex h-16 justify-between">
 							<div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
 								{/* Mobile menu button */}
-								<Disclosure.Button className="inline-flex items-center justify-center p-2 ml-4 text-gray-400 rounded-md hover:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
-									<span className="sr-only">Open main menu</span>
+								<Disclosure.Button className="ml-4 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
+									<span className="sr-only">
+										Open main menu
+									</span>
 									{open ? (
 										// <XIcon className="block w-6 h-6" aria-hidden="true" />
-										<FontAwesomeIcon icon={faX} className="block w-6 h-6" aria-hidden="true" />
+										<FontAwesomeIcon
+											icon={faX}
+											className="block h-6 w-6"
+											aria-hidden="true"
+										/>
 									) : (
 										// <MenuIcon className="block w-6 h-6" aria-hidden="true" />
-										<FontAwesomeIcon icon={faBars} className="block w-6 h-6" aria-hidden="true" />
+										<FontAwesomeIcon
+											icon={faBars}
+											className="block h-6 w-6"
+											aria-hidden="true"
+										/>
 									)}
 								</Disclosure.Button>
 							</div>
-							<div className="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
-								<div className="flex items-center flex-shrink-0">
+							<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+								<div className="flex flex-shrink-0 items-center">
 									{/* <img
 										className="block w-auto h-8 lg:hidden"
 										src="https://tailwindui.com/img/logos/workflow-mark-orange-600.svg"
 										alt="Workflow"
 									/> */}
 
-									<span className={`lg:flex items-center justify-center hidden w-auto h-8`}>
+									<span
+										className={`hidden h-8 w-auto items-center justify-center lg:flex`}
+									>
 										<Image
 											width={400}
 											height={80}
@@ -155,13 +183,25 @@ export default function NavigationBar() {
 												return (
 													<div
 														key={navItem.text + i}
-														className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:text-gray-700"
+														className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-gray-700"
 													>
-														<Dropdown text={navItem.text} data={navItem.data} />
+														<Dropdown
+															text={navItem.text}
+															data={navItem.data}
+														/>
 													</div>
 												);
 											default:
-												return <NavItem key={navItem.href + i} text={navItem.text} href={navItem.href} navType={navItem.navType} />;
+												return (
+													<NavItem
+														key={navItem.href + i}
+														text={navItem.text}
+														href={navItem.href}
+														navType={
+															navItem.navType
+														}
+													/>
+												);
 										}
 									})}
 
@@ -201,7 +241,15 @@ export default function NavigationBar() {
 								<div className="font-roboto">
 									{locales!.map((l, i) => {
 										return (
-											<span key={l + i} className={classNames(l === locale ? "underline" : "", "mx-2 uppercase")}>
+											<span
+												key={l + i}
+												className={classNames(
+													l === locale
+														? "underline"
+														: "",
+													"mx-2 uppercase"
+												)}
+											>
 												<Link href={asPath} locale={l}>
 													{l}
 												</Link>
@@ -260,20 +308,20 @@ export default function NavigationBar() {
 						</div>
 					</div>
 
-					<Disclosure.Panel className="text-black bg-white sm:hidden font-roboto">
-						<div className="pt-2 pb-4 space-y-1">
+					<Disclosure.Panel className="bg-white font-roboto text-black sm:hidden">
+						<div className="space-y-1 pt-2 pb-4">
 							{/* Current: "bg-orange-50 border-orange-500 text-orange-700", Default: "border-transparent  hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
 							<Disclosure.Button
 								as="a"
 								href="#"
-								className="block py-2 pl-3 pr-4 text-base font-medium text-orange-700 border-l-4 border-orange-500 bg-orange-50"
+								className="block border-l-4 border-orange-500 bg-orange-50 py-2 pl-3 pr-4 text-base font-medium text-orange-700"
 							>
 								Home
 							</Disclosure.Button>
 							<Disclosure.Button
 								as="a"
 								href="#"
-								className="block py-2 pl-3 pr-4 text-base font-medium border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
+								className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
 							>
 								Courses, Classes & Meditations
 							</Disclosure.Button>
@@ -281,14 +329,14 @@ export default function NavigationBar() {
 							<Disclosure.Button
 								as="a"
 								href="#"
-								className="block py-2 pl-3 pr-4 text-base font-medium border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
+								className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
 							>
 								Locations
 							</Disclosure.Button>
 							<Disclosure.Button
 								as="a"
 								href="#"
-								className="block py-2 pl-3 pr-4 text-base font-medium border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
+								className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
 							>
 								About Us
 							</Disclosure.Button>
@@ -296,11 +344,15 @@ export default function NavigationBar() {
 							<Disclosure>
 								{({ open }) => (
 									<>
-										<Disclosure.Button className="block py-2 pl-3 pr-4 text-base font-medium border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">
+										<Disclosure.Button className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">
 											<span>Meditation</span>
 											<FontAwesomeIcon
 												icon={faChevronUp}
-												className={`${open ? "rotate-180 transform" : ""} ml-4 h-5 w-5 text-purple-500`}
+												className={`${
+													open
+														? "rotate-180 transform"
+														: ""
+												} ml-4 h-5 w-5 text-purple-500`}
 											/>
 										</Disclosure.Button>
 										<Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">

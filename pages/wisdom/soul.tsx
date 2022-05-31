@@ -5,14 +5,18 @@ import Image from "next/image";
 
 export default function SoulPage() {
 	const { locale, locales } = useRouter();
-	const [currentLocaleStrings, setCurrentLocaleStrings] = useState(translation.translation.filter((p) => p.locale === locale));
+	const [currentLocaleStrings, setCurrentLocaleStrings] = useState(
+		translation.translation.filter((p) => p.locale === locale)
+	);
 
 	useEffect(() => {
-		setCurrentLocaleStrings(translation.translation.filter((p) => p.locale === locale));
+		setCurrentLocaleStrings(
+			translation.translation.filter((p) => p.locale === locale)
+		);
 	}, [locale]);
 
 	return (
-		<div className="px-4 mx-auto space-y-8 max-w-7xl sm:px-6 lg:px-8">
+		<div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
 			<article className="prose prose-h1:mb-0 prose-p:mt-2">
 				<div>
 					<h1>{currentLocaleStrings[0].title}</h1>

@@ -77,7 +77,12 @@ export default function Virtuescope() {
 
 		const correctRotation = winningIndex * degressPerSlice;
 
-		setWheelRotation(wheelRotation + minimumSpin + (360 - (wheelRotation % 360)) + correctRotation);
+		setWheelRotation(
+			wheelRotation +
+				minimumSpin +
+				(360 - (wheelRotation % 360)) +
+				correctRotation
+		);
 
 		setSpinning(true);
 		await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -85,9 +90,13 @@ export default function Virtuescope() {
 	};
 
 	return (
-		<div className="relative flex flex-col w-min h-min">
+		<div className="relative flex h-min w-min flex-col">
 			<div className="flex ">
-				<FontAwesomeIcon icon={faCaretDown} color="black" className="mx-auto" />
+				<FontAwesomeIcon
+					icon={faCaretDown}
+					color="black"
+					className="mx-auto"
+				/>
 			</div>
 			<motion.div
 				ref={rouletteWheelRef}
