@@ -13,7 +13,40 @@ import { classNames } from "@/utils/classNames";
 
 const navItems: NavItemPropType[] = [
 	{ text: "Home", href: "/" },
-	{ text: "Courses, Classes & Meditations", href: "/courses" },
+	{
+		text: "Meditation",
+		href: "#",
+		navType: "dropdown",
+		data: [
+			{
+				dropdownType: "normal",
+				text: "What is Raja Yoga Meditation",
+				href: "/",
+			},
+			{
+				dropdownType: "normal",
+				text: "How to Meditate",
+				href: "/",
+			},
+			{
+				dropdownType: "normal",
+				text: "Experience Meditation",
+				href: "/",
+			},
+
+			{
+				dropdownType: "normal",
+				text: "Where to Meditate",
+				href: "/",
+			},
+
+			{
+				dropdownType: "normal",
+				text: "Register Online For Courses",
+				href: "/",
+			},
+		],
+	},
 	{
 		text: "Locations",
 		href: "/locations",
@@ -62,17 +95,20 @@ const navItems: NavItemPropType[] = [
 		],
 	},
 	{
-		text: "Meditation",
+		text: "Wisdom",
 		href: "#",
 		navType: "dropdown",
 		data: [
 			{
-				dropdownType: "innerdropdown",
-				title: "Wisdom",
-				options: [
-					{ text: "Raja Yoga", href: "/wisdom/raja-yoga" },
-					{ text: "Soul", href: "/wisdom/soul" },
-				],
+				dropdownType: "normal",
+				text: "Raja Yoga",
+				href: "/wisdom/raja-yoga",
+			},
+
+			{
+				dropdownType: "normal",
+				text: "Soul",
+				href: "/wisdom/soul",
 			},
 		],
 	},

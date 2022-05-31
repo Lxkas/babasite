@@ -120,7 +120,7 @@ export default function Dropdown(props: { text: string; data: any }) {
 	return (
 		<div
 			ref={dropdownRef}
-			className="relative cursor-default"
+			className="relative flex h-full cursor-default items-center justify-center"
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 			onMouseDown={handleMouseClick}
@@ -137,7 +137,7 @@ export default function Dropdown(props: { text: string; data: any }) {
 			<div
 				className={classNames(
 					dropdownOpen ? "" : "hidden",
-					"absolute top-full left-0 h-min w-44 bg-white"
+					"absolute top-full left-0 h-min w-44 bg-white shadow-lg"
 				)}
 			>
 				<div className="flex flex-col">
