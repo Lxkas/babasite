@@ -173,7 +173,6 @@ function MobileNavItem(props: NavItemPropType) {
 }
 
 export default function NavigationBar() {
-	const { locale, locales, asPath } = useRouter();
 	const [hasScrolled, setHasScrolled] = useState(false);
 
 	function handleScroll() {
@@ -311,28 +310,6 @@ export default function NavigationBar() {
 								</div>
 							</div>
 							<div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-								{/* Language Switch */}
-
-								<div className="font-roboto">
-									{locales!.map((l, i) => {
-										return (
-											<span
-												key={l + i}
-												className={classNames(
-													l === locale
-														? "underline"
-														: "",
-													"mx-2 uppercase"
-												)}
-											>
-												<Link href={asPath} locale={l}>
-													{l}
-												</Link>
-											</span>
-										);
-									})}
-								</div>
-
 								{/* Profile dropdown */}
 								{/* <Menu as="div" className="relative ml-3">
 									<div>

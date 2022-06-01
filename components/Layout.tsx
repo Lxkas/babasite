@@ -1,5 +1,6 @@
 import Head from "next/head";
 import NavigationBar from "./shared/NavigationBar";
+import SiteFooter from "./shared/SiteFooter";
 
 export default function Layout({ children }: any) {
 	return (
@@ -14,6 +15,7 @@ export default function Layout({ children }: any) {
 			<NavigationBar />
 			<div className="mb-2 block h-32"></div>
 			<main>{children}</main>
+			<SiteFooter />
 		</>
 	);
 }
