@@ -1,0 +1,164 @@
+{
+	"translation": [
+		{
+			"locale": "en-US",
+			"title": "Our Courses",
+			"heart": {
+				"body": "At the heart of the Brahma Kumaris teachings is the Foundation Course in Raja Yoga meditation. This course provides a practical understanding of the relationship between spirit and matter, as well as an understanding of the interplay between souls, God and the material world. The series of classes in this course will facilitate your inward journey in an efficient and effective way.",
+				"heartLearnAbout": "Learn about:",
+				"listItems": [
+					"consciousness and self-realisation",
+					"connection and relationship with God",
+					"the Law of Karma",
+					"the Cycle of Time",
+					"the Tree of Life",
+					"a Spiritual Lifestyle"
+				]
+			},
+
+			"explore": {
+				"title": "Explore how to:",
+				"listItems": [
+					"make time & space for meditation to establish a daily practice",
+					"harness your thoughts, emotions and responses",
+					"use your meditation skills in everyday life"
+				]
+			},
+			"otherCourses": {
+				"title": "Other courses and activities",
+				"body": "In addition to Raja Yoga meditation courses, Brahma Kumaris run other seminars, courses, workshops and retreats on personal development. The content and presentation may vary according to country, culture and local facilities. To find out about the courses in your area:",
+				"otherCoursesInclude": "Courses include:"
+			},
+			"overComingAnger": {
+				"title": "Overcoming anger",
+				"body": "Anger is an expression of inner pain; an indication that all is not well in our world. It is one of the most powerful and destructive emotions.  How can we change the anger within and use our energy in more positive ways?",
+				"learnHowTo": "Learn how to:",
+				"listItems": [
+					"understand the anger process",
+					"realise the power of your thoughts in dealing with anger",
+					"let go of inner pain",
+					"use spiritual knowledge and awareness to transform anger",
+					"develop a range of practical tools to live a more peaceful life"
+				]
+			},
+
+			"positiveThinking": {
+				"title": "Positive thinking",
+				"body": "For is for those who are not sure that they are ready for meditation but would like to understand the workings of the mind better, gain greater clarity and learn how to manage their thoughts.",
+				"benefitsTitle": "Benefits include:",
+				"benefitsListItems": [
+					"becoming a master of your thoughts and feelings",
+					"applying the gentle art of self reflection and encourage personal growth",
+					"tapping into the natural positivity of the mind",
+					"finishing negative, energy-draining language and self-talk",
+					"developing a constantly positive attitude"
+				]
+			},
+
+			"selfEsteem": {
+				"title": "Self-esteem",
+				"body": "No matter how successful we may be, almost all of us could do with a self-esteem boost. Reminded of our core values, our own innate value, we can face life confidently and peacefully.",
+				"learnHowTo": "Learn how to:",
+				"listItems": [
+					"know and discover your positive self",
+					"accept yourself, identifying personal strengths, abilities and uniqueness",
+					"develop effective strategies for building healthy relationships, letting go of fears and aggression",
+					"empower yourself, making the right choices to maintain inner balance"
+				]
+			},
+
+			"stressFreeLiving": {
+				"title": "Stress-free living",
+				"body": "Stress has been identified as a leading cause of many health problems. Largely psychological, rather than physical in origin and therefore much more difficult to prevent and remedy, modern stress affects nearly all of us at some point in our lives. Regardless of its origins, stress drains our physical, emotional and mental energy.",
+				"learnHowTo": "Learn how to:",
+				"listItems": [
+					"Identify different forms of stress and the effects it has on our well-being",
+					"identify the triggers of stress and how and why we react",
+					"use practical tools to enable inner change",
+					"move from fearing change to embracing it",
+					"develop your spiritual intelligence to manage stress."
+				]
+			}
+		},
+		{
+			"locale": "th-TH",
+			"title": "Our Courses",
+			"heart": {
+				"body": "หัวใจสําคัญของคําสอนของบราห์มา กุมารี คือหลักสูตรพื้นฐานในการฝึกสมาธิแบบราชาโยคะ  หลักสูตรนี้ให้ความเข้าใจเกี่ยวกับความสัมพันธ์ระหว่างจิตวิญญาณและวัตถุธาตุ  การทํางานร่วมกันระหว่างดวงวิญญาณ ดวงวิญญาณสูงสุด และโลกวัตถุ หัวข้อต่างๆ ในหลักสูตรนี้จะช่วยให้เราตระหนักรู้จักตนเองและเดินทางกลับเข้าสู่ภายในได้อย่างมีประสิทธิภาพ",
+				"heartLearnAbout": "หัวข้อการเรียนรู้:",
+				"listItems": [
+					"จิตสํานึกและการตระหนักรู้จักตนเอง",
+					"การเชื่อมต่อและความสัมพันธ์กับพระเจ้า",
+					"กฎแห่งกรรม",
+					"วงจรเวลา",
+					"ต้นไม้แห่งชีวิต",
+					"วิถีชีวิตทางจิตวิญญาณ"
+				]
+			},
+
+			"explore": {
+				"title": "สํารวจวิธีการ:",
+				"listItems": [
+					"จัดสรรเวลาและเนื้อที่สําหรับการทําสมาธิเพื่อการฝึกฝนในชีวิตประจําวัน",
+					"ควบคุมความคิด อารมณ์ และการตอบสนองของคุณ",
+					"ใช้ทักษะการทําสมาธิของคุณในการดำเนินชีวิตประจําวัน"
+				]
+			},
+			"otherCourses": {
+				"title": "หลักสูตรและกิจกรรมอื่นๆ",
+				"body": "นอกจากหลักสูตรการฝึกสมาธิแบบราชาโยคะแล้ว บราห์มา กุมารียังจัดสัมมนา ประชุมเชิงปฏิบัติการ และการรีทรีตในหลากหลายหัวข้อเพื่อการพัฒนาตนเอง",
+				"otherCoursesInclude": "หลักสูตรต่างๆ รวมถึง:"
+			},
+			"overComingAnger": {
+				"title": "การเอาชนะความโกรธ",
+				"body": "ความโกรธเป็นการแสดงออกของความเจ็บปวดภายใน เป็นสิ่งชี้บอกว่าโลกภายในของคุณนั้นไม่ราบรื่น ความโกรธเป็นหนึ่งในอารมณ์ที่มีพลังในการทําลายมากที่สุด หลักสูตรนี้จะช่วยให้ความเข้าใจที่จะเปลี่ยนความโกรธที่มีอยู่ภายในและใช้พลังงานของคุณในทางที่เป็นบวกมากขึ้น",
+				"learnHowTo": "Learn how to:",
+				"listItems": [
+					"เข้าใจกระบวนการของความโกรธ",
+					"ตระหนักถึงพลังของความคิดของคุณในการจัดการกับความโกรธ",
+					"ปล่อยวางจากความเจ็บปวดภายใน",
+					"ใช้ความรู้ทางจิตวิญญาณและการตระหนักรู้เพื่อเปลี่ยนแปลงความโกรธ",
+					"พัฒนาวิธีการที่หลากหลายเพื่อการมีชีวิตที่สงบสุขยิ่งขึ้น"
+				]
+			},
+
+			"positiveThinking": {
+				"title": "การคิดเชิงบวก",
+				"body": "หลักสูตรนี้สําหรับผู้ที่ไม่แน่ใจว่าพวกเขาพร้อมสําหรับการฝึกสมาธิ แต่ต้องการทำความเข้าใจการทํางานของจิตใจให้และกระจ่างมากขึ้น และเรียนรู้วิธีการจัดการความคิดของพวกเขา",
+				"benefitsTitle": "ประโยชน์ที่ได้รับ:",
+				"benefitsListItems": [
+					"การกลับมาเป็นนายของความคิดและความรู้สึกของตนเอง",
+					"ศิลปะการสะท้อนตนเองที่อ่อนโยน",
+					"ทดลองมีประสบการณ์กับธรรมชาติของจิตใจที่มีความเป็นบวก",
+					"จบสิ้นความเป็นลบ, ภาษาที่สูบพลังงาน และการพูดคุยกับตนเอง",
+					"พัฒนาทัศนคติเชิงบวกอย่างต่อเนื่อง"
+				]
+			},
+
+			"selfEsteem": {
+				"title": "ความนับถือตนเอง",
+				"body": "ไม่ว่าเราจะประสบความสําเร็จมามากขนาดไหนก็ตาม เราจะประสบความได้สำเร็จมากขึ้นด้วยการเพิ่มความนับถือตนเอง เตือนตนเองถึงคุณค่าหลักของเรา คุณค่าดั้งเดิมของเรา เราสามารถเผชิญกับชีวิตได้อย่างมั่นใจและสงบสุข",
+				"learnHowTo": "เรียนรู้วิธีการที่จะ:",
+				"listItems": [
+					"รู้จักและค้นพบตัวตนในเชิงบวกของคุณ",
+					"ยอมรับตนเอง ระบุจุดแข็ง ความสามารถ และเอกลักษณ์ส่วนบุคคล",
+					"พัฒนากลยุทธ์ที่มีประสิทธิภาพสําหรับการสร้างความสัมพันธ์ที่ดี ปล่อยวางความกลัวและความก้าวร้าวรุนแรง",
+					"เพิ่มพลังอํานาจให้ตัวเอง, สร้างทางเลือกที่เหมาะสมเพื่อรักษาสมดุลภายใน"
+				]
+			},
+
+			"stressFreeLiving": {
+				"title": "การใช้ชีวิตที่ปราศจากความเครียด",
+				"body": "ความเครียดถูกระบุว่าเป็นสาเหตุหลักของปัญหาสุขภาพมากมาย สาเหตุส่วนใหญ่มาจากเรื่องทางจิตมากกว่าทางกาย และดังนั้นจึงเป็นเรื่องยากมากที่จะป้องกันและแก้ไข ความเครียดขส่งผลกระทบต่อพวกเราส่วนใหญ่ในบางช่วงเวลาของชีวิต ไม่ว่าจะเกิดจากสาเหตุใดก็ตาม ความเครียดจะสูบพลังงานทั้งทางร่างกาย อารมณ์และจิตใจ",
+				"learnHowTo": "เรียนรู้วิธีการที่จะ:",
+				"listItems": [
+					"ระบุรูปแบบต่างๆ ของความเครียดและผลกระทบต่อสุขภาพของเรา",
+					"ระบุตัวกระตุ้นของความเครียด วิธีการ และเหตุผลที่เราตอบโต้",
+					"เครื่องมือที่ใช้งานได้จริงเพื่อทำให้เกิดการเปลี่ยนแปลงภายใน",
+					"เปลี่ยนความกลัวเป็นการโอบกอดความรู้สึกนั้น",
+					"พัฒนาความฉลาดทางจิตวิญญาณของคุณเพื่อจัดการความเครียด"
+				]
+			}
+		}
+	]
+}

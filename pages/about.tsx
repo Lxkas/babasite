@@ -3,10 +3,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
-import translation from "../public/assets/translations/about_page.json";
+import translation from "@/public/assets/translations/about_page.json";
 
 export default function About() {
-	const { locale, locales } = useRouter();
+	const { locale } = useRouter();
 
 	return (
 		<div>

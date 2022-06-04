@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
-export default function RegisterPage() {
+import WisdomCoursesContent from "@/components/shared/wisdom/WisdomCoursesContent.mdx";
+import translation from "@/public/assets/translations/meditation/courses.json";
+
+function SignUpComponent() {
 	return (
 		<div className="bg-white py-16 sm:py-24">
 			<div className="relative sm:py-16">
@@ -105,6 +109,39 @@ export default function RegisterPage() {
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	);
+}
+
+export default function RegisterPage() {
+	const { locale } = useRouter();
+	const [currentLocaleStrings, setCurrentLocaleStrings] = useState(
+		translation.translation.filter((p) => p.locale === locale)
+	);
+
+	useEffect(() => {
+		setCurrentLocaleStrings(
+			translation.translation.filter((p) => p.locale === locale)
+		);
+	}, [locale]);
+
+	return (
+		<div className="relative h-full w-full">
+			<div className="relative flex h-full w-full flex-col">
+				{/* Explanation section */}
+				<section className="relative h-full w-full">
+					<div className="prose p-4">
+						<WisdomCoursesContent
+							translation={currentLocaleStrings[0]}
+						/>
+					</div>
+				</section>
+
+				{/* Sign up section */}
+				<section>
+					<SignUpComponent />
+				</section>
 			</div>
 		</div>
 	);

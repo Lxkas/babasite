@@ -308,8 +308,8 @@ export default function SiteFooter() {
 							Subscribe to our newsletter
 						</h3>
 						<p className="mt-2 text-base text-gray-500">
-							The latest news, articles, and resources, sent to
-							your inbox weekly.
+							The latest news, meditations, courses, sent to your
+							inbox weekly.
 						</p>
 					</div>
 					<form className="mt-4 sm:flex sm:max-w-md lg:mt-0">

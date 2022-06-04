@@ -1,0 +1,182 @@
+{
+	"translation": [
+		{
+			"locale": "en-US",
+			"choices": [
+				{
+					"text": "Contentment",
+					"description": "Just by writing a list of your achievements you realize that you have everything you need."
+				},
+				{
+					"text": "Compassion",
+					"description": "You perceive needs without judging and send out good wishes."
+				},
+				{
+					"text": "Brotherhood",
+					"description": "Because you know the father every human being has become your brother."
+				},
+				{
+					"text": "Simplicity",
+					"description": "You see the essentials in the charms of life and light your load by letting go of complications."
+				},
+				{
+					"text": "Courage",
+					"description": "You have won your greatest battle by agreeing to change"
+				},
+				{
+					"text": "Patience",
+					"description": "Knowing the tiny seed contains the future tree you let your success grow in the soil of constancy"
+				},
+				{
+					"text": "Discipline",
+					"description": "You obey the natural laws of the universe and receive in return protection, abundance and peace of mind"
+				},
+				{
+					"text": "Delicacy",
+					"description": "You make magic wands of your thoughts and actions to turn vulgarity into subtlety"
+				},
+				{
+					"text": "Humility",
+					"description": "You are a spiritual warrior who lays down the weapons of arrogance and resists to the pleasures of praise"
+				},
+				{
+					"text": "Sponteneity",
+					"description": "Your spontaneity is like a gurgling brook which quenches all thirsts and lightens burdens"
+				},
+				{
+					"text": "Responsibility",
+					"description": "Knowing your role is UNIQUE, you are the hero, not the spectator, in the drama of life"
+				},
+				{
+					"text": "Harmony",
+					"description": "When you let go, you see how life dances"
+				},
+				{
+					"text": "Wisdom",
+					"description": "You balance masterly depth and childlike lightness and learn something new in every situation"
+				},
+				{
+					"text": "Faith",
+					"description": "You remove any doubt that blocks your path forward"
+				},
+				{
+					"text": "Friendship",
+					"description": "You are your own best friend"
+				},
+				{
+					"text": "Self-confidence",
+					"description": "You accept your good points with humility and simply dare to be great"
+				},
+				{
+					"text": "Detachment",
+					"description": "You know that less expectations means less disappointment"
+				},
+				{
+					"text": "Happiness",
+					"description": "You receive the little miracles of daily life as winks from the divine"
+				},
+				{
+					"text": "Enthusiasm",
+					"description": "By listening to the child inside you, you give souls wings to fly"
+				},
+				{
+					"text": "Discernment",
+					"description": "When in doubt, you know you can trust your instinct"
+				},
+				{
+					"text": "Tolerance",
+					"description": "Diversity glorifies the garden of life. That's why you like different flowers in your bouquet of friends."
+				}
+			]
+		},
+		{
+			"locale": "th-TH",
+			"choices": [
+				{
+					"text": "พอใจ",
+					"description": "เพียงด้วยการเขียนรายการของความสำเร็จของตนท่านตระหนักว่าท่านมีทุกสิ่งที่ท่านต้องการ"
+				},
+				{
+					"text": "ความกรุณา",
+					"description": "ท่านรับรู้ถึงความต้องการของผู้อื่นโดยไม่ตัดสินและส่งความปรารถนาดีให้กับพวกเขาเสมอ"
+				},
+				{
+					"text": "ความเป็นพี่น้อง",
+					"description": "เพราะท่านรู้จักพ่อทุกคนจึงกลายเป็นพี่น้องของท่าน"
+				},
+				{
+					"text": "เรียบง่าย",
+					"description": "ท่านเห็นสาระสำคัญในเสน่ห์ของชีวิตและปลดเปลื้องน้ำหนักของภาระ ด้วยการปล่อยวางจากความซับซ้อน"
+				},
+				{
+					"text": "กล้าหาญ",
+					"description": "ท่านได้รับชัยชนะในสงครามที่ใหญ่ที่สุดเพราะท่านยินยอมที่จะเปลี่ยนแปลง"
+				},
+				{
+					"text": "อดกลั้น",
+					"description": "เพราะรู้ว่ามีต้นไม้อยู่ในเมล็ดเล็กๆท่านจึงปลูกเมล็ดของความสำเร็จในผืนดินแห่งความศรัทธา"
+				},
+				{
+					"text": "มีวินัย",
+					"description": "ท่านเชื่อฟังกฎธรรมชาติของจักรวาล ท่านจึงการปกป้องคุ้มครอง ความอุดมสมบูรณ์ และความสงบของจิตใจเป็นการตอบแทน"
+				},
+				{
+					"text": "ความละเอียดอ่อน",
+					"description": "ใช้ไม้เท้าวิเศษของความคิดและการกระทำของท่านที่จะเปลี่ยนความหยาบกระด้างให้กลายเป็นความละเอียดอ่อน"
+				},
+				{
+					"text": "ถ่อมตน",
+					"description": "ท่านคือนักรบทางจิตผู้ที่วางอาวุธของความหยิ่งยโสและความสุขจากการได้รับคำชม"
+				},
+				{
+					"text": "เป็นธรรมชาติ",
+					"description": "ความเป็นธรรมชาติของท่านเป็นเหมือนกับลำธารสายเล็กๆ ที่ไหลไปเพื่อดับกระหายของผู้คนและช่วยปลดเปลื้องความหนักหน่วง "
+				},
+				{
+					"text": "ความรับผิดชอบ",
+					"description": "การรู้หน้าที่ของตนนั้นพิเศษสุด เพราะในละครชีวิตนี้ ท่านคือนักแสดงเอก ไม่ใช่ผู้ชม"
+				},
+				{
+					"text": "ความสอดคล้องกลมกลืน",
+					"description": "เมื่อท่านปล่อยวาง ท่านจึงเห็นการร่ายรำของชีวิต"
+				},
+				{
+					"text": "ปัญญา",
+					"description": "ท่านรักษาสมดุลของความลึกล้ำของการเป็นผู้มีอำนาจและความเบาสบายเหมือนเด็กเล็กๆ และเรียนรู้สิ่งใหม่ๆได้จากทุกสถานการณ์ "
+				},
+				{
+					"text": "ศรัทธา",
+					"description": "ท่านขจัดความสงสัยที่กีดขวางหนทางก้าวหน้าของท่าน"
+				},
+				{
+					"text": "มิตรภาพ",
+					"description": "ท่านคือเพื่อนที่ดีที่สุดของตนเอง"
+				},
+				{
+					"text": "ความเชื่อมั่นในตน",
+					"description": "ท่านยอมรับข้อดีของท่านด้วยความถ่อมตนและกล้าที่จะอยู่อย่างยิ่งใหญ่"
+				},
+				{
+					"text": "ละวาง",
+					"description": "ท่านรู้ดีว่าเมื่อคาดหวังน้อยลงก็จะผิดหวังน้อยลง"
+				},
+				{
+					"text": "ความสุข",
+					"description": "ปาฏิหาริย์เล็กๆน้อยๆของชีวิตในแต่ละวันเปรียบเหมือนกับสิ่งสูงสุดกระพริบตาให้ท่าน"
+				},
+				{
+					"text": "กระตือรือร้น",
+					"description": "ด้วยการรับฟังเสียงของเด็กตัวเล็กที่อยู่ภายในตัวท่าน ท่านจึงให้ปีกที่จะโบยบินแก่ดวงวิญญาณ"
+				},
+				{
+					"text": "แยกแยะ",
+					"description": "เมื่อมีความสงสัยท่านรู้ว่าท่านสามารถไว้วางใจสัญชาตญาณภายในของตนเองได้"
+				},
+				{
+					"text": "อดทน",
+					"description": "ความแตกต่างทำให้สวนดอกไม้ของชีวิตนั้นงดงาม เหตุนี้เองท่านจึงชื่นชมดอกไม้ที่หลากหลายในช่อดอกไม้ของเพื่อนๆของท่าน"
+				}
+			]
+		}
+	]
+}

@@ -134,6 +134,12 @@ const navItems: NavItemPropType[] = [
 				text: "God Knows",
 				href: "/wisdom/god-knows",
 			},
+
+			{
+				dropdownType: "normal",
+				text: "Healthy Living",
+				href: "/wisdom/healthy-living",
+			},
 		],
 	},
 ];
