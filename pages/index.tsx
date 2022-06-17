@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
+import Stats from "@/components/shared/Stats";
 import "swiper/css";
 import "swiper/css/navigation";
-import Calendar from "@/components/shared/Calendar";
-import Stats from "@/components/shared/Stats";
 
 const Home: NextPage = () => {
 	return (
@@ -177,7 +176,7 @@ const Home: NextPage = () => {
 			</section>
 
 			{/* Divider */}
-			<div className="relative">
+			{/* <div className="relative">
 				<div
 					className="absolute inset-0 flex items-center"
 					aria-hidden="true"
@@ -191,7 +190,7 @@ const Home: NextPage = () => {
 				</div>
 			</div>
 
-			<Calendar />
+			<Calendar /> */}
 
 			<Stats />
 		</div>

@@ -107,6 +107,10 @@ const navigation = {
 	],
 };
 
+const textMap = {
+	"en-US": "English",
+	"th-TH": "Thai",
+};
 function LanguageItem(props: { text: string; href: string; locale: string }) {
 	const { text, href, locale } = props;
 	return (
@@ -122,7 +126,8 @@ function LanguageItem(props: { text: string; href: string; locale: string }) {
 								"block px-4 py-2 text-sm"
 							)}
 						>
-							{text}
+							{/* @ts-ignore */}
+							{textMap[text]}
 						</a>
 					</Link>
 				</div>
@@ -225,7 +230,16 @@ export default function SiteFooter() {
 						>
 							<div>
 								<Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-									{locales?.filter((x) => x == locale)}
+									{
+										// TODO: Make text align right if mobile
+										// @ts-ignore
+										textMap[
+											// @ts-ignore
+											locales?.filter(
+												(x) => x == locale
+											)[0]
+										]
+									}
 									<FontAwesomeIcon
 										icon={faChevronDown}
 										className="-mr-1 ml-2 h-5 w-5"

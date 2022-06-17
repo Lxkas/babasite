@@ -233,6 +233,7 @@ export default function NavigationBar() {
 								</Disclosure.Button>
 							</div>
 							<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+								{/* TODO: Make this link back to home */}
 								<div className="flex flex-shrink-0 items-center">
 									{/* <img
 										className="block w-auto h-8 lg:hidden"
