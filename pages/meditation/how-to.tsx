@@ -201,8 +201,8 @@ export default function HowtoPage() {
 				<div className="relative col-span-12 lg:col-span-8">
 					{/* How to Meditate header */}
 					<div className="prose mb-8">
-						<h2>How to Meditate</h2>
-						<p>{`Meditating is easy. Raja Yoga even has the name 'Easy Raja Yoga'. But sometimes getting started needs a little explanation. Here is a simple five-step process to follow. Soon you'll arrive at the quiet still place with just a single stride - a single thought - and you won't even need to take five steps.`}</p>
+						<h2>วิธีการฝึกสมาธิ</h2>
+						<p>{`การฝึกสมาธิแบบราชาโยคะนั้นเป็นเรื่องง่าย แต่เราจำเป็นต้องมีคําอธิบายเล็กน้อยก่อนที่จะฝึกฝน นี่คือห้าขั้นตอนที่เรียบง่ายในการฝึก และในไม่ช้า คุณก็จะเข้าถึงความเงียบสงบได้ในเพียงความคิดเดียว - และไม่จำเป็นต้องทําตามขั้นตอนเหล่านี้อีกต่อไป`}</p>
 					</div>
 
 					{/* Steps and experience table */}
@@ -224,9 +224,9 @@ export default function HowtoPage() {
 								className="divide-y divide-gray-200"
 							>
 								<StepComponent
-									title={"Step 1: Relaxation"}
+									title={"ขั้นตอนที่ 1: การผ่อนคลาย"}
 									description={
-										"Relaxation is about letting go of tension and stress and bringing the mind and body into a state of calm and peace ..."
+										"การผ่อนคลายเป็นเรื่องของการคลายความเกร็งตัวและความตึงเครียดออกไป และนําจิตใจและร่างกายเข้าสู่สภาวะที่นื่งและเงียบสงบ"
 									}
 									icon={
 										"https://www.brahmakumaris.org/images/icons/icon-relaxation.png"
@@ -235,9 +235,9 @@ export default function HowtoPage() {
 								/>
 
 								<StepComponent
-									title={"Step 2: Concentration"}
+									title={"ขั้นตอนที่ 2: การจดจ่อจิตใจ"}
 									description={
-										"Concentration allows me to use my time productively, once I have relaxed: I focus on the thoughts I choose to have ..."
+										"การจดจ่อจิตใจ ช่วยให้ฉันใช้เวลาของฉันไปอย่างมีประสิทธิภาพ เมื่อผ่อนคลายแล้ว ก็จดจ่ออยู่กับความคิดที่เลือกที่จะมี"
 									}
 									icon={
 										"https://www.brahmakumaris.org/images/icons/icon-concentration.png"
@@ -251,9 +251,9 @@ export default function HowtoPage() {
 								/>
 
 								<StepComponent
-									title={"Step 3: Contemplation"}
+									title={"ขั้นตอนที่ 3: การใคร่ครวญคือ"}
 									description={
-										"Contemplation is reflecting deeply on myself, my inner world and my values…"
+										"การคิดอย่างลึกล้ำเกี่ยวกับตัวฉัน โลกภายในของฉัน และคุณค่าหรือคุณงามความดีต่างที่ฉันยึดถือ"
 									}
 									icon={
 										"https://www.brahmakumaris.org/images/icons/icon-contemplation.png"
@@ -262,9 +262,9 @@ export default function HowtoPage() {
 								/>
 
 								<StepComponent
-									title={"Step 4: Realisation"}
+									title={"ขั้นตอนที่ 4: การตระหนักรู้"}
 									description={
-										"Realisation is when my understanding and feelings combine and I experience a more profound, more meaningful reality"
+										"เวลาที่ความเข้าใจอย่างลึกซึ้งในระดับความคิดและความรู้สึกในหัวใจที่จริงแท้ของฉันสอดคล้องกัน และทำให้ฉันมีประสบการณ์กับบางสิ่งที่มีนัยยะสำคัญที่ลึกล้ำมากขึ้น"
 									}
 									icon={
 										"https://www.brahmakumaris.org/images/icons/icon-realisation.png"
@@ -273,9 +273,9 @@ export default function HowtoPage() {
 								/>
 
 								<StepComponent
-									title={"Step 5: Meditation"}
+									title={"ขั้นตอนที่ 5: สมาธิ "}
 									description={
-										"Meditation is focusing on a thought and remembering my eternal identity, and re-awakening a wonderful state of well-being …"
+										"การสร้างสมาธิ คือการจดจ่อจิตใจอยู่กับความคิดหนึ่ง และการระลึกถึงตัวตนเดิมแท้ในความเป็นจิตวิญญาณของฉัน ปลุกเรียกและสัมผัสกับสภาวะของชีวิตที่สวยงามและเป็นสุขนั้นอีกครั้ง..."
 									}
 									icon={
 										"https://www.brahmakumaris.org/images/icons/icon-meditation.png"
@@ -286,7 +286,7 @@ export default function HowtoPage() {
 						</div>
 					</div>
 
-					<div className="mt-8 p-2">
+					{/* <div className="mt-8 p-2">
 						<span>
 							{`Learn more about Raja Yoga meditation - what it is,
 							why, how, where and when to do it, and the kind of
@@ -297,7 +297,7 @@ export default function HowtoPage() {
 							meditate? Meditating for just one minute can make a
 							difference. Find out how: just-a-minute`}
 						</span>
-					</div>
+					</div> */}
 				</div>
 
 				{/* second */}
