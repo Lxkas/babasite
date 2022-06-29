@@ -89,6 +89,11 @@ export default function WherePage() {
 								นี่เองคือความงดงามของการฝึกสมาธิแบบราชาโยคะ
 								เพราะคุณสามารถทำได้ทุกที่
 							</p>
+							<img
+								src="https://www.brahmakumaris.org/documents/11179/0/Meditation11.jpg/867fa0ba-ad38-4497-bfb9-0db11a985f49?t=1451290507703"
+								alt="Mediation pose"
+								className="rounded-md"
+							/>
 						</div>
 						<div className="prose prose-indigo mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
 							{/* <p>
@@ -136,6 +141,11 @@ export default function WherePage() {
 									แต่พวกเขาอาจสังเกตเห็นว่าคุณดูมีความสงบสุขมากขึ้น
 								</li>
 								<li>
+									<img
+										src="https://www.brahmakumaris.org/documents/10184/19632/make-space-for-meditation2.jpg/ae6ee167-02b4-4757-8fdc-101e798c846c?t=1454154552332"
+										alt="man on bench overlooking sunset"
+										className="rounded-md"
+									/>
 									ขณะเดินทาง
 									คุณสามารถใช้ช่วงเวลาที่คุณเดินทางจากที่หนึ่งไปยังอีกที่หนึ่ง
 									ไม่ว่าจะเป็นการเดิน การขับรถ นั่งรถประจำทาง
@@ -162,6 +172,11 @@ export default function WherePage() {
 								</li>
 
 								<li>
+									<img
+										src="https://www.brahmakumaris.org/documents/10184/19632/make-space-for-meditation3.jpg/06c0d31c-1912-4e06-ac64-5d4c4455b9af?t=1454154546332"
+										alt="woman sitting on a dock in the middle of a lake while the sun rises"
+										className="rounded-md"
+									/>
 									เงียบสงบท่ามกลางฝูงชน
 									เมื่อคุณเรียนรู้วิธีสร้างห้องที่เงียบสงบภายในตัวคุณ
 									คุณจะพบว่าคุณสามารถก้าวเข้าไปในห้องนั้นได้ตลอดเวลา
