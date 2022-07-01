@@ -1,5 +1,11 @@
-import { faDownload, faPlayCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+	faDownload,
+	faPlayCircle,
+	faStopCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import { useState } from "react";
 
 const oranges = [
 	"bg-white",
@@ -77,6 +83,11 @@ type StepComponentProps = {
 };
 
 function AudioLine({ audio }: { audio: AudioLineType }) {
+	const [isPlaying, setIsPlaying] = useState(false);
+	const [currentTrack, setCurrentTrack] = useState<
+		HTMLAudioElement | undefined
+	>();
+
 	return (
 		<li className="flex">
 			<div className="w-full p-2">
@@ -84,10 +95,38 @@ function AudioLine({ audio }: { audio: AudioLineType }) {
 					<div className="ml-auto flex flex-row gap-x-2">
 						<span className="mr-auto">{audio.title}</span>
 						<button>
-							<FontAwesomeIcon icon={faDownload} />
+							<Link href={audio.url}>
+								<FontAwesomeIcon icon={faDownload} />
+							</Link>
 						</button>
-						<button>
-							<FontAwesomeIcon icon={faPlayCircle} />
+						<button
+							onClick={() => {
+								try {
+									if (typeof currentTrack == "undefined") {
+										const newTrack = new Audio(audio.url);
+										setCurrentTrack(newTrack);
+
+										newTrack.play();
+										setIsPlaying(true);
+
+										return;
+									}
+
+									if (isPlaying) {
+										currentTrack?.pause();
+										setIsPlaying(false);
+									} else {
+										currentTrack?.play();
+										setIsPlaying(true);
+									}
+								} catch (error) {
+									console.error(error);
+								}
+							}}
+						>
+							<FontAwesomeIcon
+								icon={isPlaying ? faStopCircle : faPlayCircle}
+							/>
 						</button>
 					</div>
 				</div>
@@ -231,7 +270,24 @@ export default function HowtoPage() {
 									icon={
 										"https://www.brahmakumaris.org/images/icons/icon-relaxation.png"
 									}
-									audios={[{ title: "Title 1", url: "#" }]}
+									audios={[
+										{
+											title: "ผ่อนคลายในป่าใหญ่",
+											url: "/assets/audio/how-to-meditate/relaxation1.m4a",
+										},
+										{
+											title: "ผ่อนคลายกล้ามเนื้อ",
+											url: "/assets/audio/how-to-meditate/relaxation2.m4a",
+										},
+										{
+											title: "ผ่อนคลายกับลมหายใจ",
+											url: "/assets/audio/how-to-meditate/relaxation3.m4a",
+										},
+										{
+											title: "ผ่อนคลายการเชื่อมโยง",
+											url: "/assets/audio/how-to-meditate/relaxation4.m4a",
+										},
+									]}
 								/>
 
 								<StepComponent
