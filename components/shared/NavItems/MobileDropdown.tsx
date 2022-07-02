@@ -7,6 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
+import { MutableRefObject } from "react";
 
 function MobileDropdownItem(props: {
 	title: string;
@@ -53,7 +54,16 @@ function MobileDropdownItem(props: {
 	);
 }
 
-export default function MobileDropDown(props: { text: string; data: any }) {
+export default function MobileDropDown(props: {
+	text: string;
+	data: any;
+	closeFunction?: (
+		focusableElement?:
+			| HTMLElement
+			| MutableRefObject<HTMLElement | null>
+			| undefined
+	) => void;
+}) {
 	return (
 		<Disclosure>
 			{({ open }) => (
@@ -77,7 +87,18 @@ export default function MobileDropDown(props: { text: string; data: any }) {
 												key={item.text + i}
 												href={item.href}
 											>
-												<a className="p-2">
+												<a
+													className="p-2"
+													onClick={() => {
+														console.log("???");
+
+														if (
+															props.closeFunction
+														) {
+															props.closeFunction();
+														}
+													}}
+												>
 													{item.text}
 												</a>
 											</Link>
