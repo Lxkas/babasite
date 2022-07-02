@@ -1,7 +1,7 @@
 import {
-	faDownload,
+	faCircleArrowDown,
+	faPauseCircle,
 	faPlayCircle,
-	faStopCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -9,66 +9,11 @@ import { useState } from "react";
 
 const oranges = [
 	"bg-white",
+	"bg-orange-50",
 	"bg-orange-100",
 	"bg-orange-200",
 	"bg-orange-300",
-	"bg-orange-400",
 ];
-
-function StepTr({ ind }: { ind: number }) {
-	return (
-		<div
-			className={`flex min-w-full flex-col rounded-md p-4 shadow-md xl:flex-row ${oranges[ind]}`}
-		>
-			<div className="w-full xl:w-1/2">
-				<div className="flex flex-row">
-					<div className="flex flex-col items-center self-start">
-						<h4 className="mb-2 font-bold">Step {ind}</h4>
-						<span>
-							<img
-								src="https://www.brahmakumaris.org/images/icons/icon-relaxation.png"
-								alt="adas"
-								className="max-w-4xl"
-							/>
-						</span>
-					</div>
-
-					<div className="p-2">
-						<h2 className="mb-2">Relaxation</h2>
-						<span>
-							Relaxation is about letting go of tension and stress
-							and bringing the mind and body into a state of calm
-							and peace...
-						</span>
-					</div>
-				</div>
-			</div>
-			<ul className="flex w-full flex-col xl:w-1/2">
-				<li className="flex flex-row border-b border-b-orange-500 p-2">
-					<div>Line 1</div>
-					<div className="ml-auto flex flex-row gap-x-2">
-						<span>D</span>
-						<span>P</span>
-					</div>
-				</li>
-				<li className="flex flex-row border-b border-b-orange-500 p-2">
-					<div>Line 2</div>
-					<div className="ml-auto flex flex-row gap-x-2">
-						<span>D</span>
-						<span>P</span>
-					</div>
-				</li>
-				<li className="flex flex-row border-b border-b-orange-500 p-2">
-					<div>Line 3</div>
-					<div className="ml-auto flex flex-row gap-x-2">
-						<span>D</span>
-						<span>P</span>
-					</div>
-				</li>
-			</ul>
-		</div>
-	);
-}
 
 type AudioLineType = {
 	title: string;
@@ -80,6 +25,7 @@ type StepComponentProps = {
 	audios: AudioLineType[];
 	title: string;
 	description: string;
+	ind: number;
 };
 
 function AudioLine({ audio }: { audio: AudioLineType }) {
@@ -94,12 +40,16 @@ function AudioLine({ audio }: { audio: AudioLineType }) {
 				<div className="text-md w-full font-medium text-gray-900">
 					<div className="ml-auto flex flex-row gap-x-2">
 						<span className="mr-auto">{audio.title}</span>
-						<button>
+						<button className="flex items-center justify-center rounded-full bg-white p-2 shadow-md">
 							<Link href={audio.url}>
-								<FontAwesomeIcon icon={faDownload} />
+								<FontAwesomeIcon
+									icon={faCircleArrowDown}
+									color={"orange"}
+								/>
 							</Link>
 						</button>
 						<button
+							className="flex items-center justify-center rounded-full bg-white p-2 shadow-md"
 							onClick={() => {
 								try {
 									if (typeof currentTrack == "undefined") {
@@ -125,7 +75,8 @@ function AudioLine({ audio }: { audio: AudioLineType }) {
 							}}
 						>
 							<FontAwesomeIcon
-								icon={isPlaying ? faStopCircle : faPlayCircle}
+								icon={isPlaying ? faPauseCircle : faPlayCircle}
+								color={"orange"}
 							/>
 						</button>
 					</div>
@@ -140,9 +91,10 @@ function StepComponent({
 	audios,
 	title,
 	description,
+	ind,
 }: StepComponentProps) {
 	return (
-		<li>
+		<li className={`${oranges[ind]}`}>
 			<div className="block">
 				<div className="flex items-center px-4 py-4 sm:px-6">
 					<div className="flex min-w-0 flex-1 items-center">
@@ -155,10 +107,10 @@ function StepComponent({
 						</div>
 						<div className="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
 							<div>
-								<p className="truncate text-lg font-bold text-orange-600">
+								<p className="truncate text-lg font-bold text-black">
 									{title}
 								</p>
-								<p className="mt-2 flex items-center text-sm text-gray-500">
+								<p className="mt-2 flex items-center text-sm text-black">
 									{/* <svg
 																className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
 																xmlns="http://www.w3.org/2000/svg"
@@ -169,10 +121,10 @@ function StepComponent({
 																<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
 																<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
 															</svg> */}
-									<span className="">{description}</span>
+									<span>{description}</span>
 								</p>
 							</div>
-							<div className="">
+							<div>
 								<div>
 									<div className="text-md text-gray-900">
 										<ul
@@ -242,6 +194,9 @@ export default function HowtoPage() {
 					<div className="prose mb-8">
 						<h2>วิธีการฝึกสมาธิ</h2>
 						<p>{`การฝึกสมาธิแบบราชาโยคะนั้นเป็นเรื่องง่าย แต่เราจำเป็นต้องมีคําอธิบายเล็กน้อยก่อนที่จะฝึกฝน นี่คือห้าขั้นตอนที่เรียบง่ายในการฝึก และในไม่ช้า คุณก็จะเข้าถึงความเงียบสงบได้ในเพียงความคิดเดียว - และไม่จำเป็นต้องทําตามขั้นตอนเหล่านี้อีกต่อไป`}</p>
+						<p className="ml-8 text-xl font-bold text-orange-500">
+							ขั้นตอน
+						</p>
 					</div>
 
 					{/* Steps and experience table */}
@@ -263,6 +218,7 @@ export default function HowtoPage() {
 								className="divide-y divide-gray-200"
 							>
 								<StepComponent
+									ind={0}
 									title={"ขั้นตอนที่ 1: การผ่อนคลาย"}
 									description={
 										"การผ่อนคลายเป็นเรื่องของการคลายความเกร็งตัวและความตึงเครียดออกไป และนําจิตใจและร่างกายเข้าสู่สภาวะที่นื่งและเงียบสงบ"
@@ -291,6 +247,7 @@ export default function HowtoPage() {
 								/>
 
 								<StepComponent
+									ind={1}
 									title={"ขั้นตอนที่ 2: การจดจ่อจิตใจ"}
 									description={
 										"การจดจ่อจิตใจ ช่วยให้ฉันใช้เวลาของฉันไปอย่างมีประสิทธิภาพ เมื่อผ่อนคลายแล้ว ก็จดจ่ออยู่กับความคิดที่เลือกที่จะมี"
@@ -307,6 +264,7 @@ export default function HowtoPage() {
 								/>
 
 								<StepComponent
+									ind={2}
 									title={"ขั้นตอนที่ 3: การใคร่ครวญคือ"}
 									description={
 										"การคิดอย่างลึกล้ำเกี่ยวกับตัวฉัน โลกภายในของฉัน และคุณค่าหรือคุณงามความดีต่างที่ฉันยึดถือ"
@@ -318,6 +276,7 @@ export default function HowtoPage() {
 								/>
 
 								<StepComponent
+									ind={3}
 									title={"ขั้นตอนที่ 4: การตระหนักรู้"}
 									description={
 										"เวลาที่ความเข้าใจอย่างลึกซึ้งในระดับความคิดและความรู้สึกในหัวใจที่จริงแท้ของฉันสอดคล้องกัน และทำให้ฉันมีประสบการณ์กับบางสิ่งที่มีนัยยะสำคัญที่ลึกล้ำมากขึ้น"
@@ -329,6 +288,7 @@ export default function HowtoPage() {
 								/>
 
 								<StepComponent
+									ind={4}
 									title={"ขั้นตอนที่ 5: สมาธิ "}
 									description={
 										"การสร้างสมาธิ คือการจดจ่อจิตใจอยู่กับความคิดหนึ่ง และการระลึกถึงตัวตนเดิมแท้ในความเป็นจิตวิญญาณของฉัน ปลุกเรียกและสัมผัสกับสภาวะของชีวิตที่สวยงามและเป็นสุขนั้นอีกครั้ง..."
