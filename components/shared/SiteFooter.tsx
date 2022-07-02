@@ -201,7 +201,7 @@ export default function SiteFooter() {
 									))}
 								</ul>
 							</div>
-							<div className="mt-12 md:mt-0">
+							{/* <div className="mt-12 md:mt-0">
 								<h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
 									Legal
 								</h3>
@@ -217,7 +217,7 @@ export default function SiteFooter() {
 										</li>
 									))}
 								</ul>
-							</div>
+							</div> */}
 						</div>
 					</div>
 					<div className="mt-12 xl:mt-0">
