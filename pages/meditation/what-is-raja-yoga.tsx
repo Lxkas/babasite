@@ -1,4 +1,15 @@
+import { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
+
 export default function WhatIsRajaYoga() {
+	const [hasWindow, setHasWindow] = useState(false);
+
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			setHasWindow(true);
+		}
+	}, []);
+
 	return (
 		<div className="relative overflow-hidden bg-white py-16">
 			<div className="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full">
@@ -32,11 +43,11 @@ export default function WhatIsRajaYoga() {
 								/>
 							</pattern>
 						</defs>
-						<rect
+						{/* <rect
 							width="404"
 							height="384"
 							fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)"
-						/>
+						/> */}
 					</svg>
 					<svg
 						className="absolute top-1/2 right-full -translate-y-1/2 -translate-x-32 transform"
@@ -114,92 +125,44 @@ export default function WhatIsRajaYoga() {
 							สมาธิแบบราชาโยคะ
 						</span>
 					</h1>
-					<p className="mt-8 text-xl leading-8 text-gray-500">
-						การทำสมาธิเป็นการเดินทางเข้าสู่ภายใน
-						เป็นการเดินทางเพื่อการค้นพบตนเองอีกครั้ง
-						สมาธิคือเวลาแห่งการใคร่ครวญในความเงียบสงบ
-						ออกมาจากความเร่งรีบและความสับสนวุ่นวายของการใช้ชีวิตประจําวัน
-						การจัดหาเวลานอกเช่นนี้
-						จะช่วยให้เราสามารถกลับคืนสู่ตัวตนภายในที่เงียสงบได้อีกครั้ง
-						ในโลกสมัยใหม่ การใช้ชีวิตที่รีบเร่งขึ้นเรื่อย ๆ
-						ทำให้เราสูญเสียการเชื่อมโยงกับความสงบและพลังภายในที่แท้จริงของตนเอง
-						เมื่อเราไม่สามารถรู้สึกมั่นคงกับตนเองภายในได้
-						เราจึงมีประสบการณ์ของการถูกผลัก ถูกดัน
-						หรือถูกดึงไปในทิศทางต่าง ๆ มากมาย และเริ่มรู้สึกเครียด
-						รู้สึกติดกับอยู่ภายใน และเมื่อเวลาผ่านไป
-						ความรู้สึกนี้ก็อาจนําไปสู่การเจ็บป่วยและโรคภัยต่างๆได้ทีละน้อย
-						ซึ่งเกิดจากการขาดสมดุลในการดูแลสุขภาพของจิตใจ อารมณ์
-						และร่างกาย
-					</p>
+					<div className="mt-8 text-xl leading-8 text-gray-500">
+						<span>
+							<figure>
+								<img
+									className="w-full rounded-lg lg:float-left lg:mb-2 lg:mr-4 lg:w-96"
+									src="https://www.brahmakumaris.org/documents/10184/19632/raja-yoga-meditation1.jpg/e07635f5-3cf9-43c4-a69a-fe71a89dfe55?t=1454154559432"
+									alt=""
+								/>
+							</figure>
+							<p>
+								การทำสมาธิเป็นการเดินทางเข้าสู่ภายใน
+								เป็นการเดินทางเพื่อการค้นพบตนเองอีกครั้ง
+								สมาธิคือเวลาแห่งการใคร่ครวญในความเงียบสงบ
+								ออกมาจากความเร่งรีบและความสับสนวุ่นวายของการใช้ชีวิตประจําวัน
+								การจัดหาเวลานอกเช่นนี้
+								จะช่วยให้เราสามารถกลับคืนสู่ตัวตนภายในที่เงียสงบได้อีกครั้ง
+								ในโลกสมัยใหม่ การใช้ชีวิตที่รีบเร่งขึ้นเรื่อย ๆ
+								ทำให้เราสูญเสียการเชื่อมโยงกับความสงบและพลังภายในที่แท้จริงของตนเอง
+								เมื่อเราไม่สามารถรู้สึกมั่นคงกับตนเองภายในได้
+								เราจึงมีประสบการณ์ของการถูกผลัก ถูกดัน
+								หรือถูกดึงไปในทิศทางต่าง ๆ มากมาย
+								และเริ่มรู้สึกเครียด รู้สึกติดกับอยู่ภายใน
+								และเมื่อเวลาผ่านไป
+								ความรู้สึกนี้ก็อาจนําไปสู่การเจ็บป่วยและโรคภัยต่างๆได้ทีละน้อย
+								ซึ่งเกิดจากการขาดสมดุลในการดูแลสุขภาพของจิตใจ
+								อารมณ์ และร่างกาย
+							</p>
+						</span>
+					</div>
 				</div>
 				<div className="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
-					{/* <p>
-						Faucibus commodo massa rhoncus, volutpat.{" "}
-						<strong>Dignissim</strong> sed{" "}
-						<strong>eget risus enim</strong>. Mattis mauris semper
-						sed amet vitae sed turpis id. Id dolor praesent donec
-						est. Odio penatibus risus viverra tellus varius sit
-						neque erat velit. Faucibus commodo massa rhoncus,
-						volutpat. Dignissim sed eget risus enim.{" "}
-						<a href="#">Mattis mauris semper</a> sed amet vitae sed
-						turpis id.
-					</p>
-					<ul role="list">
-						<li>Quis elit egestas venenatis mattis dignissim.</li>
-						<li>
-							Cras cras lobortis vitae vivamus ultricies facilisis
-							tempus.
-						</li>
-						<li>
-							Orci in sit morbi dignissim metus diam arcu pretium.
-						</li>
-					</ul>
-					<p>
-						Quis semper vulputate aliquam venenatis egestas sagittis
-						quisque orci. Donec commodo sit viverra aliquam
-						porttitor ultrices gravida eu. Tincidunt leo, elementum
-						mattis elementum ut nisl, justo, amet, mattis. Nunc
-						purus, diam commodo tincidunt turpis. Amet, duis sed
-						elit interdum dignissim.
-					</p>
-					<h2>From beginner to expert in 30 days</h2>
-					<p>
-						Id orci tellus laoreet id ac. Dolor, aenean leo, ac
-						etiam consequat in. Convallis arcu ipsum urna nibh.
-						Pharetra, euismod vitae interdum mauris enim, consequat
-						vulputate nibh. Maecenas pellentesque id sed tellus
-						mauris, ultrices mauris. Tincidunt enim cursus ridiculus
-						mi. Pellentesque nam sed nullam sed diam turpis ipsum eu
-						a sed convallis diam.
-					</p>
-					<blockquote>
-						<p>
-							Sagittis scelerisque nulla cursus in enim
-							consectetur quam. Dictum urna sed consectetur neque
-							tristique pellentesque. Blandit amet, sed aenean
-							erat arcu morbi.
-						</p>
-					</blockquote>
-					<p>
-						Faucibus commodo massa rhoncus, volutpat. Dignissim sed
-						eget risus enim. Mattis mauris semper sed amet vitae sed
-						turpis id. Id dolor praesent donec est. Odio penatibus
-						risus viverra tellus varius sit neque erat velit.
-					</p> */}
 					<figure>
 						<img
-							className="w-full rounded-lg"
-							src="https://www.brahmakumaris.org/documents/10184/19632/raja-yoga-meditation1.jpg/e07635f5-3cf9-43c4-a69a-fe71a89dfe55?t=1454154559432"
+							className="w-full rounded-lg lg:float-left lg:mr-4 lg:mb-2 lg:w-96"
+							src="https://www.brahmakumaris.org/documents/10184/19632/raja-yoga-meditation2.jpg/41695908-35d2-4845-b4b1-dbadc91ce6be?t=1454154565652"
 							alt=""
-							width="1310"
-							height="873"
 						/>
-						{/* <figcaption>
-							Sagittis scelerisque nulla cursus in enim
-							consectetur quam.
-						</figcaption> */}
 					</figure>
-					{/* <h2>Everything you need to get up and running</h2> */}
 					<p>
 						{`สมาธิแบบราชาโยคะเป็นสมาธิที่ทุกคนสามารถปฏิบัติได้
 						เป็นการทำสมาธิที่ไม่มีพิธีกรรม ไม่ใช้มันตรา
@@ -207,8 +170,6 @@ export default function WhatIsRajaYoga() {
 						สมาธิแบบราชาโยคะเป็นสมาธิแบบ 'เปิดตา'
 						ที่สามารถใช้ได้ในทุกสถานการณ์ เรียบง่าย
 						และไม่ยากที่จะฝึกฝน`}
-					</p>
-					<p>
 						การทำสมาธิ
 						คือการอยู่ในสภาวะของการรักษาจิตสำนึกให้ไปอยู่เหนือสำนึกรู้ธรรมดาในชีวิตประจำวันทั่วไป
 						ซึ่งเป็นจุดเริ่มต้นของการเสริมสร้างพลังทางจิตวิญญาณ
@@ -221,6 +182,28 @@ export default function WhatIsRajaYoga() {
 						มีความสัมพันธ์ที่ดี มีความสุข และเข้มแข็งยิ่งขึ้น
 						และเปลี่ยนชีวิตของเราให้เป็นไปในทางบวกให้มากที่สุด
 					</p>
+					<div className="relative mt-4 aspect-video 2xl:absolute 2xl:right-48 2xl:top-0 2xl:w-1/6 2xl:bg-white 2xl:p-4">
+						{hasWindow && (
+							<>
+								<p className="mb-1 font-bold text-black">
+									The Power Pack of Raja Yoga
+								</p>
+								<ReactPlayer
+									url="http://www.brahmakumaris.org/alfresco/guestDownload/direct/workspace/SpacesStore/ce6a4c06-2cf9-47a0-82be-ec9d3b1e1da2/The%20power%20pack%20of%20raja%20Yoga%202.mp4"
+									light={
+										"https://www.brahmakumaris.org/images/headers/Head8banner.jpg"
+									}
+									controls
+									width="100%"
+									height="100%"
+								/>
+								<p>
+									Sister Jayanti gives deep insight on what
+									inspires people to seek truth.
+								</p>
+							</>
+						)}
+					</div>
 				</div>
 			</div>
 		</div>
