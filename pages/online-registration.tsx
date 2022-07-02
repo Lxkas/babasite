@@ -50,9 +50,11 @@ export default function OnlineRegistrationPage() {
 
 		console.log(resultJSON);
 
-		await new Promise((r) => setTimeout(r, 1000));
-
 		clearForm();
+
+		if (resultJSON.error) {
+			console.error(resultJSON.error);
+		}
 
 		setSubmitResult({
 			message: resultJSON.message,
