@@ -68,7 +68,7 @@ export default function MobileDropDown(props: {
 		<Disclosure>
 			{({ open }) => (
 				<>
-					<Disclosure.Button className="block border-l-4 border-transparent bg-white py-2 pl-3 pr-4 text-base font-medium text-gray-700">
+					<Disclosure.Button className="block border-l-4 border-transparent bg-white py-2 pl-2 pr-4 text-base font-medium text-gray-700">
 						<span>{props.text}</span>
 						<FontAwesomeIcon
 							icon={faCaretUp}

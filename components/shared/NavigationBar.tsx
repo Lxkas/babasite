@@ -253,7 +253,7 @@ export default function NavigationBar() {
 											width={400}
 											height={80}
 											src="https://brahmakumaris.org.au/new/wp-content/uploads/2020/09/the-brahma-kumaris-australia-1024x212.png"
-											alt="Workflow"
+											alt="Logo"
 										/>
 									</span>
 								</div>

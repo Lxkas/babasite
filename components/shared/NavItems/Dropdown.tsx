@@ -1,16 +1,12 @@
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import { Disclosure } from "@headlessui/react";
+import { useEffect, useRef, useState } from "react";
 
+import { faCaretDown, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faCaretDown,
-	faCaretLeft,
-	faCaretRight,
-} from "@fortawesome/free-solid-svg-icons";
 
 import { DropdownNavItemOptions } from "@/types/NavigationBarTypes";
-import Link from "next/link";
 import { classNames } from "@/utils/classNames";
+import Link from "next/link";
 
 function useOnClickOutside(ref: any, handler: any) {
 	useEffect(
@@ -137,10 +133,10 @@ export default function Dropdown(props: { text: string; data: any }) {
 			<div
 				className={classNames(
 					dropdownOpen ? "" : "hidden",
-					"absolute top-full left-0 h-min w-44 bg-white shadow-lg"
+					"absolute top-full left-0 h-min w-44 text-gray-700 shadow-lg"
 				)}
 			>
-				<div className="flex flex-col">
+				<div className="flex flex-col bg-white">
 					{data.map((item: any, i: number) => {
 						switch (item.dropdownType) {
 							case "normal":
