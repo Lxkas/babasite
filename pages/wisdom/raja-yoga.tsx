@@ -1,13 +1,21 @@
-import React, { useEffect, useState } from "react";
 import translation from "@/public/assets/translations/wisdom/raja-yoga.json";
 import { useRouter } from "next/router";
-import YouTube from "react-youtube";
+import { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 
 export default function RajaYoga() {
 	const { locale, locales } = useRouter();
 	const [currentLocaleStrings, setCurrentLocaleStrings] = useState(
 		translation.translation.filter((p) => p.locale === locale)
 	);
+
+	const [hasWindow, setHasWindow] = useState(false);
+
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			setHasWindow(true);
+		}
+	}, []);
 
 	useEffect(() => {
 		setCurrentLocaleStrings(
@@ -111,9 +119,17 @@ export default function RajaYoga() {
 									alt="Workcation"
 									className="h-8"
 								/> */}
-								<p className="h-8 text-4xl font-bold">
-									Who am I?
-								</p>
+								<div className="text-4xl font-bold">
+									<p className="mb-4">Who am I?</p>
+									{hasWindow && (
+										<ReactPlayer
+											controls
+											url={
+												"http://www.brahmakumaris.org/alfresco/guestDownload/direct/workspace/SpacesStore/6a329832-0f96-4d9d-bbd8-0aa7e0a5c3f0/Raja%20Yoga%20Meditation%20Who%20Am%20I%20HD.mp4"
+											}
+										/>
+									)}
+								</div>
 								<div className="relative mt-8 text-lg font-medium text-gray-700">
 									{/* <svg
 										className="absolute top-0 left-0 w-8 h-8 text-gray-200 transform -translate-x-3 -translate-y-2"
