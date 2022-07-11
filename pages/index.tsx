@@ -27,21 +27,48 @@ const Home: NextPage = () => {
 
 					<div className="relative flex h-full w-full flex-col items-center justify-center">
 						<div className="absolute h-full w-full bg-purple-700 opacity-25"></div>
-						<div className="z-10 mt-auto mb-20 text-center text-6xl font-extrabold text-white">
+						<div className="relative flex h-full w-full flex-col items-center justify-center">
+							<div className="flex flex-col sm:absolute sm:bottom-0 sm:h-1/4">
+								<p className="mb-8 text-center text-6xl font-extrabold text-white">
+									You are powerful
+								</p>
+								<p className="w-full px-2 pb-2 text-center text-2xl font-normal text-white">
+									{`With an ever increasing amount of turmoil in the
+								world it's difficult to know how to help or even
+								cope with it all.`}
+									<br />
+									Our thoughts have power. They shape the
+									world and can influence people and nature.
+									<br />
+									Spending 5 mins a day consciously creating
+									thoughts of love and peace for the world can
+									help lift the atmosphere in a subtle yet
+									very meaningful way. The influence of these
+									powerful thoughts cannot be overstated.
+								</p>
+							</div>
+						</div>
+						{/* <div className="z-10 mt-auto mb-20 text-center text-6xl font-extrabold text-white">
 							<p className="mb-4">You are powerful</p>
 							<p className="w-1/2 translate-x-1/2 text-2xl font-normal">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Tenetur quae illo eaque cumque
-								placeat fuga quaerat amet ea, quam eum maxime
-								ducimus quo totam quos explicabo vitae. Officia
-								nesciunt esse modi vitae repellendus
+								With an ever increasing amount of turmoil in the
+								world it's difficult to know how to help or even
+								cope with it all.
+								<br />
+								Our thoughts have power. They shape the world
+								and can influence people and nature. <br />
+								Spending 5 mins a day consciously creating
+								thoughts of love and peace for the world can
+								help lift the atmosphere in a subtle yet very
+								meaningful way. The influence of these powerful
+								thoughts cannot be overstated.
 							</p>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</section>
 
-			<section className="h-screen w-full">
+			{/* <section className="h-screen w-full">
 				<Swiper
 					loop={true}
 					navigation={true}
@@ -106,6 +133,44 @@ const Home: NextPage = () => {
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>Slide 3</SwiperSlide>
+				</Swiper>
+			</section> */}
+
+			<section>
+				<Swiper
+					loop={true}
+					navigation={true}
+					modules={[Navigation]}
+					className="h-full w-full"
+				>
+					<SwiperSlide>
+						<div className="relative flex h-full w-full items-center justify-center bg-black">
+							{/* TODO: Make these local images, and make them components */}
+							<img
+								className="h-auto w-full"
+								src="http://brahmakumaris.or.th/images/2018/09/25/think-.jpg"
+								alt="Some"
+							/>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="relative flex h-full w-full items-center justify-center bg-black">
+							<img
+								className="h-auto w-full"
+								src="http://brahmakumaris.or.th/images/2018/09/25/course-1.jpg"
+								alt="Some"
+							/>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="relative flex h-full w-full items-center justify-center bg-black">
+							<img
+								className="h-auto w-full"
+								src="http://brahmakumaris.or.th/images/2018/09/25/stress-free.jpg"
+								alt="Some"
+							/>
+						</div>
+					</SwiperSlide>
 				</Swiper>
 			</section>
 
