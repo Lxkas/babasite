@@ -2,13 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import Dropdown from "./NavItems/Dropdown";
 
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
 
 import { NavItemPropType } from "@/types/NavigationBarTypes";
+import { useLayoutEffect, useState } from "react";
 import MobileDropDown from "./NavItems/MobileDropdown";
 
 const navItems: NavItemPropType[] = [
@@ -186,21 +186,22 @@ function MobileNavItem(props: NavItemPropType) {
 export default function NavigationBar() {
 	const [hasScrolled, setHasScrolled] = useState(false);
 
-	function handleScroll() {
-		if (window.scrollY > 0) {
-			setHasScrolled(true);
-		}
+	useLayoutEffect(() => {
+		const handleScroll = () => {
+			setHasScrolled(window.scrollY > 0);
+		};
 
-		if (window.scrollY <= 0) {
-			setHasScrolled(false);
-		}
-	}
+		// just trigger this so that the initial state
+		// is updated as soon as the component is mounted
+		// related: https://stackoverflow.com/a/63408216
+		handleScroll();
 
-	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
