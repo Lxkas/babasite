@@ -5,9 +5,9 @@ export default function WherePage() {
 				<div className="absolute top-0 bottom-0 left-3/4 hidden w-screen bg-gray-50 lg:block"></div>
 				<div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
 					<div>
-						<h2 className="text-base font-semibold uppercase tracking-wide text-indigo-600">
+						{/* <h2 className="text-base font-semibold uppercase tracking-wide text-indigo-600">
 							Meditation
-						</h2>
+						</h2> */}
 						<h3 className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
 							การสร้างพื้นที่สําหรับการทําสมาธิ
 						</h3>
@@ -114,9 +114,11 @@ export default function WherePage() {
 								Quis lorem lorem arcu, metus, egestas netus
 								cursus. In.
 							</p> */}
-							<ul role="list">
-								<li>
-									ที่บ้าน
+							<div>
+								<div className="mb-8">
+									<p className="mb-2 text-3xl font-bold text-black">
+										ที่บ้าน
+									</p>
 									คุณไม่จําเป็นต้องจัดเตรียมพื้นที่หรือห้องใดขึ้นมาพิเศษ
 									เพียงแต่หามุมที่เงียบสงบหรือเก้าอี้ที่สะดวกสบายสักตัว
 									จัดตารางเวลาให้เป็นประจำ
@@ -126,9 +128,11 @@ export default function WherePage() {
 									และการฝึกที่จะใคร่ครวญในเวลานั้น
 									จะช่วยสร้างพื้นที่น้อยๆอันเงียบสงบ
 									ที่คุณสามารถแวะเวียนไปได้ทุกเวลาที่คุณต้องการ
-								</li>
-								<li>
-									ในที่ทํางานของคุณ
+								</div>
+								<div className="mb-8">
+									<p className="mb-2 text-3xl font-bold text-black">
+										ในที่ทํางานของคุณ
+									</p>
 									ไม่ว่าคุณจะทํางานที่ใดก็ตาม
 									เพียงความคิดสร้างสรรค์เล็กน้อยก็จะช่วยให้คุณสามารถหาสถานที่สําหรับฝึกสมาธิได้
 									เช่น ระหว่างที่ถือหูรอสายโทรศัพท์
@@ -139,14 +143,17 @@ export default function WherePage() {
 									แค่นี้ก็สามารถให้ความสงบสองสามนาทีแก่คุณได้แล้ว
 									เพื่อนร่วมงานของคุณจะไม่รู้เลยว่าคุณกำลังทำสมาธิ
 									แต่พวกเขาอาจสังเกตเห็นว่าคุณดูมีความสงบสุขมากขึ้น
-								</li>
-								<li>
+								</div>
+
+								<div className="mb-8">
 									<img
 										src="https://www.brahmakumaris.org/documents/10184/19632/make-space-for-meditation2.jpg/ae6ee167-02b4-4757-8fdc-101e798c846c?t=1454154552332"
 										alt="man on bench overlooking sunset"
 										className="rounded-md"
 									/>
-									ขณะเดินทาง
+									<p className="mb-2 text-3xl font-bold text-black">
+										ขณะเดินทาง
+									</p>
 									คุณสามารถใช้ช่วงเวลาที่คุณเดินทางจากที่หนึ่งไปยังอีกที่หนึ่ง
 									ไม่ว่าจะเป็นการเดิน การขับรถ นั่งรถประจำทาง
 									รถไฟฟ้า
@@ -155,9 +162,12 @@ export default function WherePage() {
 									ทําให้การเดินทางภายในนี้เป็นไปได้โดยง่าย
 									และปฏิบัติได้จริงในชีวิตประจำวันทั่วไป
 									นอกเหนือจากการจัดเวลานั่งสมาธิเป็นเรื่องเป็นราวด้วย
-								</li>
-								<li>
-									ภายนอกหรือภายในอาคารก็ได้
+								</div>
+
+								<div className="mb-8">
+									<p className="mb-2 text-3xl font-bold text-black">
+										ภายนอกหรือภายในอาคารก็ได้
+									</p>
 									คุณสามารถเลือกสถานที่ใดๆของคุณได้เอง
 									เพื่อเชื่อมต่อกับตัวตนภายใน
 									และเชื่อมต่อกับพระเจ้า
@@ -169,23 +179,25 @@ export default function WherePage() {
 									หรือพื้นหญ้าสักแห่ง
 									ทุกที่เป็นสถานที่ที่ดีที่จะกลับมานิ่งและเงียบสงบ
 									คุณสามารถเลือกสถานที่แห่งสันติสุขของคุณเอง
-								</li>
+								</div>
 
-								<li>
+								<div className="mb-8">
 									<img
 										src="https://www.brahmakumaris.org/documents/10184/19632/make-space-for-meditation3.jpg/06c0d31c-1912-4e06-ac64-5d4c4455b9af?t=1454154546332"
 										alt="woman sitting on a dock in the middle of a lake while the sun rises"
 										className="rounded-md"
 									/>
-									เงียบสงบท่ามกลางฝูงชน
+									<p className="mb-2 text-3xl font-bold text-black">
+										เงียบสงบท่ามกลางฝูงชน
+									</p>
 									เมื่อคุณเรียนรู้วิธีสร้างห้องที่เงียบสงบภายในตัวคุณ
 									คุณจะพบว่าคุณสามารถก้าวเข้าไปในห้องนั้นได้ตลอดเวลา
 									ในเวลาที่มีผู้คนรายล้อมรอบตัว
 									หรือขณะอยู่ท่ามกลางเสียงอึกทึกหรือความท้าทาย
 									เพียงแต่กลับเข้าไปในสถานที่ที่เงียบที่สุดในโลกนี้
 									: พื้นที่แห่งความเงียบของจิตวิญญาณ
-								</li>
-							</ul>
+								</div>
+							</div>
 							<p>
 								ไม่ว่าจะอยู่ตามลำพังหรืออยู่กับผู้คน
 								ประสบการณ์ที่สวยงามที่สุดของการทําสมาธิอาจจะเกิดขึ้นได้เมื่อคุณอยู่ตามลำพังกับตนเองและพระเจ้า
