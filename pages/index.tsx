@@ -1,12 +1,41 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Stats from "@/components/shared/Stats";
 import "swiper/css";
 import "swiper/css/navigation";
+
+function WordSlider() {
+	return (
+		<SwiperSlide>
+			<div className="relative flex h-[580px] w-full items-center justify-center py-4">
+				<Image
+					src={
+						"https://images.unsplash.com/photo-1596461009523-7d647a4e2399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+					}
+					quality={100}
+					alt="Forest"
+					className="-z-20 object-cover"
+					layout="fill"
+				/>
+
+				<div className="absolute">
+					<div className="flex flex-col items-center text-white">
+						<h1 className="text-4xl font-extrabold">ปัญญา</h1>
+						<p className="text-xl">
+							การมีปัญญา หมายถึง
+							การตอบสนองต่อสถานการณ์อย่างถูกต้องเหมาะสม
+							ด้วยความเข้าใจ การใส่ใจดูแล และความกรุณา
+						</p>
+					</div>
+				</div>
+			</div>
+		</SwiperSlide>
+	);
+}
 
 const Home: NextPage = () => {
 	return (
@@ -30,21 +59,17 @@ const Home: NextPage = () => {
 						<div className="relative flex h-full w-full flex-col items-center justify-center">
 							<div className="flex flex-col sm:absolute sm:bottom-0 sm:h-1/4">
 								<p className="mb-8 text-center text-6xl font-extrabold text-white">
-									You are powerful
+									คุณทรงพลัง
 								</p>
 								<p className="w-full px-2 pb-2 text-center text-2xl font-normal text-white">
-									{`With an ever increasing amount of turmoil in the
-								world it's difficult to know how to help or even
-								cope with it all.`}
+									{`ด้วยความปั่นป่วนที่เพิ่มขึ้นเรื่อยๆ ในโลกนี้ จึงเป็นเรื่องยากที่จะรู้วิธีช่วยเหลือ หรือ แม้แต่จะรับมือกับมันทั้งหมด`}
 									<br />
-									Our thoughts have power. They shape the
-									world and can influence people and nature.
+									ความคิดของเรามีพลัง
+									พวกมันหล่อหลอมโลกและมีอิทธิพลต่อผู้คนและธรรมชาติ
 									<br />
-									Spending 5 mins a day consciously creating
-									thoughts of love and peace for the world can
-									help lift the atmosphere in a subtle yet
-									very meaningful way. The influence of these
-									powerful thoughts cannot be overstated.
+									การใช้เวลา 5
+									นาทีต่อวันอย่างมีสติสัมปชัญญะสร้างความรักและสันติสุขให้กับโลกสามารถช่วยยกระดับบรรยากาศในแบบที่ละเอียดอ่อนแต่มีความหมายมาก
+									อิทธิพลของความคิดที่ทรงพลังเหล่านี้ไม่สามารถพูดเกินจริงได้
 								</p>
 							</div>
 						</div>
@@ -204,40 +229,116 @@ const Home: NextPage = () => {
 			</section>
 
 			<section className="w-full">
-				<div className="relative flex h-[580px] w-full items-center justify-center py-4">
-					<Image
-						src={
-							"https://brahmakumaris.org.au/new/wp-content/uploads/2021/01/unnamed-3.jpg"
-						}
-						alt="Forest"
-						className="-z-20 object-cover"
-						layout="fill"
-					/>
+				<Swiper
+					loop={true}
+					navigation={true}
+					modules={[Navigation, Autoplay]}
+					className="h-full w-full"
+					autoplay={{
+						delay: 3000,
+					}}
+				>
+					<SwiperSlide>
+						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
+							<Image
+								src={
+									"https://images.unsplash.com/photo-1572061485545-9399b66acedd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+								}
+								quality={100}
+								alt="Forest"
+								className="-z-20 object-cover"
+								layout="fill"
+							/>
 
-					<div className="relative flex h-full w-full items-center justify-center xl:block">
-						<div className="relative mx-4 flex h-2/3 w-full flex-col xl:-right-[10%] xl:top-[10%] xl:w-1/3">
-							<div className="absolute -z-10 h-full w-full rounded-md bg-white opacity-95"></div>
-							<div className="p-4">
-								<div className="font-sans text-6xl font-extrabold text-orange-600">
-									New
-									<br />
-									Virtual Center
-								</div>
-								<div className="mt-8 font-sans">
-									Lorem ipsum dolor sit, amet consectetur
-									adipisicing elit. Ad, ab iusto. Quasi nulla
-									cumque veritatis ducimus tempore fugit
-									nostrum voluptatibus? Lorem ipsum dolor sit
-									amet consectetur, adipisicing elit. Cum eius
-									ad officiis!
+							<div className="absolute">
+								<div className="flex flex-col items-center text-white">
+									<h1 className="text-4xl font-extrabold xl:text-8xl">
+										ปัญญา
+									</h1>
+									<p className="px-16 text-xl xl:text-4xl">
+										การมีปัญญา หมายถึง
+										การตอบสนองต่อสถานการณ์อย่างถูกต้องเหมาะสม
+										ด้วยความเข้าใจ การใส่ใจดูแล และความกรุณา
+									</p>
 								</div>
 							</div>
-							<button className="text-bold absolute -bottom-16 rounded-md bg-orange-600 p-4 font-sans text-white opacity-100">
-								Browse Now
-							</button>
 						</div>
-					</div>
-				</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
+							<Image
+								src={
+									"https://images.unsplash.com/photo-1594684198422-2b625d9281e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+								}
+								quality={100}
+								alt="Forest"
+								className="-z-20 object-cover"
+								layout="fill"
+							/>
+
+							<div className="absolute">
+								<div className="flex flex-col items-center text-white">
+									<h1 className="text-4xl font-extrabold xl:text-8xl">
+										ความสุข
+									</h1>
+									<p className="px-16 text-xl xl:text-4xl">
+										คือการที่ฉันใช้เวลาทุกขณะได้ตามที่ต้องการเป็นอย่างดี
+									</p>
+								</div>
+							</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
+							<Image
+								src={
+									"https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+								}
+								quality={100}
+								alt="Forest"
+								className="-z-20 object-cover"
+								layout="fill"
+							/>
+
+							<div className="absolute">
+								<div className="flex flex-col items-center text-white">
+									<h1 className="text-4xl font-extrabold xl:text-8xl">
+										ความสงบ
+									</h1>
+									<p className="px-16 text-xl xl:text-4xl">
+										มีบางสิ่งที่คุณสามารถทําได้เพื่อช่วยสร้างสันติสุขในโลก
+										นั่นคือการทําให้ตัวเองสงบสุข
+									</p>
+								</div>
+							</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
+							<Image
+								src={
+									"https://images.unsplash.com/photo-1484609047056-d27d44e97ede?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+								}
+								quality={100}
+								alt="Forest"
+								className="-z-20 object-cover"
+								layout="fill"
+							/>
+
+							<div className="absolute">
+								<div className="flex flex-col items-center text-white">
+									<h1 className="text-4xl font-extrabold xl:text-8xl">
+										ความรัก
+									</h1>
+									<p className="px-16 text-xl xl:text-4xl">
+										แม้ว่าฉันอาจจะไม่เห็นผลของความรักได้ในทันที
+										แต่ความรักนั้นทำงานเสมอ
+									</p>
+								</div>
+							</div>
+						</div>
+					</SwiperSlide>
+				</Swiper>
 			</section>
 
 			{/* Divider */}
