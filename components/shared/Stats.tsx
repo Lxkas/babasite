@@ -1,8 +1,8 @@
 import {
-	faEarthAsia,
 	faBuilding,
-	faPeopleGroup,
+	faEarthAsia,
 	faHourglass,
+	faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -33,7 +33,7 @@ export default function Stats() {
 										/>
 									</dt>
 									<dt className="order-3 mt-2 text-lg font-medium leading-6 text-gray-500">
-										Countries Worldwide
+										ประเทศทั่วโลก
 									</dt>
 									<dd className="order-2 text-5xl font-extrabold text-gray-600">
 										110
@@ -47,7 +47,7 @@ export default function Stats() {
 										/>
 									</dt>
 									<dt className="order-3 mt-2 text-lg font-medium leading-6 text-gray-500">
-										Meditation Centers
+										ศูนย์นั่งสมาธิ
 									</dt>
 									<dd className="order-2 text-4xl font-extrabold text-gray-600 md:text-5xl">
 										4500+
@@ -61,7 +61,7 @@ export default function Stats() {
 										/>
 									</dt>
 									<dt className="order-3 mt-2 text-lg font-medium leading-6 text-gray-500">
-										Students
+										นักเรียน
 									</dt>
 									<dd className="order-2 text-4xl font-extrabold text-gray-600 sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl">
 										1,000,000+
@@ -75,7 +75,7 @@ export default function Stats() {
 										/>
 									</dt>
 									<dt className="order-3 mt-2 text-lg font-medium leading-6 text-gray-500">
-										Minutes of Meditation
+										นาทีที่นั่งสมาธิไปแล้ว
 									</dt>
 									<dd className="order-2 text-4xl font-extrabold text-gray-600 sm:text-lg md:text-2xl lg:text-3xl xl:text-5xl">
 										100,000,000

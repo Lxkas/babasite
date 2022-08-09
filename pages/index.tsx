@@ -5,6 +5,7 @@ import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Stats from "@/components/shared/Stats";
+import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -212,17 +213,19 @@ const Home: NextPage = () => {
 
 					<div className="relative flex h-full w-full flex-col items-center justify-center py-4">
 						<div className="z-10 mx-auto text-center text-6xl font-extrabold text-white">
-							<p className="mb-4">Learn meditation now</p>
-							<p className="w-1/2 translate-x-1/2 text-2xl font-normal">
+							<p className="mb-4">เรียนสมาธิเดี๋ยวนี้</p>
+							{/* <p className="w-1/2 translate-x-1/2 text-2xl font-normal">
 								Lorem ipsum dolor sit amet consectetur
 								adipisicing elit. Tenetur quae illo eaque cumque
 								placeat fuga quaerat amet ea, quam eum maxime
 								ducimus quo totam quos explicabo vitae. Officia
 								nesciunt esse modi vitae repellendus
-							</p>
-							<button className="mt-2 border-2 border-gray-300 p-2 text-xl transition-all duration-100 hover:border-white">
-								View Playlist
-							</button>
+							</p> */}
+							<Link href="/meditation/how-to">
+								<button className="mt-2 border-2 border-gray-300 p-2 text-xl transition-all duration-100 hover:border-white">
+									View Playlist
+								</button>
+							</Link>
 						</div>
 					</div>
 				</div>

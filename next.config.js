@@ -17,10 +17,10 @@ const nextConfig = {
 	},
 	i18n: {
 		// providing the locales supported by your application
-		locales: ["en-US", "th-TH"],
-		//  default locale used when the non-locale paths are visited
-		defaultLocale: "en-US",
+		locales: ["th-TH"],
+		defaultLocale: "th-TH",
 	},
+	defaultLocale: "th-TH",
 
 	pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 };

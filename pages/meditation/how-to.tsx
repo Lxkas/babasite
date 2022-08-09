@@ -256,10 +256,26 @@ export default function HowtoPage() {
 										"https://www.brahmakumaris.org/images/icons/icon-concentration.png"
 									}
 									audios={[
-										{ title: "Title 1", url: "#" },
-										{ title: "Title 2", url: "#" },
-										{ title: "Title 3", url: "#" },
-										{ title: "Title 4", url: "#" },
+										{
+											title: "เพ่งรวมกับการหายใจ",
+											url: "/assets/audio/how-to-meditate/concentration1.m4a",
+										},
+										{
+											title: "เพ่งรวมกับจุด",
+											url: "/assets/audio/how-to-meditate/concentration2.m4a",
+										},
+										{
+											title: "เพ่งรวมกับคำว่าชานติ",
+											url: "/assets/audio/how-to-meditate/concentration3.m4a",
+										},
+										{
+											title: "เพ่งรวมอยู่กับการนับถอยหลัง",
+											url: "/assets/audio/how-to-meditate/concentration4.m4a",
+										},
+										// {
+										// 	title: "เพ่งรวมเป็นสมาธิกับจุด",
+										// 	url: "/assets/audio/how-to-meditate/concentration5.m4a",
+										// },
 									]}
 								/>
 
@@ -272,7 +288,24 @@ export default function HowtoPage() {
 									icon={
 										"https://www.brahmakumaris.org/images/icons/icon-contemplation.png"
 									}
-									audios={[{ title: "Title 1", url: "#" }]}
+									audios={[
+										{
+											title: "ใคร่ครวญกับความเป็นนิรันดร์",
+											url: "/assets/audio/how-to-meditate/contemplation1.m4a",
+										},
+										{
+											title: "ใคร่ครวญกับคุณสมบัติหลัก",
+											url: "/assets/audio/how-to-meditate/contemplation2.m4a",
+										},
+										{
+											title: "ใคร่ครวญกับชีวิตที่เป็นแสง",
+											url: "/assets/audio/how-to-meditate/contemplation3.m4a",
+										},
+										{
+											title: "ใคร่ครวญกับตัวตนที่แท้จริง",
+											url: "/assets/audio/how-to-meditate/contemplation4.m4a",
+										},
+									]}
 								/>
 
 								<StepComponent
