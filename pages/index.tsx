@@ -5,9 +5,28 @@ import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Stats from "@/components/shared/Stats";
-import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
+
+import {
+	faMedkit,
+	faMoneyBillTrendUp,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const audioNow = [
+	{
+		name: "Audio Clip 1",
+		description: "Some description",
+		icon: faMoneyBillTrendUp,
+	},
+
+	{
+		name: "Audio Clip 2",
+		description: "Some description 2",
+		icon: faMedkit,
+	},
+];
 
 function WordSlider() {
 	return (
@@ -45,6 +64,7 @@ const Home: NextPage = () => {
 			<section className="h-screen w-full">
 				<div className="relative flex h-full w-full items-center justify-center">
 					<Image
+						quality={100}
 						src={
 							"https://brahmakumaris.org.au/new/wp-content/uploads/2022/01/rui-xu-XabW1JtTJ3M-unsplash-scaled.jpg"
 						}
@@ -204,28 +224,77 @@ const Home: NextPage = () => {
 				<div className="relative flex h-full w-full items-center justify-center">
 					<Image
 						src={
-							"https://images.unsplash.com/photo-1579761804843-f997ade7fa35?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
+							"https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1193&q=80"
 						}
 						alt="Forest"
 						className="object-cover"
 						layout="fill"
+						quality={100}
 					/>
 
 					<div className="relative flex h-full w-full flex-col items-center justify-center py-4">
 						<div className="z-10 mx-auto text-center text-6xl font-extrabold text-white">
-							<p className="mb-4">เรียนสมาธิเดี๋ยวนี้</p>
-							{/* <p className="w-1/2 translate-x-1/2 text-2xl font-normal">
+							<div className="py-12">
+								<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+									<div className="lg:text-center">
+										{/* <h2 className="text-base font-semibold uppercase tracking-wide text-indigo-600">
+											Transactions
+										</h2> */}
+										<p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-white sm:text-4xl">
+											เรียนสมาธิเดี๋ยวนี้
+										</p>
+										<p className="mt-4 max-w-2xl text-xl text-white lg:mx-auto">
+											Lorem ipsum dolor sit amet consect
+											adipisicing elit. Possimus magnam
+											voluptatum cupiditate veritatis in
+											accusamus quisquam. This can be some
+											description
+										</p>
+									</div>
+
+									<div className="mt-10">
+										<dl className="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
+											{audioNow.map((audionow) => (
+												<div
+													key={audionow.name}
+													className="relative rounded-md bg-orange-500 p-2"
+												>
+													<dt>
+														<div className="absolute flex h-12 w-12 items-center justify-center rounded-md text-white">
+															<FontAwesomeIcon
+																icon={
+																	audionow.icon
+																}
+																className="h-6 w-6"
+																aria-hidden="true"
+															/>
+														</div>
+														<p className="ml-16 text-lg font-medium leading-6 text-white">
+															{audionow.name}
+														</p>
+													</dt>
+													<dd className="mt-2 ml-16 text-base text-white">
+														{audionow.description}
+													</dd>
+												</div>
+											))}
+										</dl>
+									</div>
+								</div>
+							</div>
+							{/* <p className="mb-4">เรียนสมาธิเดี๋ยวนี้</p>
+							<p className="w-1/2 translate-x-1/2 text-2xl font-normal">
 								Lorem ipsum dolor sit amet consectetur
 								adipisicing elit. Tenetur quae illo eaque cumque
 								placeat fuga quaerat amet ea, quam eum maxime
 								ducimus quo totam quos explicabo vitae. Officia
 								nesciunt esse modi vitae repellendus
-							</p> */}
+							</p>
 							<Link href="/meditation/how-to">
 								<button className="mt-2 border-2 border-gray-300 p-2 text-xl transition-all duration-100 hover:border-white">
 									View Playlist
 								</button>
-							</Link>
+							</Link> */}
 						</div>
 					</div>
 				</div>

@@ -317,7 +317,20 @@ export default function HowtoPage() {
 									icon={
 										"https://www.brahmakumaris.org/images/icons/icon-realisation.png"
 									}
-									audios={[{ title: "Title 1", url: "#" }]}
+									audios={[
+										{
+											title: "ตระหนักรู้ในความรัก",
+											url: "/assets/audio/how-to-meditate/realization1.m4a",
+										},
+										{
+											title: "ตระหนักรู้ถึงแสงที่บริสุทธิ์",
+											url: "/assets/audio/how-to-meditate/realization2.m4a",
+										},
+										{
+											title: "ตระหนักรู้ถึงการเป็นนิรันดร์",
+											url: "/assets/audio/how-to-meditate/realization3.m4a",
+										},
+									]}
 								/>
 
 								<StepComponent
@@ -329,7 +342,16 @@ export default function HowtoPage() {
 									icon={
 										"https://www.brahmakumaris.org/images/icons/icon-meditation.png"
 									}
-									audios={[{ title: "Title 1", url: "#" }]}
+									audios={[
+										{
+											title: "ทำสมาธิให้ไปอยู่เหนือเรื่องราว",
+											url: "/assets/audio/how-to-meditate/meditation1.m4a",
+										},
+										{
+											title: "ทำสมาธิกับผู้เป็นเเหล่ง",
+											url: "/assets/audio/how-to-meditate/meditation2.m4a",
+										},
+									]}
 								/>
 							</ul>
 						</div>
