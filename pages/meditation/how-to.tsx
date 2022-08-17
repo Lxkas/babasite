@@ -40,7 +40,7 @@ function AudioLine({ audio }: { audio: AudioLineType }) {
 				<div className="text-md w-full font-medium text-gray-900">
 					<div className="ml-auto flex flex-row gap-x-2">
 						<span className="mr-auto">{audio.title}</span>
-						<button className="flex items-center justify-center rounded-full bg-white p-2 shadow-md">
+						<button className="flex h-8 w-8 items-center justify-center rounded-full bg-white p-2 shadow-md">
 							<Link href={audio.url}>
 								<FontAwesomeIcon
 									icon={faCircleArrowDown}
@@ -49,7 +49,7 @@ function AudioLine({ audio }: { audio: AudioLineType }) {
 							</Link>
 						</button>
 						<button
-							className="flex items-center justify-center rounded-full bg-white p-2 shadow-md"
+							className="flex h-8 w-8 items-center justify-center rounded-full bg-white p-2 shadow-md"
 							onClick={() => {
 								try {
 									if (typeof currentTrack == "undefined") {
@@ -330,6 +330,11 @@ export default function HowtoPage() {
 											title: "ตระหนักรู้ถึงการเป็นนิรันดร์",
 											url: "/assets/audio/how-to-meditate/realization3.m4a",
 										},
+
+										{
+											title: "การเปลี่ยนของดวงวิญญาณ",
+											url: "/assets/audio/how-to-meditate/realization4.m4a",
+										},
 									]}
 								/>
 
@@ -350,6 +355,14 @@ export default function HowtoPage() {
 										{
 											title: "ทำสมาธิกับผู้เป็นเเหล่ง",
 											url: "/assets/audio/how-to-meditate/meditation2.m4a",
+										},
+										{
+											title: "การไปอยู่เหนือทุกสิ่ง",
+											url: "/assets/audio/how-to-meditate/meditation3.m4a",
+										},
+										{
+											title: "การเปลี่ยนที่เรียบง่าย",
+											url: "/assets/audio/how-to-meditate/meditation4.m4a",
 										},
 									]}
 								/>

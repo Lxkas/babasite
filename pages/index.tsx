@@ -15,120 +15,120 @@ import { useEffect, useRef, useState } from "react";
 
 const audioNow = [
 	{
-		name: "Relaxation",
-		description: "Part 1",
+		name: "การผ่อนคลาย",
+		description: "ส่วนที่ 1",
 		url: "/assets/audio/how-to-meditate/relaxation1.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Relaxation",
-		description: "Part 2",
+		name: "การผ่อนคลาย",
+		description: "ส่วนที่ 2",
 		url: "/assets/audio/how-to-meditate/relaxation2.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Relaxation",
-		description: "Part 3",
+		name: "การผ่อนคลาย",
+		description: "ส่วนที่ 3",
 		url: "/assets/audio/how-to-meditate/relaxation3.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Relaxation",
-		description: "Part 4",
+		name: "การผ่อนคลาย",
+		description: "ส่วนที่ 4",
 		url: "/assets/audio/how-to-meditate/relaxation4.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Concentration",
-		description: "Part 1",
+		name: "การเพ่งรวม",
+		description: "ส่วนที่ 1",
 		url: "/assets/audio/how-to-meditate/concentration1.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Concentration",
-		description: "Part 2",
+		name: "การเพ่งรวม",
+		description: "ส่วนที่ 2",
 		url: "/assets/audio/how-to-meditate/concentration2.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Concentration",
-		description: "Part 3",
+		name: "การเพ่งรวม",
+		description: "ส่วนที่ 3",
 		url: "/assets/audio/how-to-meditate/concentration3.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Concentration",
-		description: "Part 4",
+		name: "การเพ่งรวม",
+		description: "ส่วนที่ 4",
 		url: "/assets/audio/how-to-meditate/concentration4.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Contemplation",
-		description: "Part 1",
+		name: "การไตร่ตรอง",
+		description: "ส่วนที่ 1",
 		url: "/assets/audio/how-to-meditate/contemplation1.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Contemplation",
-		description: "Part 2",
+		name: "การไตร่ตรอง",
+		description: "ส่วนที่ 2",
 		url: "/assets/audio/how-to-meditate/contemplation2.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Contemplation",
-		description: "Part 3",
+		name: "การไตร่ตรอง",
+		description: "ส่วนที่ 3",
 		url: "/assets/audio/how-to-meditate/contemplation3.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Contemplation",
-		description: "Part 4",
+		name: "การไตร่ตรอง",
+		description: "ส่วนที่ 4",
 		url: "/assets/audio/how-to-meditate/contemplation4.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Realization",
-		description: "Part 1",
+		name: "การตระหนัก",
+		description: "ส่วนที่ 1",
 		url: "/assets/audio/how-to-meditate/realization1.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Realization",
-		description: "Part 2",
+		name: "การตระหนัก",
+		description: "ส่วนที่ 2",
 		url: "/assets/audio/how-to-meditate/realization2.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Realization",
-		description: "Part 3",
+		name: "การตระหนัก",
+		description: "ส่วนที่ 3",
 		url: "/assets/audio/how-to-meditate/realization3.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Meditation",
-		description: "Part 1",
+		name: "สมาธิ",
+		description: "ส่วนที่ 1",
 		url: "/assets/audio/how-to-meditate/meditation1.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "Meditation",
-		description: "Part 2",
+		name: "สมาธิ",
+		description: "ส่วนที่ 2",
 		url: "/assets/audio/how-to-meditate/meditation2.m4a",
 		icon: faPlayCircle,
 	},
@@ -357,11 +357,11 @@ const Home: NextPage = () => {
 											เรียนสมาธิเดี๋ยวนี้
 										</p>
 										<p className="mt-4 max-w-2xl text-xl text-white lg:mx-auto">
-											Lorem ipsum dolor sit amet consect
-											adipisicing elit. Possimus magnam
-											voluptatum cupiditate veritatis in
-											accusamus quisquam. This can be some
-											description
+											การฝึกสมาธิแบบราชาโยคะนั้นเป็นเรื่องง่าย
+											แต่เราจำเป็นต้องมีคําอธิบายเล็กน้อยก่อนที่จะฝึกฝน
+											นี่คือห้าขั้นตอนที่เรียบง่ายในการฝึก
+											และในไม่ช้า
+											คุณก็จะเข้าถึงความเงียบสงบได้ในเพียงความคิดเดียว
 										</p>
 									</div>
 
@@ -388,7 +388,10 @@ const Home: NextPage = () => {
 										>
 											{audioNow.map((audionow) => (
 												<SwiperSlide
-													key={audionow.name}
+													key={
+														audionow.name +
+														audionow.url
+													}
 												>
 													<AudioNowComponent
 														currentUrl={currentUrl}
