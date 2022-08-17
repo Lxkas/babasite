@@ -9,58 +9,134 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import TestimonialComponent from "@/components/shared/Testimonial";
-import {
-	faMedkit,
-	faMoneyBillTrendUp,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlayCircle, faStopCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const audioNow = [
 	{
-		name: "Audio Clip 1",
-		description: "Some description",
-		icon: faMoneyBillTrendUp,
+		name: "Relaxation",
+		description: "Part 1",
+		url: "/assets/audio/how-to-meditate/relaxation1.m4a",
+		icon: faPlayCircle,
 	},
 
 	{
-		name: "Audio Clip 2",
-		description: "Some description 2",
-		icon: faMedkit,
+		name: "Relaxation",
+		description: "Part 2",
+		url: "/assets/audio/how-to-meditate/relaxation2.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Relaxation",
+		description: "Part 3",
+		url: "/assets/audio/how-to-meditate/relaxation3.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Relaxation",
+		description: "Part 4",
+		url: "/assets/audio/how-to-meditate/relaxation4.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Concentration",
+		description: "Part 1",
+		url: "/assets/audio/how-to-meditate/concentration1.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Concentration",
+		description: "Part 2",
+		url: "/assets/audio/how-to-meditate/concentration2.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Concentration",
+		description: "Part 3",
+		url: "/assets/audio/how-to-meditate/concentration3.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Concentration",
+		description: "Part 4",
+		url: "/assets/audio/how-to-meditate/concentration4.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Contemplation",
+		description: "Part 1",
+		url: "/assets/audio/how-to-meditate/contemplation1.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Contemplation",
+		description: "Part 2",
+		url: "/assets/audio/how-to-meditate/contemplation2.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Contemplation",
+		description: "Part 3",
+		url: "/assets/audio/how-to-meditate/contemplation3.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Contemplation",
+		description: "Part 4",
+		url: "/assets/audio/how-to-meditate/contemplation4.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Realization",
+		description: "Part 1",
+		url: "/assets/audio/how-to-meditate/realization1.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Realization",
+		description: "Part 2",
+		url: "/assets/audio/how-to-meditate/realization2.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Realization",
+		description: "Part 3",
+		url: "/assets/audio/how-to-meditate/realization3.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Meditation",
+		description: "Part 1",
+		url: "/assets/audio/how-to-meditate/meditation1.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "Meditation",
+		description: "Part 2",
+		url: "/assets/audio/how-to-meditate/meditation2.m4a",
+		icon: faPlayCircle,
 	},
 ];
 
-function WordSlider() {
-	return (
-		<SwiperSlide>
-			<div className="relative flex h-[580px] w-full items-center justify-center py-4">
-				<Image
-					src={
-						"https://images.unsplash.com/photo-1596461009523-7d647a4e2399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-					}
-					quality={100}
-					alt="Forest"
-					className="-z-20 object-cover"
-					layout="fill"
-				/>
-
-				<div className="absolute">
-					<div className="flex flex-col items-center text-white">
-						<h1 className="text-4xl font-extrabold">ปัญญา</h1>
-						<p className="text-xl">
-							การมีปัญญา หมายถึง
-							การตอบสนองต่อสถานการณ์อย่างถูกต้องเหมาะสม
-							ด้วยความเข้าใจ การใส่ใจดูแล และความกรุณา
-						</p>
-					</div>
-				</div>
-			</div>
-		</SwiperSlide>
-	);
-}
-
 const Home: NextPage = () => {
 	const [hasWindow, setHasWindow] = useState(false);
+	const [currentUrl, setCurrentUrl] = useState("");
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
@@ -68,8 +144,35 @@ const Home: NextPage = () => {
 		}
 	}, []);
 
+	const audioElemRef = useRef<HTMLAudioElement>(null);
+
+	const playAudio = (url: string) => {
+		if (audioElemRef.current) {
+			if (audioElemRef.current.src.includes(url)) {
+				if (audioElemRef.current.paused) {
+					audioElemRef.current.play();
+					setCurrentUrl(url);
+				} else {
+					audioElemRef.current.pause();
+					setCurrentUrl("");
+				}
+
+				return;
+			}
+
+			setCurrentUrl(url);
+			audioElemRef.current.pause();
+			audioElemRef.current.src = url;
+			audioElemRef.current.currentTime = 0;
+			audioElemRef.current.play();
+		} else {
+			alert("Failed to play audio");
+		}
+	};
+
 	return (
 		<div className="relative flex h-full w-full flex-col justify-center gap-y-4 px-4 pb-4 font-roboto">
+			<audio ref={audioElemRef} className="absolute hidden" src="" />
 			{/* You are powerful card */}
 			<section className="h-[860px] w-full">
 				<div className="relative flex h-full w-full items-center justify-center">
@@ -287,27 +390,11 @@ const Home: NextPage = () => {
 												<SwiperSlide
 													key={audionow.name}
 												>
-													<div className="relative mx-16 rounded-md bg-orange-500 py-2 px-8">
-														<dt>
-															<div className="absolute flex h-12 w-12 items-center justify-center rounded-md text-white">
-																<FontAwesomeIcon
-																	icon={
-																		audionow.icon
-																	}
-																	className="h-6 w-6"
-																	aria-hidden="true"
-																/>
-															</div>
-															<p className="ml-16 text-lg font-medium leading-6 text-white">
-																{audionow.name}
-															</p>
-														</dt>
-														<dd className="mt-2 ml-16 text-base text-white">
-															{
-																audionow.description
-															}
-														</dd>
-													</div>
+													<AudioNowComponent
+														currentUrl={currentUrl}
+														audionow={audionow}
+														playAudio={playAudio}
+													/>
 												</SwiperSlide>
 											))}
 										</Swiper>
@@ -469,3 +556,34 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+function AudioNowComponent({ playAudio, audionow, currentUrl }: any) {
+	return (
+		<div
+			className="relative mx-16 rounded-md bg-orange-500 py-2 px-8"
+			onClick={() => {
+				playAudio(audionow.url);
+			}}
+		>
+			<dt>
+				<div className="absolute flex h-12 w-12 items-center justify-center rounded-md text-white">
+					<FontAwesomeIcon
+						icon={
+							currentUrl == audionow.url
+								? faStopCircle
+								: audionow.icon
+						}
+						className="h-8 w-8"
+						aria-hidden="true"
+					/>
+				</div>
+				<p className="ml-16 text-lg font-medium leading-6 text-white">
+					{audionow.name}
+				</p>
+			</dt>
+			<dd className="mt-2 ml-16 text-base text-white">
+				{audionow.description}
+			</dd>
+		</div>
+	);
+}
