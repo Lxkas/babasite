@@ -424,9 +424,9 @@ export default function RegisterPage() {
 				</section>
 
 				{/* Sign up section */}
-				<section>
+				{/* <section>
 					<SignUpComponent />
-				</section>
+				</section> */}
 			</div>
 		</div>
 	);

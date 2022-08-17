@@ -15,121 +15,142 @@ import { useEffect, useRef, useState } from "react";
 
 const audioNow = [
 	{
-		name: "การผ่อนคลาย",
+		name: "ผ่อนคลายในป่าใหญ่",
 		description: "ส่วนที่ 1",
 		url: "/assets/audio/how-to-meditate/relaxation1.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การผ่อนคลาย",
+		name: "ผ่อนคลายกล้ามเนื้อ",
 		description: "ส่วนที่ 2",
 		url: "/assets/audio/how-to-meditate/relaxation2.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การผ่อนคลาย",
+		name: "ผ่อนคลายกับลมหายใจ",
 		description: "ส่วนที่ 3",
 		url: "/assets/audio/how-to-meditate/relaxation3.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การผ่อนคลาย",
+		name: "ผ่อนคลายการเชื่อมโยง",
 		description: "ส่วนที่ 4",
 		url: "/assets/audio/how-to-meditate/relaxation4.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การเพ่งรวม",
+		name: "เพ่งรวมกับการหายใจ",
 		description: "ส่วนที่ 1",
 		url: "/assets/audio/how-to-meditate/concentration1.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การเพ่งรวม",
+		name: "เพ่งรวมกับจุด",
 		description: "ส่วนที่ 2",
 		url: "/assets/audio/how-to-meditate/concentration2.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การเพ่งรวม",
+		name: "เพ่งรวมกับคำว่าชานติ",
 		description: "ส่วนที่ 3",
 		url: "/assets/audio/how-to-meditate/concentration3.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การเพ่งรวม",
+		name: "เพ่งรวมอยู่กับการนับถอยหลัง",
 		description: "ส่วนที่ 4",
 		url: "/assets/audio/how-to-meditate/concentration4.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การไตร่ตรอง",
+		name: "ใคร่ครวญกับความเป็นนิรันดร์",
 		description: "ส่วนที่ 1",
 		url: "/assets/audio/how-to-meditate/contemplation1.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การไตร่ตรอง",
+		name: "ใคร่ครวญกับคุณสมบัติหลัก",
 		description: "ส่วนที่ 2",
 		url: "/assets/audio/how-to-meditate/contemplation2.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การไตร่ตรอง",
+		name: "ใคร่ครวญกับชีวิตที่เป็นแสง",
 		description: "ส่วนที่ 3",
 		url: "/assets/audio/how-to-meditate/contemplation3.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การไตร่ตรอง",
+		name: "ใคร่ครวญกับตัวตนที่แท้จริง",
 		description: "ส่วนที่ 4",
 		url: "/assets/audio/how-to-meditate/contemplation4.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การตระหนัก",
+		name: "ตระหนักรู้ในความรัก",
 		description: "ส่วนที่ 1",
 		url: "/assets/audio/how-to-meditate/realization1.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การตระหนัก",
+		name: "ตระหนักรู้ถึงแสงที่บริสุทธิ์",
 		description: "ส่วนที่ 2",
 		url: "/assets/audio/how-to-meditate/realization2.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "การตระหนัก",
+		name: "ตระหนักรู้ถึงการเป็นนิรันดร์",
 		description: "ส่วนที่ 3",
 		url: "/assets/audio/how-to-meditate/realization3.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "สมาธิ",
+		name: "การเปลี่ยนของดวงวิญญาณ",
+		description: "ส่วนที่ 4",
+		url: "/assets/audio/how-to-meditate/realization4.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "ทำสมาธิให้ไปอยู่เหนือเรื่องราว",
 		description: "ส่วนที่ 1",
 		url: "/assets/audio/how-to-meditate/meditation1.m4a",
 		icon: faPlayCircle,
 	},
 
 	{
-		name: "สมาธิ",
+		name: "ทำสมาธิกับผู้เป็นเเหล่ง",
 		description: "ส่วนที่ 2",
 		url: "/assets/audio/how-to-meditate/meditation2.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "การไปอยู่เหนือทุกสิ่ง",
+		description: "ส่วนที่ 3",
+		url: "/assets/audio/how-to-meditate/meditation3.m4a",
+		icon: faPlayCircle,
+	},
+
+	{
+		name: "การเปลี่ยนที่เรียบง่าย",
+		description: "ส่วนที่ 4",
+		url: "/assets/audio/how-to-meditate/meditation4.m4a",
 		icon: faPlayCircle,
 	},
 ];
@@ -207,93 +228,9 @@ const Home: NextPage = () => {
 								</p>
 							</div>
 						</div>
-						{/* <div className="z-10 mt-auto mb-20 text-center text-6xl font-extrabold text-white">
-							<p className="mb-4">You are powerful</p>
-							<p className="w-1/2 translate-x-1/2 text-2xl font-normal">
-								With an ever increasing amount of turmoil in the
-								world it's difficult to know how to help or even
-								cope with it all.
-								<br />
-								Our thoughts have power. They shape the world
-								and can influence people and nature. <br />
-								Spending 5 mins a day consciously creating
-								thoughts of love and peace for the world can
-								help lift the atmosphere in a subtle yet very
-								meaningful way. The influence of these powerful
-								thoughts cannot be overstated.
-							</p>
-						</div> */}
 					</div>
 				</div>
 			</section>
-
-			{/* <section className="h-screen w-full">
-				<Swiper
-					loop={true}
-					navigation={true}
-					modules={[Navigation]}
-					className="h-full w-full"
-				>
-					<SwiperSlide>
-						<div className="relative flex h-full w-full items-center justify-center">
-							<Image
-								src={
-									"https://images.unsplash.com/photo-1448375240586-882707db888b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
-								}
-								alt="Forest"
-								className="object-cover"
-								layout="fill"
-							/>
-
-							<div className="relative flex h-full w-full flex-col items-center justify-center">
-								<div className="absolute h-full w-full bg-gray-700 opacity-25"></div>
-								<div className="z-10 mx-auto mb-20 text-center text-6xl font-extrabold text-white">
-									<p className="mb-4">You are peaceful</p>
-									<p className="w-1/2 translate-x-1/2 text-2xl font-normal">
-										Lorem ipsum dolor sit amet consectetur
-										adipisicing elit. Tenetur quae illo
-										eaque cumque placeat fuga quaerat amet
-										ea, quam eum maxime ducimus quo totam
-										quos explicabo vitae. Officia nesciunt
-										esse modi vitae repellendus
-									</p>
-								</div>
-							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide>
-						<div className="relative flex h-full w-full items-center justify-center">
-							<Image
-								src={
-									"https://images.unsplash.com/photo-1487621167305-5d248087c724?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632"
-								}
-								alt="Forest"
-								className="object-cover"
-								layout="fill"
-							/>
-
-							<div className="relative flex h-full w-full flex-col items-center justify-center">
-								<div className="absolute h-full w-full bg-gray-700 opacity-25"></div>
-								<div className="z-10 mx-auto mb-20 text-center text-6xl font-extrabold text-white">
-									<p className="mb-4">You are free</p>
-									<p className="w-1/2 translate-x-1/2 text-2xl font-normal">
-										Lorem ipsum dolor sit amet consectetur
-										adipisicing elit. Tenetur quae illo
-										eaque cumque placeat fuga quaerat amet
-										ea, quam eum maxime ducimus quo totam
-										quos explicabo vitae. Officia nesciunt
-										esse modi vitae repellendus
-									</p>
-									<button className="mt-2 border-2 border-gray-300 p-2 text-xl transition-all duration-100 hover:border-white">
-										Learn More
-									</button>
-								</div>
-							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide>Slide 3</SwiperSlide>
-				</Swiper>
-			</section> */}
 
 			<section>
 				<Swiper
@@ -350,9 +287,6 @@ const Home: NextPage = () => {
 							<div className="py-12">
 								<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 									<div className="lg:text-center">
-										{/* <h2 className="text-base font-semibold uppercase tracking-wide text-indigo-600">
-											Transactions
-										</h2> */}
 										<p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-white sm:text-4xl">
 											เรียนสมาธิเดี๋ยวนี้
 										</p>
@@ -365,26 +299,19 @@ const Home: NextPage = () => {
 										</p>
 									</div>
 
-									{/* <div className="relative mt-10 h-32 w-full min-w-full max-w-full bg-gray-400">
-										<Swiper
-											navigation={true}
-											modules={[Navigation]}
-											className="h-full w-full max-w-xs"
-										>
-											<SwiperSlide>
-												<div>hi</div>
-											</SwiperSlide>
-											<SwiperSlide>
-												<div>hi</div>
-											</SwiperSlide>
-										</Swiper>
-									</div> */}
-
 									<div className="relative mt-10">
 										<Swiper
+											breakpoints={{
+												640: {
+													slidesPerView: 1,
+												},
+												1280: {
+													slidesPerView: 4,
+												},
+											}}
 											navigation={true}
 											modules={[Navigation]}
-											className="h-full w-full max-w-sm md:max-w-lg"
+											className="h-full w-full max-w-sm xl:max-w-7xl"
 										>
 											{audioNow.map((audionow) => (
 												<SwiperSlide
@@ -404,19 +331,6 @@ const Home: NextPage = () => {
 									</div>
 								</div>
 							</div>
-							{/* <p className="mb-4">เรียนสมาธิเดี๋ยวนี้</p>
-							<p className="w-1/2 translate-x-1/2 text-2xl font-normal">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Tenetur quae illo eaque cumque
-								placeat fuga quaerat amet ea, quam eum maxime
-								ducimus quo totam quos explicabo vitae. Officia
-								nesciunt esse modi vitae repellendus
-							</p>
-							<Link href="/meditation/how-to">
-								<button className="mt-2 border-2 border-gray-300 p-2 text-xl transition-all duration-100 hover:border-white">
-									View Playlist
-								</button>
-							</Link> */}
 						</div>
 					</div>
 				</div>
@@ -535,23 +449,6 @@ const Home: NextPage = () => {
 				</Swiper>
 			</section>
 
-			{/* Divider */}
-			{/* <div className="relative">
-				<div
-					className="absolute inset-0 flex items-center"
-					aria-hidden="true"
-				>
-					<div className="w-full border-t border-gray-300" />
-				</div>
-				<div className="relative flex justify-center">
-					<span className="bg-white px-3 text-2xl font-medium text-gray-900">
-						Events
-					</span>
-				</div>
-			</div>
-
-			<Calendar /> */}
-
 			<Stats />
 			{hasWindow && <TestimonialComponent />}
 		</div>
@@ -563,30 +460,44 @@ export default Home;
 function AudioNowComponent({ playAudio, audionow, currentUrl }: any) {
 	return (
 		<div
-			className="relative mx-16 rounded-md bg-orange-500 py-2 px-8"
 			onClick={() => {
 				playAudio(audionow.url);
 			}}
+			className="relative mx-16 flex h-20 flex-row items-center justify-center gap-x-4 rounded-md bg-orange-500 p-2 lg:mx-2"
 		>
-			<dt>
-				<div className="absolute flex h-12 w-12 items-center justify-center rounded-md text-white">
-					<FontAwesomeIcon
-						icon={
-							currentUrl == audionow.url
-								? faStopCircle
-								: audionow.icon
-						}
-						className="h-8 w-8"
-						aria-hidden="true"
-					/>
-				</div>
-				<p className="ml-16 text-lg font-medium leading-6 text-white">
-					{audionow.name}
-				</p>
-			</dt>
-			<dd className="mt-2 ml-16 text-base text-white">
-				{audionow.description}
-			</dd>
+			<FontAwesomeIcon
+				icon={currentUrl == audionow.url ? faStopCircle : audionow.icon}
+				className="h-8 w-8"
+				aria-hidden="true"
+			/>
+			<div className="max-h-16 overflow-hidden text-lg">
+				{audionow.name}
+			</div>
 		</div>
+		// <div
+		// 	className="relative mx-16 rounded-md bg-orange-500 py-2 lg:mx-2"
+		// 	onClick={() => {
+		// 		playAudio(audionow.url);
+		// 	}}
+		// >
+		// 	<div>
+		// 		<div className="absolute flex h-12 w-12 items-center justify-center rounded-md text-white">
+		// 			<FontAwesomeIcon
+		// 				icon={
+		// 					currentUrl == audionow.url
+		// 						? faStopCircle
+		// 						: audionow.icon
+		// 				}
+		// 				className="h-8 w-8"
+		// 				aria-hidden="true"
+		// 			/>
+		// 			<div className="flex h-full items-center justify-center text-center">
+		// 				<p className="my-4 ml-16 text-center text-lg font-medium leading-6 text-white">
+		// 					{audionow.name}
+		// 				</p>
+		// 			</div>
+		// 		</div>
+		// 	</div>
+		// </div>
 	);
 }
