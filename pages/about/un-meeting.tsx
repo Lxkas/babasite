@@ -1,0 +1,149 @@
+import Link from "next/link";
+
+export default function UNMeetingPage() {
+	return (
+		<div className="relative overflow-hidden bg-white py-16">
+			<div className="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full">
+				<div
+					className="relative mx-auto h-full max-w-prose text-lg"
+					aria-hidden="true"
+				>
+					<svg
+						className="absolute top-12 left-full translate-x-32 transform"
+						width={404}
+						height={384}
+						fill="none"
+						viewBox="0 0 404 384"
+					>
+						<defs>
+							<pattern
+								id="74b3fd99-0a6f-4271-bef2-e80eeafdf357"
+								x={0}
+								y={0}
+								width={20}
+								height={20}
+								patternUnits="userSpaceOnUse"
+							>
+								<rect
+									x={0}
+									y={0}
+									width={4}
+									height={4}
+									className="text-gray-200"
+									fill="currentColor"
+								/>
+							</pattern>
+						</defs>
+						<rect
+							width={404}
+							height={384}
+							fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)"
+						/>
+					</svg>
+					<svg
+						className="absolute top-1/2 right-full -translate-y-1/2 -translate-x-32 transform"
+						width={404}
+						height={384}
+						fill="none"
+						viewBox="0 0 404 384"
+					>
+						<defs>
+							<pattern
+								id="f210dbf6-a58d-4871-961e-36d5016a0f49"
+								x={0}
+								y={0}
+								width={20}
+								height={20}
+								patternUnits="userSpaceOnUse"
+							>
+								<rect
+									x={0}
+									y={0}
+									width={4}
+									height={4}
+									className="text-gray-200"
+									fill="currentColor"
+								/>
+							</pattern>
+						</defs>
+						<rect
+							width={404}
+							height={384}
+							fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
+						/>
+					</svg>
+				</div>
+			</div>
+			<div className="relative px-4 sm:px-6 lg:px-8">
+				<div className="prose mx-auto max-w-prose text-lg">
+					<h1>บราห์มากุมารี ณ องค์การสหประชาชาติ</h1>
+
+					<p>
+						นับรา ห์มากุมารี ซึ่งมีสำนักงานใหญ่อยู่ที่ ภูเขาอาบู
+						ประเทศอินเดีย
+						ประกอบด้วยเครือข่ายของศูนย์การเรียนรู้ในประเทศต่างๆ
+						ทั่วโลก มากกว่า 110 ประเทศ
+						และเป็นองค์กรเอกชนระดับนานาชาติ (NGO)
+						ซึ่งองค์การสหประชาชาติให้การรับรองโดยสภาคณะมนตรีเศรษฐกิจและสังคม
+						(ECOSOC)
+					</p>
+
+					<br />
+
+					<div>
+						<p>นอกจากนั้น บราห์มา กุมารียังมี:</p>
+						<ol>
+							<li>
+								สถานภาพทางกฎหมายในทำงานร่วมกับแผนกข่าวสารสาธารณะ
+								(DIP)
+							</li>
+							<li>
+								สถานภาพทางกฎหมายในการให้คำปรึกษากับองค์กรยูนิเซฟ(UNICEF)
+							</li>
+							<li>
+								สถานภาพทางกฎหมายในการร่วมสังเกตการณ์กับสมัชชาด้านสิ่งแวดล้อมของสหประชาชาติ
+								(UNEP)
+							</li>
+						</ol>
+					</div>
+
+					<br />
+
+					<div>
+						<p>และมีสถานภาพต่อไปนี้ด้วย</p>
+						<ol>
+							<li>
+								องค์กรสังเกตการณ์
+								ให้กับสหประชาชาติตามกรอบอนุสัญญาสหประชาชาติว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ
+								(UNFCCC)
+							</li>
+							<li>
+								กรรมการนำด้านการศึกษาสำหรับประชาชนในชนบท (ERP)
+								และองค์กรด้านอาหารและการเกษตร (FAO)
+							</li>
+						</ol>
+					</div>
+
+					<br />
+
+					<p>
+						เพื่อ
+						ที่จะส่งเสริมการบรรลุเป้าหมายและหลักการขององค์การสหประชาชาติ
+						ตามวิถีทางจิตวิญญาณของบราห์มา กุมารี การตระหนักรู้
+						ทัศนคติ วิสัยทัศน์ และการปฏิบัติ
+						ได้ถูกนำไปใช้เป็นเป้าหมายในการพัฒนาแห่งสหัสวรรษ
+						ด้านการเปลี่ยนแปลงสภาพอากาศ วิกฤตด้านอาหาร
+						ความเท่าเทียมทางเพศ การสาธารณสุขโลก
+						การช่วยเหลือในภาวะฉุกเฉินตามหลักมนุษยธรรม สิทธิมนุษยชน
+						รวมถึงวันและทศวรรษสากลต่างๆ ที่เกี่ยวกับสตรี เด็ก
+						และเยาวชน
+						เพื่ออ่านข้อมูลเพิ่มเติมเกี่ยวกับกิจกรรมของเราสหประชาชาติ{" "}
+						<Link href="/" passHref>
+							<a>คลิกที่นี่</a>
+						</Link>
+					</p>
+				</div>
+			</div>
+		</div>
+	);
+}

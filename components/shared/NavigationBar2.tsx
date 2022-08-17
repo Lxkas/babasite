@@ -15,20 +15,45 @@ const colors = {
 };
 
 const navItemsRight: NavItemPropType[] = [
-	{ text: "Home", href: "/" },
+	{ text: "หน้าหลัก", href: "/" },
 	{
-		text: "About Us",
+		text: "เกี่ยวกับเรา",
 		href: "#",
 		navType: "dropdown",
 		data: [
 			{
-				dropdownType: "normal",
-				text: "About Us",
-				href: "/about",
+				dropdownType: "innerdropdown",
+				title: "เกี่ยวกับเรา",
+				options: [
+					{
+						text: "รู้จักเรา",
+						href: "/about",
+					},
+					{
+						text: "นักเรียน",
+						href: "/about/students",
+					},
+					{
+						text: "ประสบการณ์ที่ได้รับจากบราห์มากุมารี",
+						href: "/about/benefits",
+					},
+					{
+						text: "จากจุดเริ่มต้นเล็กๆ",
+						href: "/about/humble-beginnings",
+					},
+					{
+						text: "ผู้นำท่านปัจจุบัน",
+						href: "/about/current-leaders",
+					},
+					{
+						text: "บราห์มากุมารี ณ องค์การสหประชาชาติ ",
+						href: "/about/un-meeting",
+					},
+				],
 			},
 			{
 				dropdownType: "innerdropdown",
-				title: "Our Headquarters",
+				title: "ศูนย์หลักของเรา",
 				options: [
 					{
 						text: "Pandav Bhavan",
@@ -47,18 +72,18 @@ const navItemsRight: NavItemPropType[] = [
 		],
 	},
 	{
-		text: "Locations",
+		text: "ศูนย์ของเรา",
 		href: "/locations",
 		navType: "dropdown",
 		data: [
 			{
 				dropdownType: "normal",
-				text: "Local Centers",
+				text: "ศูนย์ท้องถิ่น",
 				href: "/local-locations",
 			},
 			{
 				dropdownType: "normal",
-				text: "Global Center Locator",
+				text: "ศูนย์ระดับโลก",
 				href: "https://www.brahmakumaris.org/centre-locator/",
 			},
 		],
@@ -67,7 +92,7 @@ const navItemsRight: NavItemPropType[] = [
 
 const navItemsLeft: NavItemPropType[] = [
 	{
-		text: "Meditation",
+		text: "การทำสมาธิ",
 		href: "#",
 		navType: "dropdown",
 		data: [
@@ -101,7 +126,7 @@ const navItemsLeft: NavItemPropType[] = [
 		],
 	},
 	{
-		text: "Wisdom",
+		text: "ภูมิปัญญา",
 		href: "#",
 		navType: "dropdown",
 		data: [
@@ -320,7 +345,7 @@ export default function NavigationBar2() {
 									}
 								>
 									<span>
-										Menu{" "}
+										เมนู{" "}
 										<span className="ml-1">
 											<FontAwesomeIcon
 												icon={faCaretDown}

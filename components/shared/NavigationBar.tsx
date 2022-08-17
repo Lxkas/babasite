@@ -12,7 +12,7 @@ import { useLayoutEffect, useState } from "react";
 import MobileDropDown from "./NavItems/MobileDropdown";
 
 const navItems: NavItemPropType[] = [
-	{ text: "Home", href: "/" },
+	{ text: "หน้าหลัก", href: "/" },
 	{
 		text: "Meditation",
 		href: "#",
@@ -48,24 +48,24 @@ const navItems: NavItemPropType[] = [
 		],
 	},
 	{
-		text: "Locations",
+		text: "ที่ตั้งศูนย์",
 		href: "/locations",
 		navType: "dropdown",
 		data: [
 			{
 				dropdownType: "normal",
-				text: "Local Centers",
+				text: "ศูนย์ท้องถิ่น",
 				href: "/local-locations",
 			},
 			{
 				dropdownType: "normal",
-				text: "Global Center Locator",
+				text: "ศูนย์ระดับโลก",
 				href: "https://www.brahmakumaris.org/centre-locator/",
 			},
 		],
 	},
 	{
-		text: "About Us",
+		text: "เกี่ยวกับเรา",
 		href: "#",
 		navType: "dropdown",
 		data: [

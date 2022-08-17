@@ -8,6 +8,7 @@ import Stats from "@/components/shared/Stats";
 import "swiper/css";
 import "swiper/css/navigation";
 
+import TestimonialComponent from "@/components/shared/Testimonial";
 import {
 	faMedkit,
 	faMoneyBillTrendUp,
@@ -252,33 +253,55 @@ const Home: NextPage = () => {
 										</p>
 									</div>
 
-									<div className="mt-10">
-										<dl className="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
+									{/* <div className="relative mt-10 h-32 w-full min-w-full max-w-full bg-gray-400">
+										<Swiper
+											navigation={true}
+											modules={[Navigation]}
+											className="h-full w-full max-w-xs"
+										>
+											<SwiperSlide>
+												<div>hi</div>
+											</SwiperSlide>
+											<SwiperSlide>
+												<div>hi</div>
+											</SwiperSlide>
+										</Swiper>
+									</div> */}
+
+									<div className="relative mt-10">
+										<Swiper
+											navigation={true}
+											modules={[Navigation]}
+											className="h-full w-full max-w-sm md:max-w-lg"
+										>
 											{audioNow.map((audionow) => (
-												<div
+												<SwiperSlide
 													key={audionow.name}
-													className="relative rounded-md bg-orange-500 p-2"
 												>
-													<dt>
-														<div className="absolute flex h-12 w-12 items-center justify-center rounded-md text-white">
-															<FontAwesomeIcon
-																icon={
-																	audionow.icon
-																}
-																className="h-6 w-6"
-																aria-hidden="true"
-															/>
-														</div>
-														<p className="ml-16 text-lg font-medium leading-6 text-white">
-															{audionow.name}
-														</p>
-													</dt>
-													<dd className="mt-2 ml-16 text-base text-white">
-														{audionow.description}
-													</dd>
-												</div>
+													<div className="relative mx-16 rounded-md bg-orange-500 py-2 px-8">
+														<dt>
+															<div className="absolute flex h-12 w-12 items-center justify-center rounded-md text-white">
+																<FontAwesomeIcon
+																	icon={
+																		audionow.icon
+																	}
+																	className="h-6 w-6"
+																	aria-hidden="true"
+																/>
+															</div>
+															<p className="ml-16 text-lg font-medium leading-6 text-white">
+																{audionow.name}
+															</p>
+														</dt>
+														<dd className="mt-2 ml-16 text-base text-white">
+															{
+																audionow.description
+															}
+														</dd>
+													</div>
+												</SwiperSlide>
 											))}
-										</dl>
+										</Swiper>
 									</div>
 								</div>
 							</div>
@@ -431,6 +454,7 @@ const Home: NextPage = () => {
 			<Calendar /> */}
 
 			<Stats />
+			<TestimonialComponent />
 		</div>
 	);
 };
