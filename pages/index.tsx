@@ -14,6 +14,7 @@ import {
 	faMoneyBillTrendUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 
 const audioNow = [
 	{
@@ -59,6 +60,14 @@ function WordSlider() {
 }
 
 const Home: NextPage = () => {
+	const [hasWindow, setHasWindow] = useState(false);
+
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			setHasWindow(true);
+		}
+	}, []);
+
 	return (
 		<div className="relative flex h-full w-full flex-col justify-center gap-y-4 px-4 pb-4 font-roboto">
 			{/* You are powerful card */}
@@ -454,7 +463,7 @@ const Home: NextPage = () => {
 			<Calendar /> */}
 
 			<Stats />
-			<TestimonialComponent />
+			{hasWindow && <TestimonialComponent />}
 		</div>
 	);
 };

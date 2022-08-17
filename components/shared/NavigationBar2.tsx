@@ -98,29 +98,29 @@ const navItemsLeft: NavItemPropType[] = [
 		data: [
 			{
 				dropdownType: "normal",
-				text: "What is Raja Yoga Meditation",
+				text: "นั้งสมาธิแบบราชาโยคะ",
 				href: "/meditation/what-is-raja-yoga",
 			},
 			{
 				dropdownType: "normal",
-				text: "How to Meditate",
+				text: "วิธีการฝึกสมาธิ",
 				href: "/meditation/how-to",
 			},
-			{
-				dropdownType: "normal",
-				text: "Experience Meditation",
-				href: "/meditation/experience",
-			},
+			// {
+			// 	dropdownType: "normal",
+			// 	text: "Experience Meditation",
+			// 	href: "/meditation/experience",
+			// },
 
 			{
 				dropdownType: "normal",
-				text: "Where to Meditate",
+				text: "การสร้างพื้นที่สําหรับการทําสมาธิ",
 				href: "/meditation/where",
 			},
 
 			{
 				dropdownType: "normal",
-				text: "Register Online For Courses",
+				text: "เรียนฟรี",
 				href: "/meditation/register",
 			},
 		],
@@ -132,31 +132,31 @@ const navItemsLeft: NavItemPropType[] = [
 		data: [
 			{
 				dropdownType: "normal",
-				text: "Raja Yoga",
+				text: "ราชาโยคะ",
 				href: "/wisdom/raja-yoga",
 			},
 
 			{
 				dropdownType: "normal",
-				text: "Soul",
+				text: "ดวงวิญญาน",
 				href: "/wisdom/soul",
 			},
 
 			{
 				dropdownType: "normal",
-				text: "Tree in Time",
+				text: "ต้นไม้และกาลเวลา",
 				href: "/wisdom/tree",
 			},
 
 			{
 				dropdownType: "normal",
-				text: "Wheel of Life",
+				text: "วัฏจักรแห่งชีวิต",
 				href: "/wisdom/wheel-of-life",
 			},
 
 			{
 				dropdownType: "normal",
-				text: "Karma",
+				text: "กรรม",
 				href: "/wisdom/karma",
 			},
 
@@ -168,7 +168,7 @@ const navItemsLeft: NavItemPropType[] = [
 
 			{
 				dropdownType: "normal",
-				text: "Healthy Living",
+				text: "การใช้ชีวิตที่เพื่อการมีสุขภาพที่ดี",
 				href: "/wisdom/healthy-living",
 			},
 		],
