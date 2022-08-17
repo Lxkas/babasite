@@ -420,7 +420,7 @@ export default function NavigationBar2() {
 										default:
 											return (
 												<NavItem
-													key={navItem.href + i}
+													key={navItem.href + i + 100}
 													text={navItem.text}
 													href={navItem.href}
 													navType={navItem.navType}
