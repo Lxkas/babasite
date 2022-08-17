@@ -71,7 +71,7 @@ const Home: NextPage = () => {
 	return (
 		<div className="relative flex h-full w-full flex-col justify-center gap-y-4 px-4 pb-4 font-roboto">
 			{/* You are powerful card */}
-			<section className="h-screen w-full">
+			<section className="h-[860px] w-full">
 				<div className="relative flex h-full w-full items-center justify-center">
 					<Image
 						quality={100}
@@ -89,7 +89,7 @@ const Home: NextPage = () => {
 						<div className="absolute h-full w-full bg-purple-700 opacity-25"></div>
 						<div className="relative flex h-full w-full flex-col items-center justify-center">
 							<div className="flex flex-col sm:absolute sm:bottom-0 sm:h-1/4">
-								<p className="mb-8 text-center text-6xl font-extrabold text-white">
+								<p className="mb-4 text-center text-6xl font-extrabold text-white">
 									คุณทรงพลัง
 								</p>
 								<p className="w-full px-2 pb-2 text-center text-2xl font-normal text-white">
