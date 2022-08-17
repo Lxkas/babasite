@@ -8,7 +8,7 @@ export default function TestimonialComponent() {
 					controls
 					width={"100%"}
 					height={"100%"}
-					url="https://www.youtube.com/watch?v=Zt0JfmV7CyI"
+					url="https://youtu.be/q1w3xMwycLs"
 				></ReactPlayer>
 			</div>
 
