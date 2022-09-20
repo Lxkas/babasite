@@ -102,30 +102,20 @@ export default function CurrentLeadersPage() {
 					</h1>
 
 					<LeaderCard
-						name="ดาดี้ จางกี"
-						desc={`ท่านถือกำเนิดในปีค.ศ. 1916 ท่านเป็นผู้นำทางจิตของ บราห์มา
-					กุมารี ด้วยความเชื่อถือที่ไม่สั่นคลอน,
-					ดาดี้ปฏิเสธที่จะกำหนดขีดจำกัดให้แก่ตัวท่านเองด้วยการทำงานรับใช้ช่วยเหลือผู้อื่นอย่างไม่รู้เหนื่อย
-					ท่านมีส่วนร่วมกับองค์กรมาตั้งแต่ปี คศ. 1937
-					และประจำการอยู่ที่ ลอนดอนเป็นเวลา 40 ปี นับตั้งแต่ปี คศ.
-					1974
-					ท่านให้แรงบันดาลใจแก่ผู้คนจากทุกวัฒนธรรมและพื้นฐานอาชีพที่จะดำเนินชีวิตตามเป้าหมายที่สูงส่ง
-					เพื่อสนับสนุนการสร้างโลกที่น่าอยู่ขึ้น
-					ความลึกล้ำและการหยั่งรู้,
-					ดาดี้เบิกบานอย่างแท้จริงที่จะสังเกตการณ์และรับฟัง`}
-						img={"/assets/images/about/current_leaders/01.jpg"}
+						name="Dadi Ratan Mohini"
+						desc={`She is the Administrative Head of Brahma Kumaris and is one of the backbone members residing at the Headquarters. In childhood she created the foundation of her life in the early days of Brahma Kumaris. She lives up to her name 'most beautiful jewel' by always appearing light and tension-free. Dedicated and forthright, her focus has been the development and training programmes for teachers throughout India and serves as the spiritual resource to the team of young people responsible for the personal development and growth of youth. Now in her nineties, she remains lively and young at heart. `}
+						img={"/assets/images/about/current_leaders/03.jpg"}
 					/>
 
 					<LeaderCard
-						name="ดาดี้ฮิระดายา โมฮินี"
-						desc={`ท่านเป็นผู้ร่วมบริหารของบราห์มา กุมารี ชื่อของท่านหมายถึง “ผู้ที่ดึงดูดหัวใจ” ซึ่งเหมาะสมกับบุคลิกของท่านอย่างยิ่ง ท่านเป็นที่รู้จักอย่างดีในชื่อ กูลซาร์ (สวนดอกกุหลาบ) ท่านเป็นหนึ่งในสมาชิกก่อตั้งของโรงเรียนประจำที่ก่อตั้งขึ้นในปี ค.ศ. 1937 โดย บราห์มา บาบา ท่านฝึกสมาธิอย่างจริงจังมาเป็นเวลายาวนาน ในระเบียบวินัย และการฝึกปฏิบัติทางจิตวิญญาณทำให้ท่านกลายเป็นตัวอย่างของคุณธรรมที่มีชีวิต ท่านให้แรงบันดาลใจแก่ผู้คนนับล้านๆ ทั่วทั้งโลกด้วยความเรียบง่าย ความเงียบสงบและความลึกล้ำของท่าน
-                        `}
-						img={"/assets/images/about/current_leaders/02.jpg"}
+						name="Dadi Mohini Panjabi"
+						desc={`She is the Additional Administrative Head of Brahma Kumaris. She has been with the BK's since childhood in Delhi, even while she was a student at the University of Delhi. She served with the founder, Brahma Baba, opening centres in India. In 1974 she began serving abroad, establishing a BK presence in North American, first in the Caribbean (1976) and then in New York (1978). She is president of the Brahma Kumaris World Spiritual Organization of the USA, the regional coordinator of the Brahma Kumaris for the Americas and the Caribbean and is representative of the BK's to the United Nations. She will share her time between India and the USA.`}
+						img={"/assets/images/about/current_leaders/03.jpg"}
 					/>
 
 					<LeaderCard
-						name="ดาดี้ ระตัน โมฮินี"
-						desc={`ท่านเป็นผู้ช่วยบริหารของบราห์มา กุมารี และเป็นหนึ่งในสมาชิกแกนนำที่อยู่ที่สำนักงานใหญ่ ในวัยเด็ก ท่านสร้างรากฐานของชีวิตของท่านในยุคแรกๆ ของบราห์มา กุมารี ท่านดำเนินชีวิตตามความหมายของชื่อของท่าน “อัญมณีที่สวยงามที่สุด” โดยการอยู่อย่างเบาสบายและไร้ความเครียด ด้วยการอุทิศตนและตรงไปตรงมา, ท่านจดจ่ออยู่กับโปรแกรมการพัฒนาและการฝึกอบรมให้กับครูทั่วทั้งอินเดีย และรับใช้ช่วยเหลือในฐานะที่เป็นแหล่งทรัพยากรทางจิตวิญญาณให้แก่ทีมเยาวชนที่รับผิดชอบต่อการเติบโตและพัฒนาตนเองของเยาวชน เวลานี้ ในวัยแปดสิบปีของท่าน, ท่านอยู่อย่างสดใสร่าเริง`}
+						name="Dadi Jayanti Kirpalani"
+						desc={`She is an Additional Administrative Head of the Brahma Kumaris. Born in India, she moved with her family to London in 1957 at the age of 8. Her family was instrumental in bringing Raj Yoga to the West. As she returned to India over the years, she met the founder, Brahma Baba on many occasions and at age 19 she made the decision to pursue a life of spiritual study and service with the Brahma Kumaris. Her unique childhood prepared her to bring the wisdom of the East to the West. She is an eloquent speaker and has spoken widely on climate change, applied values and spiritual practice. She is the regional coordinator for the Brahma Kumaris activities in Europe and the Middle East.`}
 						img={"/assets/images/about/current_leaders/03.jpg"}
 					/>
 				</div>

@@ -53,7 +53,7 @@ const navItemsRight: NavItemPropType[] = [
 			},
 			{
 				dropdownType: "innerdropdown",
-				title: "ศูนย์หลักของเรา",
+				title: "สำนักงานใหญ่",
 				options: [
 					{
 						text: "Pandav Bhavan",
@@ -69,6 +69,11 @@ const navItemsRight: NavItemPropType[] = [
 					},
 				],
 			},
+			{
+				dropdownType: "normal",
+				text: "ติดต่อเรา",
+				href: "/contact",
+			},
 		],
 	},
 	{
@@ -78,13 +83,36 @@ const navItemsRight: NavItemPropType[] = [
 		data: [
 			{
 				dropdownType: "normal",
-				text: "ศูนย์ท้องถิ่น",
+				text: "ศูนย์ในประเทศไทย",
 				href: "/local-locations",
 			},
 			{
 				dropdownType: "normal",
-				text: "ศูนย์ระดับโลก",
+				text: "ศูนย์ในต่างประเทศ",
+				href: "/",
+			},
+			{
+				dropdownType: "normal",
+				text: "ค้นหาศูนย์ทั่วโลก",
 				href: "https://www.brahmakumaris.org/centre-locator/",
+			},
+		],
+	},
+
+	{
+		text: "Something",
+		href: "#",
+		navType: "dropdown",
+		data: [
+			{
+				dropdownType: "normal",
+				text: "วงล้อคุณธรรม",
+				href: "/virtuescope",
+			},
+			{
+				dropdownType: "normal",
+				text: "หนังสือ e-book",
+				href: "/",
 			},
 		],
 	},
@@ -92,18 +120,18 @@ const navItemsRight: NavItemPropType[] = [
 
 const navItemsLeft: NavItemPropType[] = [
 	{
-		text: "การทำสมาธิ",
+		text: "การฝึกจิตให้มีพลัง",
 		href: "#",
 		navType: "dropdown",
 		data: [
 			{
 				dropdownType: "normal",
-				text: "นั้งสมาธิแบบราชาโยคะ",
+				text: "สมาธิแบบราชาโยคะ",
 				href: "/meditation/what-is-raja-yoga",
 			},
 			{
 				dropdownType: "normal",
-				text: "วิธีการฝึกสมาธิ",
+				text: "วิธีการฝึกเบื้องต้น",
 				href: "/meditation/how-to",
 			},
 			// {
@@ -114,19 +142,19 @@ const navItemsLeft: NavItemPropType[] = [
 
 			{
 				dropdownType: "normal",
-				text: "การสร้างพื้นที่สําหรับการทําสมาธิ",
+				text: "ฝึกที่ไหน อย่างไร",
 				href: "/meditation/where",
 			},
 
 			{
 				dropdownType: "normal",
-				text: "เรียนฟรี",
+				text: "หลักสูตรของเรา (เรียนฟรี)",
 				href: "/meditation/register",
 			},
 		],
 	},
 	{
-		text: "ภูมิปัญญา",
+		text: "องค์ความรู้",
 		href: "#",
 		navType: "dropdown",
 		data: [
@@ -138,8 +166,14 @@ const navItemsLeft: NavItemPropType[] = [
 
 			{
 				dropdownType: "normal",
-				text: "ดวงวิญญาน",
+				text: "ดวงวิญญานและร่างกาย",
 				href: "/wisdom/soul",
+			},
+
+			{
+				dropdownType: "normal",
+				text: "พระเจ้าและมนุษย์",
+				href: "/wisdom/god-knows",
 			},
 
 			{
@@ -156,20 +190,20 @@ const navItemsLeft: NavItemPropType[] = [
 
 			{
 				dropdownType: "normal",
-				text: "กรรม",
+				text: "กฎแห่งกรรม",
 				href: "/wisdom/karma",
 			},
 
 			{
 				dropdownType: "normal",
-				text: "God Knows",
-				href: "/wisdom/god-knows",
+				text: "วิถีชีวิตที่ดีงาม",
+				href: "/wisdom/healthy-living",
 			},
 
 			{
 				dropdownType: "normal",
-				text: "การใช้ชีวิตที่เพื่อการมีสุขภาพที่ดี",
-				href: "/wisdom/healthy-living",
+				text: "พลังทางจิตวิญญาณ",
+				href: "/wisdom/soul-power",
 			},
 		],
 	},

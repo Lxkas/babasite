@@ -1,7 +1,6 @@
 import {
 	faBuilding,
 	faEarthAsia,
-	faHourglass,
 	faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,7 +23,7 @@ export default function Stats() {
 					<div className="absolute inset-0 h-1/2 bg-white" />
 					<div className="relative mx-auto max-w-full px-4 sm:px-6 lg:px-8">
 						<div className="mx-auto max-w-full">
-							<dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-4">
+							<dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
 								<div className="flex flex-col border-b border-gray-100 p-6 text-center hover:border-b-orange-600 sm:border-0 sm:border-b-2 sm:border-r sm:border-b-transparent">
 									<dt className="order-1 mb-2 text-lg font-medium leading-6 text-gray-500">
 										<FontAwesomeIcon
@@ -67,7 +66,7 @@ export default function Stats() {
 										1,000,000+
 									</dd>
 								</div>
-								<div className="flex flex-col border-t border-b border-gray-100 p-6 text-center hover:border-b-orange-600 sm:border-l sm:border-b-2">
+								{/* <div className="flex flex-col border-t border-b border-gray-100 p-6 text-center hover:border-b-orange-600 sm:border-l sm:border-b-2">
 									<dt className="order-1 mb-2 text-lg font-medium leading-6 text-gray-500">
 										<FontAwesomeIcon
 											icon={faHourglass}
@@ -80,7 +79,7 @@ export default function Stats() {
 									<dd className="order-2 text-4xl font-extrabold text-gray-600 sm:text-lg md:text-2xl lg:text-3xl xl:text-5xl">
 										100,000,000
 									</dd>
-								</div>
+								</div> */}
 							</dl>
 						</div>
 					</div>

@@ -23,24 +23,19 @@ import { useRouter } from "next/router";
 
 const navigation = {
 	meditation: [
-		{ name: "ราชาโยคะคืออะไร", href: "/meditation/what-is-raja-yoga" },
-		{ name: "นั่งสมาธิยังไง", href: "/meditation/how-to" },
-		{ name: "เรียนสมาธิเดี๋ยวนี้", href: "/meditation/how-to" },
+		{ name: "สมาธิแบบราชาโยคะ", href: "/meditation/what-is-raja-yoga" },
+		{ name: "ขั้นตอนการฝึกเบื้องต้น", href: "/meditation/how-to" },
+		{ name: "หลักสูตรของเรา (เรียนฟรี)", href: "/meditation/register" },
 	],
 	location: [
-		{ name: "ศูนย์ในประเทศ", href: "/local-locations" },
+		{ name: "ศูนย์ในประเทศไทย", href: "/local-locations" },
+		{ name: "ศูนย์ในต่างประเทศ", href: "/" },
 		{
-			name: "ศูนย์ทั่วโลก",
+			name: "ค้นหาศูนย์ทั่วโลก",
 			href: "https://www.brahmakumaris.org/centre-locator/",
 		},
 	],
-	about: [
-		{ name: "เกี่ยวกับเรา", href: "/about" },
-		{
-			name: "ศูนย์หลักของเรา",
-			href: "https://brahmakumaris.org.au/new/about-us/our-headquarters/pandav-bhavan/",
-		},
-	],
+	contact: [{ name: "ติดต่อเรา", href: "/contact" }],
 	legal: [
 		{ name: "Claim", href: "#" },
 		{ name: "Privacy", href: "#" },
@@ -105,7 +100,7 @@ export default function SiteFooter() {
 					<div className="grid grid-cols-2 gap-8 xl:col-span-4">
 						<div className="md:grid md:grid-cols-2 md:gap-8">
 							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+								<h3 className="text-md font-semibold uppercase tracking-wider text-gray-700">
 									meditation
 								</h3>
 								<ul role="list" className="mt-4 space-y-4">
@@ -113,7 +108,7 @@ export default function SiteFooter() {
 										<li key={item.name}>
 											<a
 												href={item.href}
-												className="text-base text-gray-500 hover:text-gray-900"
+												className="text-base text-gray-500 hover:text-orange-500"
 											>
 												{item.name}
 											</a>
@@ -122,7 +117,7 @@ export default function SiteFooter() {
 								</ul>
 							</div>
 							<div className="mt-12 md:mt-0">
-								<h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+								<h3 className="text-md font-semibold uppercase tracking-wider text-gray-700">
 									location
 								</h3>
 								<ul role="list" className="mt-4 space-y-4">
@@ -130,7 +125,7 @@ export default function SiteFooter() {
 										<li key={item.name}>
 											<a
 												href={item.href}
-												className="text-base text-gray-500 hover:text-gray-900"
+												className="text-base text-gray-500 hover:text-orange-500"
 											>
 												{item.name}
 											</a>
@@ -141,15 +136,15 @@ export default function SiteFooter() {
 						</div>
 						<div className="md:grid md:grid-cols-2 md:gap-8">
 							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
-									about
+								<h3 className="text-md font-semibold uppercase tracking-wider text-gray-700">
+									contact
 								</h3>
 								<ul role="list" className="mt-4 space-y-4">
-									{navigation.about.map((item) => (
+									{navigation.contact.map((item) => (
 										<li key={item.name}>
 											<a
 												href={item.href}
-												className="text-base text-gray-500 hover:text-gray-900"
+												className="text-base text-gray-500 hover:text-orange-500"
 											>
 												{item.name}
 											</a>
@@ -180,6 +175,11 @@ export default function SiteFooter() {
 
 				{/* BeeZone banner */}
 				{/* TODO: Make it a component, localize the assets */}
+				<div className="mb-2">
+					ท่านสามารถดาวน์โหลดแอพพลิเคชั่น Bee.Zone ได้ฟรี
+					ในการฝึกสมาธิอย่างง่ายๆ ที่จะช่วยให้กลับมาผ่อนคลาย
+					และสัมผัสกับความสงบสุข และความเข้มแข็งจากภายใน
+				</div>
 				<div className="mx-auto flex max-w-7xl flex-col rounded-lg bg-orange-400 lg:flex-none">
 					<div className="px-4 py-2">
 						<div className="mx-auto max-w-7xl py-6 lg:flex lg:items-center lg:justify-between lg:py-8">
@@ -236,14 +236,14 @@ export default function SiteFooter() {
 				</div>
 
 				{/* Newsletter section */}
-				<div className="border-t border-gray-200 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
+				{/* <div className="border-t border-gray-200 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
 					<div>
 						<h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
-							Subscribe to our newsletter
+							Contact Us
 						</h3>
 						<p className="mt-2 text-base text-gray-500">
-							The latest news, meditations, courses, sent to your
-							inbox weekly.
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Laborum, perspiciatis.
 						</p>
 					</div>
 					<form className="mt-4 sm:flex sm:max-w-md lg:mt-0">
@@ -264,11 +264,11 @@ export default function SiteFooter() {
 								type="submit"
 								className="flex w-full items-center justify-center rounded-md border border-transparent bg-orange-600 py-2 px-4 text-base font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
 							>
-								Subscribe
+								Send
 							</button>
 						</div>
 					</form>
-				</div>
+				</div> */}
 
 				{/* Copyright, socials */}
 				<div className="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
@@ -283,7 +283,7 @@ export default function SiteFooter() {
 							>
 								<span className="sr-only">{item.name}</span>
 								<item.icon
-									className="h-6 w-6"
+									className="h-8 w-8"
 									aria-hidden="true"
 								/>
 							</a>

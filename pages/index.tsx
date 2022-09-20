@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import TestimonialComponent from "@/components/shared/Testimonial";
 import { faPlayCircle, faStopCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const audioNow = [
@@ -195,7 +196,7 @@ const Home: NextPage = () => {
 		<div className="relative flex h-full w-full flex-col justify-center gap-y-4 px-4 pb-4 font-roboto">
 			<audio ref={audioElemRef} className="absolute hidden" src="" />
 			{/* You are powerful card */}
-			<section className="h-[860px] w-full">
+			<section className="h-[720px] w-full">
 				<div className="relative flex h-full w-full items-center justify-center">
 					<Image
 						quality={100}
@@ -212,124 +213,21 @@ const Home: NextPage = () => {
 					<div className="relative flex h-full w-full flex-col items-center justify-center">
 						<div className="absolute h-full w-full bg-purple-700 opacity-25"></div>
 						<div className="relative flex h-full w-full flex-col items-center justify-center">
-							<div className="flex flex-col sm:absolute sm:bottom-0 sm:h-1/4">
-								<p className="mb-4 text-center text-6xl font-extrabold text-white">
-									คุณทรงพลัง
-								</p>
-								<p className="w-full px-2 pb-2 text-center text-2xl font-normal text-white">
-									{`ด้วยความปั่นป่วนที่เพิ่มขึ้นเรื่อยๆ ในโลกนี้ จึงเป็นเรื่องยากที่จะรู้วิธีช่วยเหลือ หรือ แม้แต่จะรับมือกับมันทั้งหมด`}
+							<div className="flex flex-col">
+								<p className="mb-16 text-center text-4xl font-extrabold text-white lg:text-6xl">
+									ความคิดที่ทรงพลัง
 									<br />
-									ความคิดของเรามีพลัง
-									พวกมันหล่อหลอมโลกและมีอิทธิพลต่อผู้คนและธรรมชาติ
-									<br />
-									การใช้เวลา 5
-									นาทีต่อวันอย่างมีสติสัมปชัญญะสร้างความรักและสันติสุขให้กับโลกสามารถช่วยยกระดับบรรยากาศในแบบที่ละเอียดอ่อนแต่มีความหมายมาก
-									อิทธิพลของความคิดที่ทรงพลังเหล่านี้ไม่สามารถพูดเกินจริงได้
+									ชีวิตที่ทรงพลัง
 								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 
-			<section>
-				<Swiper
-					loop={true}
-					navigation={true}
-					modules={[Navigation]}
-					className="h-full w-full"
-				>
-					<SwiperSlide>
-						<div className="relative flex h-full w-full items-center justify-center bg-black">
-							{/* TODO: Make these local images, and make them components */}
-							<img
-								className="h-auto w-full"
-								src="http://brahmakumaris.or.th/images/2018/09/25/think-.jpg"
-								alt="Some"
-							/>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide>
-						<div className="relative flex h-full w-full items-center justify-center bg-black">
-							<img
-								className="h-auto w-full"
-								src="http://brahmakumaris.or.th/images/2018/09/25/course-1.jpg"
-								alt="Some"
-							/>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide>
-						<div className="relative flex h-full w-full items-center justify-center bg-black">
-							<img
-								className="h-auto w-full"
-								src="http://brahmakumaris.or.th/images/2018/09/25/stress-free.jpg"
-								alt="Some"
-							/>
-						</div>
-					</SwiperSlide>
-				</Swiper>
-			</section>
-
-			<section className="w-full">
-				<div className="relative flex h-full w-full items-center justify-center">
-					<Image
-						src={
-							"https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1193&q=80"
-						}
-						alt="Forest"
-						className="object-cover"
-						layout="fill"
-						quality={100}
-					/>
-
-					<div className="relative flex h-full w-full flex-col items-center justify-center py-4">
-						<div className="z-10 mx-auto text-center text-6xl font-extrabold text-white">
-							<div className="py-12">
-								<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-									<div className="lg:text-center">
-										<p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-white sm:text-4xl">
-											เรียนสมาธิเดี๋ยวนี้
-										</p>
-										<p className="mt-4 max-w-2xl text-xl text-white lg:mx-auto">
-											การฝึกสมาธิแบบราชาโยคะนั้นเป็นเรื่องง่าย
-											แต่เราจำเป็นต้องมีคําอธิบายเล็กน้อยก่อนที่จะฝึกฝน
-											นี่คือห้าขั้นตอนที่เรียบง่ายในการฝึก
-											และในไม่ช้า
-											คุณก็จะเข้าถึงความเงียบสงบได้ในเพียงความคิดเดียว
-										</p>
-									</div>
-
-									<div className="relative mt-10">
-										<Swiper
-											breakpoints={{
-												640: {
-													slidesPerView: 1,
-												},
-												1280: {
-													slidesPerView: 4,
-												},
-											}}
-											navigation={true}
-											modules={[Navigation]}
-											className="h-full w-full max-w-sm xl:max-w-7xl"
-										>
-											{audioNow.map((audionow) => (
-												<SwiperSlide
-													key={
-														audionow.name +
-														audionow.url
-													}
-												>
-													<AudioNowComponent
-														currentUrl={currentUrl}
-														audionow={audionow}
-														playAudio={playAudio}
-													/>
-												</SwiperSlide>
-											))}
-										</Swiper>
-									</div>
-								</div>
+								<p className="w-full px-16 pb-2 text-center text-2xl font-normal text-white lg:text-4xl">
+									ความคิดของเรานั้นมีอำนาจอย่างยิ่ง
+									มันหล่อหลอมตัวเรา โลกของเรา
+									และมีอิทธิพลต่อผู้คนและธรรมชาติอย่างมากมาย
+									หากเราสามารถควบคุมจิตใจให้เกิดการจดจ่อเพ่งรวม
+									เต็มด้วยความคิดและความรู้สึกที่บริสุทธิ์ สงบ
+									และทรงพลัง
+								</p>
 							</div>
 						</div>
 					</div>
@@ -343,7 +241,7 @@ const Home: NextPage = () => {
 					modules={[Navigation, Autoplay]}
 					className="h-full w-full"
 					autoplay={{
-						delay: 3000,
+						delay: 5000,
 					}}
 				>
 					<SwiperSlide>
@@ -449,8 +347,120 @@ const Home: NextPage = () => {
 				</Swiper>
 			</section>
 
+			<section>
+				<Swiper
+					loop={true}
+					navigation={true}
+					modules={[Navigation]}
+					className="h-full w-full"
+				>
+					<SwiperSlide>
+						<div className="relative flex h-full w-full items-center justify-center bg-black">
+							{/* TODO: Make these local images, and make them components */}
+							<img
+								className="h-auto w-full"
+								src="http://brahmakumaris.or.th/images/2018/09/25/think-.jpg"
+								alt="Some"
+							/>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="relative flex h-full w-full items-center justify-center bg-black">
+							<img
+								className="h-auto w-full"
+								src="http://brahmakumaris.or.th/images/2018/09/25/course-1.jpg"
+								alt="Some"
+							/>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="relative flex h-full w-full items-center justify-center bg-black">
+							<img
+								className="h-auto w-full"
+								src="http://brahmakumaris.or.th/images/2018/09/25/stress-free.jpg"
+								alt="Some"
+							/>
+						</div>
+					</SwiperSlide>
+				</Swiper>
+			</section>
+
+			{/* <section className="w-full">
+				<div className="relative flex h-full w-full items-center justify-center">
+					<Image
+						src={
+							"https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1193&q=80"
+						}
+						alt="Forest"
+						className="object-cover"
+						layout="fill"
+						quality={100}
+					/>
+
+					<div className="relative flex h-full w-full flex-col items-center justify-center py-4">
+						<div className="z-10 mx-auto text-center text-6xl font-extrabold text-white">
+							<div className="py-12">
+								<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+									<div className="lg:text-center">
+										<p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-white sm:text-4xl">
+											เรียนสมาธิเดี๋ยวนี้
+										</p>
+										<p className="mt-4 max-w-2xl text-xl text-white lg:mx-auto">
+											การฝึกสมาธิแบบราชาโยคะนั้นเป็นเรื่องง่าย
+											แต่เราจำเป็นต้องมีคําอธิบายเล็กน้อยก่อนที่จะฝึกฝน
+											นี่คือห้าขั้นตอนที่เรียบง่ายในการฝึก
+											และในไม่ช้า
+											คุณก็จะเข้าถึงความเงียบสงบได้ในเพียงความคิดเดียว
+										</p>
+									</div>
+
+									<div className="relative mt-10">
+										<Swiper
+											breakpoints={{
+												640: {
+													slidesPerView: 1,
+												},
+												1280: {
+													slidesPerView: 4,
+												},
+											}}
+											navigation={true}
+											modules={[Navigation]}
+											className="h-full w-full max-w-sm xl:max-w-7xl"
+										>
+											{audioNow.map((audionow) => (
+												<SwiperSlide
+													key={
+														audionow.name +
+														audionow.url
+													}
+												>
+													<AudioNowComponent
+														currentUrl={currentUrl}
+														audionow={audionow}
+														playAudio={playAudio}
+													/>
+												</SwiperSlide>
+											))}
+										</Swiper>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> */}
+
 			<Stats />
+
 			{hasWindow && <TestimonialComponent />}
+
+			{/* Virtuescope */}
+			<section className="w-full p-2">
+				<Link href={"/virtuescope"} passHref>
+					<a>Virtuescope</a>
+				</Link>
+			</section>
 		</div>
 	);
 };
