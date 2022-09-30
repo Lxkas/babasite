@@ -196,13 +196,11 @@ const Home: NextPage = () => {
 		<div className="relative flex h-full w-full flex-col justify-center gap-y-4 px-4 pb-4 font-roboto">
 			<audio ref={audioElemRef} className="absolute hidden" src="" />
 			{/* You are powerful card */}
-			<section className="h-[720px] w-full">
+			<section className="h-[1080px] w-full">
 				<div className="relative flex h-full w-full items-center justify-center">
 					<Image
 						quality={100}
-						src={
-							"https://brahmakumaris.org.au/new/wp-content/uploads/2022/01/rui-xu-XabW1JtTJ3M-unsplash-scaled.jpg"
-						}
+						src={"/assets/images/home/a.png"}
 						alt="Lotus"
 						className="object-cover"
 						layout="fill"
@@ -210,7 +208,7 @@ const Home: NextPage = () => {
 						// height={842}
 					/>
 
-					<div className="relative flex h-full w-full flex-col items-center justify-center">
+					{/* <div className="relative flex h-full w-full flex-col items-center justify-center">
 						<div className="absolute h-full w-full bg-purple-700 opacity-25"></div>
 						<div className="relative flex h-full w-full flex-col items-center justify-center">
 							<div className="flex flex-col">
@@ -221,16 +219,18 @@ const Home: NextPage = () => {
 								</p>
 
 								<p className="w-full px-16 pb-2 text-center text-2xl font-normal text-white lg:text-4xl">
-									ความคิดของเรานั้นมีอำนาจอย่างยิ่ง
+									ความคิดของเรานั้นมีอำนาจกว่าที่เราคิด
 									มันหล่อหลอมตัวเรา โลกของเรา
 									และมีอิทธิพลต่อผู้คนและธรรมชาติอย่างมากมาย
 									หากเราสามารถควบคุมจิตใจให้เกิดการจดจ่อเพ่งรวม
-									เต็มด้วยความคิดและความรู้สึกที่บริสุทธิ์ สงบ
-									และทรงพลัง
+									เต็มไปด้วยความคิดที่เป็นบวก
+									และความรู้สึกที่บริสุทธิ์
+									เราจะสามารถเปลี่ยนแปลงชีวิตของตนเอง
+									และเปลี่ยนแปลงโลกได้อย่างน่าอัศจรรย์
 								</p>
 							</div>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</section>
 
@@ -247,16 +247,14 @@ const Home: NextPage = () => {
 					<SwiperSlide>
 						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
 							<Image
-								src={
-									"https://images.unsplash.com/photo-1572061485545-9399b66acedd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-								}
+								src={"/assets/images/home/1.png"}
 								quality={100}
 								alt="Forest"
 								className="-z-20 object-cover"
 								layout="fill"
 							/>
 
-							<div className="absolute">
+							{/* <div className="absolute">
 								<div className="flex flex-col items-center text-white">
 									<h1 className="text-4xl font-extrabold xl:text-8xl">
 										ปัญญา
@@ -267,22 +265,20 @@ const Home: NextPage = () => {
 										ด้วยความเข้าใจ การใส่ใจดูแล และความกรุณา
 									</p>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
 						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
 							<Image
-								src={
-									"https://images.unsplash.com/photo-1594684198422-2b625d9281e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-								}
+								src={"/assets/images/home/2.png"}
 								quality={100}
 								alt="Forest"
 								className="-z-20 object-cover"
 								layout="fill"
 							/>
 
-							<div className="absolute">
+							{/* <div className="absolute">
 								<div className="flex flex-col items-center text-white">
 									<h1 className="text-4xl font-extrabold xl:text-8xl">
 										ความสุข
@@ -291,22 +287,20 @@ const Home: NextPage = () => {
 										คือการที่ฉันใช้เวลาทุกขณะได้ตามที่ต้องการเป็นอย่างดี
 									</p>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
 						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
 							<Image
-								src={
-									"https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-								}
+								src={"/assets/images/home/3.png"}
 								quality={100}
 								alt="Forest"
 								className="-z-20 object-cover"
 								layout="fill"
 							/>
 
-							<div className="absolute">
+							{/* <div className="absolute">
 								<div className="flex flex-col items-center text-white">
 									<h1 className="text-4xl font-extrabold xl:text-8xl">
 										ความสงบ
@@ -316,22 +310,20 @@ const Home: NextPage = () => {
 										นั่นคือการทําให้ตัวเองสงบสุข
 									</p>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
 						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
 							<Image
-								src={
-									"https://images.unsplash.com/photo-1484609047056-d27d44e97ede?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
-								}
+								src={"/assets/images/home/4.png"}
 								quality={100}
 								alt="Forest"
 								className="-z-20 object-cover"
 								layout="fill"
 							/>
 
-							<div className="absolute">
+							{/* <div className="absolute">
 								<div className="flex flex-col items-center text-white">
 									<h1 className="text-4xl font-extrabold xl:text-8xl">
 										ความรัก
@@ -341,7 +333,7 @@ const Home: NextPage = () => {
 										แต่ความรักนั้นทำงานเสมอ
 									</p>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</SwiperSlide>
 				</Swiper>
@@ -357,29 +349,62 @@ const Home: NextPage = () => {
 					<SwiperSlide>
 						<div className="relative flex h-full w-full items-center justify-center bg-black">
 							{/* TODO: Make these local images, and make them components */}
-							<img
-								className="h-auto w-full"
-								src="http://brahmakumaris.or.th/images/2018/09/25/think-.jpg"
-								alt="Some"
-							/>
+							<Link href="/meditation/register">
+								<Image
+									src="/assets/images/registration/basic.gif"
+									width={3000}
+									height={1000}
+								/>
+							</Link>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
 						<div className="relative flex h-full w-full items-center justify-center bg-black">
-							<img
-								className="h-auto w-full"
-								src="http://brahmakumaris.or.th/images/2018/09/25/course-1.jpg"
-								alt="Some"
-							/>
+							{/* TODO: Make these local images, and make them components */}
+							<Link href="/meditation/register">
+								<Image
+									src="/assets/images/images/home/anger.jpg"
+									width={3000}
+									height={1000}
+								/>
+							</Link>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
 						<div className="relative flex h-full w-full items-center justify-center bg-black">
-							<img
-								className="h-auto w-full"
-								src="http://brahmakumaris.or.th/images/2018/09/25/stress-free.jpg"
-								alt="Some"
-							/>
+							{/* TODO: Make these local images, and make them components */}
+							<Link href="/meditation/register">
+								<Image
+									src="/assets/images/images/home/stress.jpg"
+									width={3000}
+									height={1000}
+								/>
+							</Link>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="relative flex h-full w-full items-center justify-center bg-black">
+							{/* TODO: Make these local images, and make them components */}
+
+							<Link href="/meditation/register">
+								<Image
+									src="/assets/images/images/home/positive.jpg"
+									width={3000}
+									height={1000}
+								/>
+							</Link>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="relative flex h-full w-full items-center justify-center bg-black">
+							{/* TODO: Make these local images, and make them components */}
+							<Link href="/meditation/register">
+								<Image
+									src="/assets/images/images/home/respect.jpg"
+									width={3000}
+									height={1000}
+								/>
+							</Link>
 						</div>
 					</SwiperSlide>
 				</Swiper>

@@ -34,7 +34,7 @@ const navItemsRight: NavItemPropType[] = [
 						href: "/about/students",
 					},
 					{
-						text: "ประสบการณ์ที่ได้รับจากบราห์มากุมารี",
+						text: "การเรียนรู้และประสบการณ์ที่ได้รับ",
 						href: "/about/benefits",
 					},
 					{
@@ -120,7 +120,7 @@ const navItemsRight: NavItemPropType[] = [
 
 const navItemsLeft: NavItemPropType[] = [
 	{
-		text: "การฝึกจิตให้มีพลัง",
+		text: "การฝึกจิต",
 		href: "#",
 		navType: "dropdown",
 		data: [
@@ -154,7 +154,7 @@ const navItemsLeft: NavItemPropType[] = [
 		],
 	},
 	{
-		text: "องค์ความรู้",
+		text: "สาระความรู้",
 		href: "#",
 		navType: "dropdown",
 		data: [
@@ -178,7 +178,7 @@ const navItemsLeft: NavItemPropType[] = [
 
 			{
 				dropdownType: "normal",
-				text: "ต้นไม้และกาลเวลา",
+				text: "ต้นไม้แห่งมนุษยชาติและวงจรเวลา",
 				href: "/wisdom/tree",
 			},
 
@@ -303,7 +303,7 @@ export default function NavigationBar2() {
 						hasScrolled ? "shadow-xl" : ""
 					)}
 				>
-					<div className="relative mx-auto flex h-full max-w-7xl justify-between">
+					<div className="relative mx-auto flex h-full max-w-7xl cursor-pointer justify-between">
 						<div className="relative z-10 flex px-2 lg:px-0">
 							<div className="flex flex-shrink-0 items-center pl-2 lg:pl-1 xl:pl-0">
 								<Link href="/">

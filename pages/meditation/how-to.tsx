@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const oranges = [
 	"bg-white",
@@ -28,18 +28,49 @@ type StepComponentProps = {
 	ind: number;
 };
 
+function fancyTimeFormat(duration: number) {
+	// Hours, minutes and seconds
+	var hrs = ~~(duration / 3600);
+	var mins = ~~((duration % 3600) / 60);
+	var secs = ~~duration % 60;
+
+	// Output like "1:01" or "4:03:59" or "123:03:59"
+	var ret = "";
+
+	if (hrs > 0) {
+		ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+	}
+
+	ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+	ret += "" + secs;
+	return ret;
+}
+
 function AudioLine({ audio }: { audio: AudioLineType }) {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentTrack, setCurrentTrack] = useState<
 		HTMLAudioElement | undefined
 	>();
 
+	const [dur, setDur] = useState(0);
+
+	// TODO: make this not use effect
+	useEffect(() => {
+		const nAud = new Audio();
+		nAud.src = audio.url;
+		nAud.onloadeddata = () => {
+			setDur(nAud.duration);
+		};
+	}, []);
+
 	return (
 		<li className="flex">
 			<div className="w-full p-2">
 				<div className="text-md w-full font-medium text-gray-900">
 					<div className="ml-auto flex flex-row gap-x-2">
-						<span className="mr-auto">{audio.title}</span>
+						<span className="mr-auto">
+							{audio.title} {fancyTimeFormat(dur)}
+						</span>
 						<button className="flex h-8 w-8 items-center justify-center rounded-full bg-white p-2 shadow-md">
 							<Link href={audio.url}>
 								<FontAwesomeIcon
@@ -349,11 +380,11 @@ export default function HowtoPage() {
 									}
 									audios={[
 										{
-											title: "ทำสมาธิให้ไปอยู่เหนือเรื่องราว",
+											title: "การไปอยู่เหนือเรื่องราว",
 											url: "/assets/audio/how-to-meditate/meditation1.m4a",
 										},
 										{
-											title: "ทำสมาธิกับผู้เป็นเเหล่ง",
+											title: "ผู้เป็นแหล่งกำเนิดแห่งชีวิต",
 											url: "/assets/audio/how-to-meditate/meditation2.m4a",
 										},
 										{
@@ -361,7 +392,7 @@ export default function HowtoPage() {
 											url: "/assets/audio/how-to-meditate/meditation3.m4a",
 										},
 										{
-											title: "การเปลี่ยนที่เรียบง่าย",
+											title: "การเปลี่ยนแปลงที่เรียบง่าย",
 											url: "/assets/audio/how-to-meditate/meditation4.m4a",
 										},
 									]}

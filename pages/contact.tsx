@@ -1,129 +1,51 @@
+import Link from "next/link";
+
 export default function ContactUsPage() {
 	return (
 		<div className="bg-white">
-			<div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
-				<div className="divide-y-2 divide-gray-200">
-					<div className="lg:grid lg:grid-cols-3 lg:gap-8">
-						<h2 className="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">
-							Get in touch
-						</h2>
-						<div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0">
-							<div>
-								<h3 className="text-lg font-medium leading-6 text-gray-900">
-									Collaborate
-								</h3>
-								<dl className="mt-2 text-base text-gray-500">
-									<div>
-										<dt className="sr-only">Email</dt>
-										<dd>support@example.com</dd>
-									</div>
-									<div className="mt-1">
-										<dt className="sr-only">
-											Phone number
-										</dt>
-										<dd>+1 (555) 123-4567</dd>
-									</div>
-								</dl>
-							</div>
-							<div>
-								<h3 className="text-lg font-medium leading-6 text-gray-900">
-									Press
-								</h3>
-								<dl className="mt-2 text-base text-gray-500">
-									<div>
-										<dt className="sr-only">Email</dt>
-										<dd>support@example.com</dd>
-									</div>
-									<div className="mt-1">
-										<dt className="sr-only">
-											Phone number
-										</dt>
-										<dd>+1 (555) 123-4567</dd>
-									</div>
-								</dl>
-							</div>
-							<div>
-								<h3 className="text-lg font-medium leading-6 text-gray-900">
-									Join our team
-								</h3>
-								<dl className="mt-2 text-base text-gray-500">
-									<div>
-										<dt className="sr-only">Email</dt>
-										<dd>support@example.com</dd>
-									</div>
-									<div className="mt-1">
-										<dt className="sr-only">
-											Phone number
-										</dt>
-										<dd>+1 (555) 123-4567</dd>
-									</div>
-								</dl>
-							</div>
-							<div>
-								<h3 className="text-lg font-medium leading-6 text-gray-900">
-									Say hello
-								</h3>
-								<dl className="mt-2 text-base text-gray-500">
-									<div>
-										<dt className="sr-only">Email</dt>
-										<dd>support@example.com</dd>
-									</div>
-									<div className="mt-1">
-										<dt className="sr-only">
-											Phone number
-										</dt>
-										<dd>+1 (555) 123-4567</dd>
-									</div>
-								</dl>
-							</div>
-						</div>
-					</div>
-					<div className="mt-16 pt-16 lg:grid lg:grid-cols-3 lg:gap-8">
-						<h2 className="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">
-							Locations
-						</h2>
-						<div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0">
-							<div>
-								<h3 className="text-lg font-medium leading-6 text-gray-900">
-									Los Angeles
-								</h3>
-								<div className="mt-2 text-base text-gray-500">
-									<p>4556 Brendan Ferry</p>
-									<p className="mt-1">
-										Los Angeles, CA 90210
-									</p>
-								</div>
-							</div>
-							<div>
-								<h3 className="text-lg font-medium leading-6 text-gray-900">
-									New York
-								</h3>
-								<div className="mt-2 text-base text-gray-500">
-									<p>886 Walter Streets</p>
-									<p className="mt-1">New York, NY 12345</p>
-								</div>
-							</div>
-							<div>
-								<h3 className="text-lg font-medium leading-6 text-gray-900">
-									Toronto
-								</h3>
-								<div className="mt-2 text-base text-gray-500">
-									<p>7363 Cynthia Pass</p>
-									<p className="mt-1">Toronto, ON N3Y 4H8</p>
-								</div>
-							</div>
-							<div>
-								<h3 className="text-lg font-medium leading-6 text-gray-900">
-									Chicago
-								</h3>
-								<div className="mt-2 text-base text-gray-500">
-									<p>726 Mavis Island</p>
-									<p className="mt-1">Chicago, IL 60601</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
+				<p className="text-xl font-extrabold">
+					ท่านสามารถติดต่อสอบถามข้อมูลเพิ่มเติม
+					<br />
+					หรือเรียนรู้เกี่ยวกับราชาโยคะ และหลักสูตรอื่นๆของเราได้
+				</p>
+				<br />
+				<p className="font-bold">ในประเทศไทย:</p>
+				<span className="prose">
+					<ul role="list">
+						<li>
+							ศูนย์ราชาโยคะ ลาดพร้าว กรุงเทพฯ (บ้านพินทุ)
+							<br />
+							081-5670784, 084-7778850 www.facebook.com/baanpinthu
+						</li>
+						<li>นครปฐม 086-4486700, 097-2383251</li>
+						<li>เชียงใหม่ 081-8813178, 081-9602577</li>
+						<li>ปัตตานี 085-3858217, 089-1970108</li>
+					</ul>
+				</span>
+
+				<br />
+				<p className="font-bold">ในต่างประเทศ:</p>
+				<ul className="text-blue-400">
+					<li>
+						<Link
+							href="https://www.brahmakumaris.org/centre-locator"
+							passHref
+						>
+							<a>https://www.brahmakumaris.org/centre-locator</a>
+						</Link>
+					</li>
+					<li>
+						<Link
+							href="https://www.brahmakumaris.org/meditation/retreat-centres"
+							passHref
+						>
+							<a>
+								https://www.brahmakumaris.org/meditation/retreat-centres
+							</a>
+						</Link>
+					</li>
+				</ul>
 			</div>
 		</div>
 	);

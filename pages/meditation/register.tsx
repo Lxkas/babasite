@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 import translation from "@/public/assets/translations/meditation/courses.json";
+import Image from "next/image";
 
 function SignUpComponent() {
 	return (
@@ -69,9 +70,9 @@ function SignUpComponent() {
 						</div>
 						<div className="relative">
 							<div className="sm:text-center">
-								<h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+								<h3 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
 									Sign up for our 7 day course
-								</h2>
+								</h3>
 								<p className="mx-auto mt-6 max-w-2xl text-lg text-orange-200">
 									Sagittis scelerisque nulla cursus in enim
 									consectetur quam. Dictum urna sed
@@ -242,7 +243,7 @@ export default function RegisterPage() {
 									</span>
 								</h1>
 								<p className="mt-8 text-xl leading-8 text-gray-500">
-									หัวใจสําคัญของคําสอนของบราห์มา กุมารี
+									หัวใจสําคัญของคําสอนของบราห์มากุมารี
 									คือหลักสูตรพื้นฐานในการฝึกสมาธิแบบราชาโยคะ
 									หลักสูตรนี้ให้ความเข้าใจเกี่ยวกับความสัมพันธ์ระหว่างจิตวิญญาณและวัตถุธาตุ
 									การทํางานร่วมกันระหว่างดวงวิญญาณ
@@ -252,6 +253,17 @@ export default function RegisterPage() {
 							</div>
 
 							<BlockTemplate>
+								<h2 className="underline">
+									หลักสูตรพื้นฐานราชาโยคะ
+								</h2>
+								<figure>
+									<Image
+										src="/assets/images/registration/basic.gif"
+										alt="Anger"
+										width={1523}
+										height={765}
+									/>
+								</figure>
 								<p>หัวข้อการเรียนรู้</p>
 								<ul role="list">
 									<li>จิตสํานึกและการตระหนักรู้จักตนเอง</li>
@@ -262,25 +274,13 @@ export default function RegisterPage() {
 									<li>วงจรเวลา ต้นไม้แห่งชีวิต</li>
 									<li>วิถีชีวิตทางจิตวิญญา</li>
 								</ul>
-
-								<h2>สํารวจวิธีการ</h2>
-								<p>
-									<ul>
-										<li>สํารวจวิธีการ</li>
-										<li>
-											ควบคุมความคิด อารมณ์
-											และการตอบสนองของคุณ
-										</li>
-										<li>
-											ใช้ทักษะการทําสมาธิของคุณในการดำเนินชีวิตประจําวัน
-										</li>
-									</ul>
-								</p>
 							</BlockTemplate>
 
 							<br />
 							<BlockTemplate>
-								<h2>หลักสูตรและกิจกรรมอื่นๆ</h2>
+								<h2 className="underline">
+									หลักสูตรและกิจกรรมอื่นๆ
+								</h2>
 								<p>
 									นอกจากหลักสูตรการฝึกสมาธิแบบราชาโยคะแล้ว
 									บราห์มา กุมารียังจัดสัมมนา
@@ -288,9 +288,16 @@ export default function RegisterPage() {
 									และการรีทรีตในหลากหลายหัวข้อเพื่อการพัฒนาตนเอง
 									<br />
 									<br />
-									หลักสูตรต่างๆ รวมถึง:
 									<BlockTemplate>
 										<h3>การเอาชนะความโกรธ</h3>
+										<figure>
+											<Image
+												src="/assets/images/registration/anger.jpg"
+												alt="Anger"
+												width={1500}
+												height={500}
+											/>
+										</figure>
 										<p>
 											ความโกรธเป็นการแสดงออกของความเจ็บปวดภายใน
 											เป็นสิ่งชี้บอกว่าโลกภายในของคุณนั้นไม่ราบรื่น
@@ -321,6 +328,14 @@ export default function RegisterPage() {
 									<br />
 									<BlockTemplate>
 										<h3>การคิดเชิงบวก</h3>
+										<figure>
+											<Image
+												src="/assets/images/registration/positive.jpg"
+												alt="Anger"
+												width={1500}
+												height={500}
+											/>
+										</figure>
 										<p>
 											หลักสูตรนี้สําหรับผู้ที่ไม่แน่ใจว่าพวกเขาพร้อมสําหรับการฝึกสมาธิ
 											แต่ต้องการทำความเข้าใจการทํางานของจิตใจให้และกระจ่างมากขึ้น
@@ -352,6 +367,14 @@ export default function RegisterPage() {
 									<br />
 									<BlockTemplate>
 										<h3>ความนับถือตนเอง</h3>
+										<figure>
+											<Image
+												src="/assets/images/registration/respect.jpg"
+												alt="Anger"
+												width={1500}
+												height={500}
+											/>
+										</figure>
 										<p>
 											ไม่ว่าเราจะประสบความสําเร็จมามากขนาดไหนก็ตาม
 											เราจะประสบความได้สำเร็จมากขึ้นด้วยการเพิ่มความนับถือตนเอง
@@ -384,6 +407,14 @@ export default function RegisterPage() {
 									<br />
 									<BlockTemplate>
 										<h3>การใช้ชีวิตที่ปราศจากความเครียด</h3>
+										<figure>
+											<Image
+												src="/assets/images/registration/stress.jpg"
+												alt="Anger"
+												width={1500}
+												height={500}
+											/>
+										</figure>
 										<p>
 											ความเครียดถูกระบุว่าเป็นสาเหตุหลักของปัญหาสุขภาพมากมาย
 											สาเหตุส่วนใหญ่มาจากเรื่องทางจิตมากกว่าทางกาย
