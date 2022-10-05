@@ -17,7 +17,7 @@ const colors = {
 const navItemsRight: NavItemPropType[] = [
 	{ text: "หน้าหลัก", href: "/" },
 	{
-		text: "เกี่ยวกับเรา",
+		text: "รู้จักเรา",
 		href: "#",
 		navType: "dropdown",
 		data: [
@@ -26,7 +26,7 @@ const navItemsRight: NavItemPropType[] = [
 				title: "เกี่ยวกับเรา",
 				options: [
 					{
-						text: "รู้จักเรา",
+						text: "เราคือใคร",
 						href: "/about",
 					},
 					{
@@ -34,15 +34,11 @@ const navItemsRight: NavItemPropType[] = [
 						href: "/about/students",
 					},
 					{
-						text: "การเรียนรู้และประสบการณ์ที่ได้รับ",
-						href: "/about/benefits",
-					},
-					{
 						text: "จากจุดเริ่มต้นเล็กๆ",
 						href: "/about/humble-beginnings",
 					},
 					{
-						text: "ผู้นำท่านปัจจุบัน",
+						text: "ผู้นำในปัจจุบัน",
 						href: "/about/current-leaders",
 					},
 					{
@@ -69,38 +65,16 @@ const navItemsRight: NavItemPropType[] = [
 					},
 				],
 			},
-			{
-				dropdownType: "normal",
-				text: "ติดต่อเรา",
-				href: "/contact",
-			},
-		],
-	},
-	{
-		text: "ศูนย์ของเรา",
-		href: "/locations",
-		navType: "dropdown",
-		data: [
-			{
-				dropdownType: "normal",
-				text: "ศูนย์ในประเทศไทย",
-				href: "/local-locations",
-			},
-			{
-				dropdownType: "normal",
-				text: "ศูนย์ในต่างประเทศ",
-				href: "/",
-			},
-			{
-				dropdownType: "normal",
-				text: "ค้นหาศูนย์ทั่วโลก",
-				href: "https://www.brahmakumaris.org/centre-locator/",
-			},
 		],
 	},
 
+	{ text: "ติดต่อเรา", href: "/contact" },
 	{
-		text: "Something",
+		text: "การเรียนรู้",
+		href: "/about/benefits",
+	},
+	{
+		text: "แรงบันดาลใจ",
 		href: "#",
 		navType: "dropdown",
 		data: [
@@ -111,8 +85,46 @@ const navItemsRight: NavItemPropType[] = [
 			},
 			{
 				dropdownType: "normal",
+				text: "บัตรดอกไม้คุณธรรม",
+				href: "https://unshakeable.me/flowersofvirtue",
+			},
+			{
+				dropdownType: "normal",
+				text: "เซียมซีดีทุกใบ",
+				href: "http://www.brahmakumaris.or.th/seamsi/",
+			},
+			{
+				dropdownType: "normal",
+				text: "เพชรพลอยแห่งแสงสว่าง",
+				href: "https://unshakeable.me/JewelsOfLight",
+			},
+			{
+				dropdownType: "normal",
 				text: "หนังสือ e-book",
 				href: "/",
+			},
+			{
+				dropdownType: "normal",
+				text: "อาหารสุขภาพ",
+				href: "https://www.mybaba.me/yummy-yogi/%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99bakery",
+			},
+		],
+	},
+
+	{
+		text: "ศูนย์ทั่วโลก",
+		href: "#",
+		navType: "dropdown",
+		data: [
+			{
+				dropdownType: "normal",
+				text: "Official Website",
+				href: "https://www.brahmakumaris.org/",
+			},
+			{
+				dropdownType: "normal",
+				text: "Center Locator",
+				href: "https://www.brahmakumaris.org/centre-locator",
 			},
 		],
 	},
@@ -144,12 +156,6 @@ const navItemsLeft: NavItemPropType[] = [
 				dropdownType: "normal",
 				text: "ฝึกที่ไหน อย่างไร",
 				href: "/meditation/where",
-			},
-
-			{
-				dropdownType: "normal",
-				text: "หลักสูตรของเรา (เรียนฟรี)",
-				href: "/meditation/register",
 			},
 		],
 	},
@@ -206,6 +212,10 @@ const navItemsLeft: NavItemPropType[] = [
 				href: "/wisdom/soul-power",
 			},
 		],
+	},
+	{
+		text: "หลักสูตรของเรา",
+		href: "/meditation/register",
 	},
 ];
 

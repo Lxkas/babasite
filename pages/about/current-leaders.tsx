@@ -2,15 +2,15 @@ import Image from "next/image";
 
 function LeaderCard({ name, desc, img }: any) {
 	return (
-		<div className="mb-16 flex flex-col">
+		<div className="mb-8 flex flex-col">
 			<h3 className="font-bold">{name}</h3>
-			<div className="flex flex-col md:flex-row">
+			<div>
 				<Image
 					className="rounded-lg"
 					src={img}
-					alt="Dadi Janki"
-					width={2000}
-					height={0}
+					alt={name}
+					width={656}
+					height={936}
 					quality={100}
 				/>
 				<p className="mt-0 ml-4 pt-0">{desc}</p>
@@ -97,26 +97,28 @@ export default function CurrentLeadersPage() {
 				<div className="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
 					<h1>
 						<span className="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:tracking-tight">
-							ผู้นำท่านปัจจุบัน
+							ผู้นำในปัจจุบัน
 						</span>
 					</h1>
 
 					<LeaderCard
 						name="Dadi Ratan Mohini"
-						desc={`She is the Administrative Head of Brahma Kumaris and is one of the backbone members residing at the Headquarters. In childhood she created the foundation of her life in the early days of Brahma Kumaris. She lives up to her name 'most beautiful jewel' by always appearing light and tension-free. Dedicated and forthright, her focus has been the development and training programmes for teachers throughout India and serves as the spiritual resource to the team of young people responsible for the personal development and growth of youth. Now in her nineties, she remains lively and young at heart. `}
-						img={"/assets/images/about/current_leaders/03.jpg"}
+						desc={`ดาดี้รัตตัน โมหินี หัวหน้าผู้บริหาร (Administrative Head) ของบราห์มากุมารี และเป็นหนึ่งในสมาชิกผู้เปรียบเป็นกระดูกสันหลังขององค์กรอยู่ที่สำนักงานใหญ่ ในวัยเด็ก เธอได้สร้างพื้นฐานชีวิตของเธอ ตั้งแต่ช่วงเวลาเริ่มต้นของบราห์มากุมารี และได้ใช้ชีวิตของเธอสมกับชื่อของเธอที่แปลว่า เพชรพลอยที่งดงามที่สุด ด้วยการอยู่อย่างเบาสบายและปราศจากความตึงเครียดใดๆ ด้วยความทุ่มเท ซื่อสัตย์ ชัดเจน เธอมุ่งมั่นกับการพัฒนาโปรแกรมการฝึกฝนต่างๆสำหรับผู้ที่เป็นครูทั่วทั้งอินเดีย และรับใช้ในฐานะทรัพยากรทางจิตวิญญาณให้กับทีมของผู้รับผิดชอบต่อการพัฒนาและการเติบโตของเหล่าเยาวชน เวลานี้ ในวัยกว่า 90 ปี เธอยังอยู่อย่างมีชีวิตชีวาและมีหัวใจที่อ่อนเยาว์อยู่เสมอ`}
+						img={"/assets/images/current-leaders/ratan.jpg"}
 					/>
 
 					<LeaderCard
-						name="Dadi Mohini Panjabi"
-						desc={`She is the Additional Administrative Head of Brahma Kumaris. She has been with the BK's since childhood in Delhi, even while she was a student at the University of Delhi. She served with the founder, Brahma Baba, opening centres in India. In 1974 she began serving abroad, establishing a BK presence in North American, first in the Caribbean (1976) and then in New York (1978). She is president of the Brahma Kumaris World Spiritual Organization of the USA, the regional coordinator of the Brahma Kumaris for the Americas and the Caribbean and is representative of the BK's to the United Nations. She will share her time between India and the USA.`}
-						img={"/assets/images/about/current_leaders/03.jpg"}
+						name="Brahma Kumari Mohini Panjabi"
+						desc={`ซิสเตอร์โมหินี ปันจาบี หัวหน้าผู้บริหารอีกท่านหนึ่งของบราห์มากุมารี (Additional Administrative Head) เธออยู่กับบราห์มากุมารีมาตั้งแต่วัยเด็ก ในเมืองเดลี และในขณะที่เป็นนักศึกษาอยู่ในมหาวิทยาลัยแห่งเดลี เธอก็ทำงานรับใช้โลกกับบราห์มาบาบา ผู้ก่อตั้งองค์กร ในการเปิดศูนย์ต่างๆมากมายในอินเดีย ในปี 1974 เธอเริ่มออกไปทำงานรับใช้ในต่างประเทศ และทำให้บราห์มากุมารีให้เป็นที่รู้จักในอเมริกาเหนือ เริ่มที่แคริบเบียนในปี 1976 และต่อมาในนิวยอร์กในปี 1978 เธอเป็นประธานของบราห์มากุมารี องค์กรทางจิตวิญญาณของโลก แห่งสหรัฐอเมริกา และเป็นผู้ประสานงานภูมิภาคของบราห์มากุมารีในทวีปอเมริกาและแคริบเบียน และเป็นตัวแทนของบราห์มากุมารีในองค์การสหประชาชาติ เธอจะใช้เวลาของเธออยู่ในอินเดียและในอเมริกาเป็นส่วนใหญ่
+						`}
+						img={"/assets/images/current-leaders/mohini.jpg"}
 					/>
 
 					<LeaderCard
-						name="Dadi Jayanti Kirpalani"
-						desc={`She is an Additional Administrative Head of the Brahma Kumaris. Born in India, she moved with her family to London in 1957 at the age of 8. Her family was instrumental in bringing Raj Yoga to the West. As she returned to India over the years, she met the founder, Brahma Baba on many occasions and at age 19 she made the decision to pursue a life of spiritual study and service with the Brahma Kumaris. Her unique childhood prepared her to bring the wisdom of the East to the West. She is an eloquent speaker and has spoken widely on climate change, applied values and spiritual practice. She is the regional coordinator for the Brahma Kumaris activities in Europe and the Middle East.`}
-						img={"/assets/images/about/current_leaders/03.jpg"}
+						name="Brahma Kumari Jayanti Kirpalani"
+						desc={`ซิสเตอร์จยันตี เคอพาลานี หัวหน้าผู้บริหารอีกท่านหนึ่งของบราห์มากุมารี (Additional Administrative Head) เธอเกิดในประเทศอินเดีย และย้ายไปอยู่ที่ลอนดอนกับครอบครัวในปี 1957 เมื่อมีอายุได้ 8 ปี ครอบครัวของเธอเป็นผู้ที่นำราชาโยคะไปสู่โลกตะวันตก เมื่อเดินทางกลับมายังอินเดียในเวลาต่อมา เธอได้พบกับบราห์มาบาบาผู้ก่อตั้งหลายครั้ง และเมื่ออายุได้ 19 ปี เธอได้ตัดสินใจที่จะใช้ชีวิตของการศึกษาและรับใช้โลกในทางจิตวิญญาณนี้ กับบราห์มากุมารี วัยเด็กที่พิเศษของเธอนั้น ได้ทำให้เธอนำภูมิปัญญาของโลกตะวันออกสู่โลกตะวันตก เธอคือนักพูดที่เชี่ยวชาญ และได้พูดเกี่ยวกับการเปลี่ยนแปลงสภาพภูมิอากาศของโลกอย่างกว้างขวาง รวมทั้งเรื่องเกี่ยวกับคุณค่า และการฝึกฝนทางจิตวิญญาณ เธอเป็นผู้ประสานงานส่วนภูมิภาคของบราห์มากุมารี ในยุโรปและตะวันออกกลาง
+						`}
+						img={"/assets/images/current-leaders/jayanti.jpg"}
 					/>
 				</div>
 			</div>

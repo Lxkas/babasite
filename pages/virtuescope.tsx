@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
+import { Choice } from "@/classes/choice";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
-import { Choice } from "@/classes/choice";
 
 import translation from "@/public/assets/translations/virtuescope.json";
 import { classNames } from "@/utils/classNames";
@@ -116,7 +116,7 @@ export default function Virtuescope() {
 			{/* Center div */}
 			<div className="col-span-12 grid grid-cols-1 overflow-auto lg:col-span-8 2xl:grid-cols-2">
 				<div className="flex flex-col items-center overflow-hidden p-4">
-					<h1 className="font text-4xl">Virtuescope</h1>
+					<h1 className="font text-4xl">วงล้อคุณธรรม</h1>
 
 					<div
 					// className={classNames(
@@ -158,16 +158,16 @@ export default function Virtuescope() {
 					<div className="col-span-12 row-span-1" />
 					<div className="col-span-12 row-span-4 grid grid-rows-6">
 						<div className="row-span-1">
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Nobis quisquam vero corporis nesciunt. Aperiam
-							tenetur aliquid commodi temporibus repudiandae
-							dolorum doloribus itaque quae, corrupti illum.
-							Officia architecto aliquid
+							คุณธรรมเปรียบเสมือนความสว่างไสวงดงามของชีวิต
+							ที่จะชี้นำไปสู่ความสุขและความสำเร็จ กลับเข้าสู่ภายใน
+							นิ่ง สงบ กดที่ปุ่มด้านล่าง
+							เพื่อดูว่าคุณธรรมใดที่เหมาะกับตัวตน
+							หรือสถานการณ์ในปัจจุบันของท่าน
 						</div>
 						<div
 							className={classNames(
 								resultIndex == -1 ? "hidden" : "flex",
-								"row-span-2 mt-2 flex-col rounded-md bg-red-500 p-4 text-white"
+								"row-span-2 mt-2 flex-col rounded-md bg-cyan-600 p-4 text-white"
 							)}
 						>
 							<span className="text-4xl uppercase">
@@ -185,9 +185,6 @@ export default function Virtuescope() {
 							>
 								{winning == -1 ? "Spin" : "Spin Again"}
 							</button>
-						</div>
-						<div className="row-span-1 mt-4 2xl:mt-0">
-							DROPDOWN SELECT HERE
 						</div>
 					</div>
 					<div className="col-span-12 row-span-1 row-start-6" />

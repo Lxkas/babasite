@@ -6,7 +6,7 @@ import SiteFooter from "./shared/SiteFooter";
 const randomImages = [
 	"https://www.brahmakumaris.org/images/headers/Head8banner.jpg",
 	"https://images.unsplash.com/photo-1526276828468-fa777352f5aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-	"https://images.unsplash.com/photo-1495567720989-cebdbdd97913?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+	"/assets/images/backgrounds/sunset.png",
 ];
 
 export default function Layout({ children }: any) {

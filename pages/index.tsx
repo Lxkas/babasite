@@ -8,6 +8,7 @@ import Stats from "@/components/shared/Stats";
 import "swiper/css";
 import "swiper/css/navigation";
 
+import AtAGlanceComponent from "@/components/shared/AtAGlanceComponent";
 import TestimonialComponent from "@/components/shared/Testimonial";
 import { faPlayCircle, faStopCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -200,7 +201,7 @@ const Home: NextPage = () => {
 				<div className="relative flex h-full w-full items-center justify-center">
 					<Image
 						quality={100}
-						src={"/assets/images/home/a.png"}
+						src={"/assets/images/home/a.gif"}
 						alt="Lotus"
 						className="object-cover"
 						layout="fill"
@@ -363,7 +364,7 @@ const Home: NextPage = () => {
 							{/* TODO: Make these local images, and make them components */}
 							<Link href="/meditation/register">
 								<Image
-									src="/assets/images/images/home/anger.jpg"
+									src="/assets/images/home/anger.jpg"
 									width={3000}
 									height={1000}
 								/>
@@ -375,7 +376,7 @@ const Home: NextPage = () => {
 							{/* TODO: Make these local images, and make them components */}
 							<Link href="/meditation/register">
 								<Image
-									src="/assets/images/images/home/stress.jpg"
+									src="/assets/images/home/stress.jpg"
 									width={3000}
 									height={1000}
 								/>
@@ -388,7 +389,7 @@ const Home: NextPage = () => {
 
 							<Link href="/meditation/register">
 								<Image
-									src="/assets/images/images/home/positive.jpg"
+									src="/assets/images/home/positive.jpg"
 									width={3000}
 									height={1000}
 								/>
@@ -400,7 +401,7 @@ const Home: NextPage = () => {
 							{/* TODO: Make these local images, and make them components */}
 							<Link href="/meditation/register">
 								<Image
-									src="/assets/images/images/home/respect.jpg"
+									src="/assets/images/home/respect.jpg"
 									width={3000}
 									height={1000}
 								/>
@@ -478,12 +479,13 @@ const Home: NextPage = () => {
 
 			<Stats />
 
+			{hasWindow && <AtAGlanceComponent />}
 			{hasWindow && <TestimonialComponent />}
 
 			{/* Virtuescope */}
 			<section className="w-full p-2">
 				<Link href={"/virtuescope"} passHref>
-					<a>Virtuescope</a>
+					<a>วงล้อคุณธรรม</a>
 				</Link>
 			</section>
 		</div>

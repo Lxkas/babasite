@@ -16,7 +16,21 @@ export default function ContactUsPage() {
 						<li>
 							ศูนย์ราชาโยคะ ลาดพร้าว กรุงเทพฯ (บ้านพินทุ)
 							<br />
-							081-5670784, 084-7778850 www.facebook.com/baanpinthu
+							081-5670784, 084-7778850
+							<br />
+							<Link
+								href="https://facebook.com/baanpinthu"
+								passHref
+							>
+								<a className="text-blue-400">
+									www.facebook.com/baanpinthu
+								</a>
+							</Link>
+							<br />
+							LINE ID : bupsaman{" "}
+							<Link href="http://line.me/ti/p/~bupsaman" passHref>
+								<a className="text-blue-400">หรือคลิกที่นี่</a>
+							</Link>
 						</li>
 						<li>นครปฐม 086-4486700, 097-2383251</li>
 						<li>เชียงใหม่ 081-8813178, 081-9602577</li>

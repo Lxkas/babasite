@@ -260,8 +260,8 @@ export default function RegisterPage() {
 									<Image
 										src="/assets/images/registration/basic.gif"
 										alt="Anger"
-										width={1523}
-										height={765}
+										width={3000}
+										height={1000}
 									/>
 								</figure>
 								<p>หัวข้อการเรียนรู้</p>
