@@ -30,7 +30,7 @@ export default function BenefitsPage() {
 									y={0}
 									width={4}
 									height={4}
-									className="text-gray-200"
+									className=""
 									fill="currentColor"
 								/>
 							</pattern>
@@ -62,7 +62,7 @@ export default function BenefitsPage() {
 									y={0}
 									width={4}
 									height={4}
-									className="text-gray-200"
+									className=""
 									fill="currentColor"
 								/>
 							</pattern>
@@ -94,7 +94,7 @@ export default function BenefitsPage() {
 									y={0}
 									width={4}
 									height={4}
-									className="text-gray-200"
+									className=""
 									fill="currentColor"
 								/>
 							</pattern>
@@ -161,7 +161,7 @@ export default function BenefitsPage() {
 						<div className="flex flex-col ">
 							<div className="relative max-w-2xl">
 								<Image
-									src="/assets/images/about/benefits/soul_knowledge.jpg"
+									src="/assets/images/about/benefits/1.png"
 									quality={100}
 									width={3000}
 									height={2000}
@@ -196,7 +196,7 @@ export default function BenefitsPage() {
 						<div className="flex flex-col ">
 							<div className="relative max-w-2xl">
 								<Image
-									src="/assets/images/about/benefits/meditation.jpg"
+									src="/assets/images/about/benefits/2.png"
 									quality={100}
 									width={3000}
 									height={2000}
@@ -232,7 +232,7 @@ export default function BenefitsPage() {
 						<div className="flex flex-col ">
 							<div className="relative max-w-2xl">
 								<Image
-									src="/assets/images/about/benefits/van.jpg"
+									src="/assets/images/about/benefits/3.png"
 									quality={100}
 									width={3000}
 									height={2000}
@@ -258,7 +258,7 @@ export default function BenefitsPage() {
 						<div className="flex flex-col ">
 							<div className="relative max-w-2xl">
 								<Image
-									src="/assets/images/about/benefits/placeholder.avif"
+									src="/assets/images/about/benefits/4.png"
 									quality={100}
 									width={3000}
 									height={2000}

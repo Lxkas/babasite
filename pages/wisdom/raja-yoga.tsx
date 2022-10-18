@@ -27,7 +27,7 @@ export default function RajaYoga() {
 		<div className="overflow-hidden py-16">
 			<div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
 				<div className="mx-auto max-w-prose text-base lg:max-w-none">
-					<p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+					<p className="-mt-8 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
 						{currentLocaleStrings[0].title}
 					</p>
 				</div>

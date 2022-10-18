@@ -67,7 +67,7 @@ export default function GowKnowsPage() {
 							<br />
 							ข้อมูลเพิ่มเติมเกี่ยวกับสูตรอาหารมังสวิรัติ{" "}
 							<Link
-								href="https://www.mybaba.me/yummy-yogi/%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99bakery"
+								href="https://www.facebook.com/YummyYogi/"
 								passHref
 							>
 								<a className="text-blue-400">yummy yogi</a>

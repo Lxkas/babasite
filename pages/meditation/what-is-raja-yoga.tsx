@@ -125,7 +125,7 @@ export default function WhatIsRajaYoga() {
 							สมาธิแบบราชาโยคะ
 						</span>
 					</h1>
-					<div className="mt-8 text-xl leading-8 text-gray-500">
+					<div className="mt-8 leading-8 text-gray-500">
 						<span>
 							<figure>
 								<img

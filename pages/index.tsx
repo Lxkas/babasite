@@ -197,11 +197,11 @@ const Home: NextPage = () => {
 		<div className="relative flex h-full w-full flex-col justify-center gap-y-4 px-4 pb-4 font-roboto">
 			<audio ref={audioElemRef} className="absolute hidden" src="" />
 			{/* You are powerful card */}
-			<section className="h-[1080px] w-full">
+			<section className="h-[720px] w-full">
 				<div className="relative flex h-full w-full items-center justify-center">
 					<Image
 						quality={100}
-						src={"/assets/images/home/a.gif"}
+						src={"/assets/images/home/a.png"}
 						alt="Lotus"
 						className="object-cover"
 						layout="fill"
@@ -209,29 +209,25 @@ const Home: NextPage = () => {
 						// height={842}
 					/>
 
-					{/* <div className="relative flex h-full w-full flex-col items-center justify-center">
-						<div className="absolute h-full w-full bg-purple-700 opacity-25"></div>
+					<div className="relative flex h-full w-full flex-col items-center justify-center">
+						<div className="absolute h-full w-full opacity-25"></div>
 						<div className="relative flex h-full w-full flex-col items-center justify-center">
 							<div className="flex flex-col">
-								<p className="mb-16 text-center text-4xl font-extrabold text-white lg:text-6xl">
+								<p className="mb-16 text-center text-4xl font-extrabold text-gray-800 lg:text-6xl">
 									ความคิดที่ทรงพลัง
 									<br />
 									ชีวิตที่ทรงพลัง
 								</p>
-
-								<p className="w-full px-16 pb-2 text-center text-2xl font-normal text-white lg:text-4xl">
-									ความคิดของเรานั้นมีอำนาจกว่าที่เราคิด
-									มันหล่อหลอมตัวเรา โลกของเรา
-									และมีอิทธิพลต่อผู้คนและธรรมชาติอย่างมากมาย
-									หากเราสามารถควบคุมจิตใจให้เกิดการจดจ่อเพ่งรวม
-									เต็มไปด้วยความคิดที่เป็นบวก
-									และความรู้สึกที่บริสุทธิ์
-									เราจะสามารถเปลี่ยนแปลงชีวิตของตนเอง
+								<p className="w-full px-16 pb-2 text-center text-2xl font-normal text-gray-800 lg:text-4xl">
+									ความคิดของเรานั้นมีอำนาจมากกว่าที่คิด
+									<br />
+									มันสามารถเปลี่ยนแปลงชีวิตของเรา
+									<br />
 									และเปลี่ยนแปลงโลกได้อย่างน่าอัศจรรย์
 								</p>
 							</div>
 						</div>
-					</div> */}
+					</div>
 				</div>
 			</section>
 
@@ -248,47 +244,73 @@ const Home: NextPage = () => {
 					<SwiperSlide>
 						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
 							<Image
-								src={"/assets/images/home/1.png"}
+								src={"/assets/images/home/f.png"}
 								quality={100}
 								alt="Forest"
 								className="-z-20 object-cover"
 								layout="fill"
 							/>
 
-							{/* <div className="absolute">
+							<div className="absolute">
 								<div className="flex flex-col items-center text-white">
-									<h1 className="text-4xl font-extrabold xl:text-8xl">
-										ปัญญา
-									</h1>
+									<p className="text-4xl font-extrabold xl:text-8xl">
+										<span className="text-yellow-200">
+											ชีวิตดี เริ่มที่
+										</span>
+										ความคิด
+									</p>
 									<p className="px-16 text-xl xl:text-4xl">
-										การมีปัญญา หมายถึง
-										การตอบสนองต่อสถานการณ์อย่างถูกต้องเหมาะสม
-										ด้วยความเข้าใจ การใส่ใจดูแล และความกรุณา
+										<span className="text-8xl">
+											คิด
+											<span className="text-yellow-200">
+												อย่างไรให้เป็นสุข
+											</span>{" "}
+										</span>
+										<br />
+										<br />
+										สอบถาม เรียนฟรี ราชาโยคะ โทร{" "}
+										<span className="font-extrabold">
+											081-5670784
+										</span>
 									</p>
 								</div>
-							</div> */}
+							</div>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
 						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
 							<Image
-								src={"/assets/images/home/2.png"}
+								src={"/assets/images/home/c.png"}
 								quality={100}
 								alt="Forest"
 								className="-z-20 object-cover"
 								layout="fill"
 							/>
 
-							{/* <div className="absolute">
-								<div className="flex flex-col items-center text-white">
-									<h1 className="text-4xl font-extrabold xl:text-8xl">
-										ความสุข
-									</h1>
-									<p className="px-16 text-xl xl:text-4xl">
-										คือการที่ฉันใช้เวลาทุกขณะได้ตามที่ต้องการเป็นอย่างดี
-									</p>
+							<div className="absolute">
+								<div className="flex flex-col items-center text-teal-800">
+									<span className="text-4xl font-extrabold xl:text-8xl">
+										มี
+										<span className="text-white">
+											ความรัก
+										</span>{" "}
+										ความเคารพ
+									</span>
+									<span className="px-16 text-xl xl:text-4xl">
+										<span className="text-6xl xl:text-8xl">
+											รู้ค่าในตนเอง อย่าง
+											<span className="text-white">
+												ก้าวกระโดด
+											</span>
+										</span>
+										<br />
+										<br />
+									</span>
+									<span className="text-4xl">
+										สอบถาม เรียนฟรี ราชาโยคะ โทร 081-5670784
+									</span>
 								</div>
-							</div> */}
+							</div>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>

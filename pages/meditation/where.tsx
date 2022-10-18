@@ -8,7 +8,7 @@ export default function WherePage() {
 						{/* <h2 className="text-base font-semibold uppercase tracking-wide text-indigo-600">
 							Meditation
 						</h2> */}
-						<h3 className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+						<h3 className="-mt-8 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
 							การสร้างพื้นที่สําหรับการทําสมาธิ
 						</h3>
 					</div>
@@ -89,6 +89,7 @@ export default function WherePage() {
 								นี่เองคือความงดงามของการฝึกสมาธิแบบราชาโยคะ
 								เพราะคุณสามารถทำได้ทุกที่
 							</p>
+							<br />
 							<img
 								src="https://www.brahmakumaris.org/documents/11179/0/Meditation11.jpg/867fa0ba-ad38-4497-bfb9-0db11a985f49?t=1451290507703"
 								alt="Mediation pose"
@@ -209,7 +210,9 @@ export default function WherePage() {
 								ด้วยความเข้าใจว่าการกระจายคลื่นพลังงานของความคิดเชิงบวกในเวลาเดียวกันนั้น
 								สามารถเพิ่มพลังและช่วยกระจายความปรารถนาดีของพวกเขาออกไปได้มากยิ่งขึ้น
 							</p>
-							<h3>ชั่วโมงของการทําสมาธิเพื่อโลก</h3>
+							<h3 className="text-3xl">
+								ชั่วโมงของการทําสมาธิเพื่อโลก
+							</h3>
 							<p>
 								ประเพณีของการนั่งสมาธิหนึ่งชั่วโมงเพื่อสันติภาพทั่วโลกของที่นี่
 								เริ่มขึ้นในปี 1978
@@ -220,7 +223,9 @@ export default function WherePage() {
 								เราสามารถร่วมกันฉายแสงแห่งความหวัง
 								เพื่อเป็นแสงสว่างเล็กๆที่จะช่วยเยียวยาโลกที่มีค่ายิ่งนี้ของเรา
 							</p>
-							<h3>การผ่อนพัก – พื้นที่แห่งความนิ่งสงบ</h3>
+							<h3 className="text-3xl">
+								การผ่อนพัก – พื้นที่แห่งความนิ่งสงบ
+							</h3>
 							<p>
 								นอกจากการสร้างโอเอซิสของความนิ่งสงบและความเงียบในระหว่างวันแล้ว
 								บางครั้งเราอาจเลือกที่จะหาเวลาว่างจากกิจวัตรปกติของเราเพื่อการผ่อนพักและฟื้นฟูจิตวิญญาณ
@@ -245,7 +250,7 @@ export default function WherePage() {
 								ความคิดของเราก็จะกลับมากระจ่างชัดเจนขึ้น
 								และพลังการตัดสินใจของเราก็เพิ่มขึ้น
 							</p>
-							<h3>
+							<h3 className="text-3xl">
 								การพักผ่อนที่แท้จริงนี้จะช่วยให้เราหวนคืนอีกครั้ง
 							</h3>
 							<p>

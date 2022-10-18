@@ -106,7 +106,7 @@ const navItemsRight: NavItemPropType[] = [
 			{
 				dropdownType: "normal",
 				text: "อาหารสุขภาพ",
-				href: "https://www.mybaba.me/yummy-yogi/%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99bakery",
+				href: "https://www.facebook.com/YummyYogi/",
 			},
 		],
 	},
@@ -184,13 +184,13 @@ const navItemsLeft: NavItemPropType[] = [
 
 			{
 				dropdownType: "normal",
-				text: "ต้นไม้แห่งมนุษยชาติและวงจรเวลา",
+				text: "ต้นไม้แห่งมนุษยชาติ",
 				href: "/wisdom/tree",
 			},
 
 			{
 				dropdownType: "normal",
-				text: "วัฏจักรแห่งชีวิต",
+				text: "วงล้อแห่งชีวิต",
 				href: "/wisdom/wheel-of-life",
 			},
 
@@ -202,7 +202,7 @@ const navItemsLeft: NavItemPropType[] = [
 
 			{
 				dropdownType: "normal",
-				text: "วิถีชีวิตที่ดีงาม",
+				text: "วิถีชีวิตที่ดี",
 				href: "/wisdom/healthy-living",
 			},
 

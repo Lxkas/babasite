@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function GowKnowsPage() {
 	return (
 		<div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
@@ -55,6 +57,13 @@ export default function GowKnowsPage() {
 							คุณจะสะสมความบริสุทธิ์ ความสงบ ความสุข สัจจะ
 							และพลังในตนเองอย่างมากมาย
 						</p>
+
+						<Image
+							width={2400}
+							height={2400}
+							src="/assets/images/wisdom/heart.png"
+							alt="A blue heart"
+						/>
 					</div>
 				</div>
 			</article>

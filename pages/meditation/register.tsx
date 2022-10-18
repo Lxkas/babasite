@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import translation from "@/public/assets/translations/meditation/courses.json";
 import Image from "next/image";
+import Link from "next/link";
 
 function SignUpComponent() {
 	return (
@@ -250,6 +251,17 @@ export default function RegisterPage() {
 									ดวงวิญญาณสูงสุด และโลกวัตถุ หัวข้อต่างๆ
 									ในหลักสูตรนี้จะช่วยให้เราตระหนักรู้จักตนเองและเดินทางกลับเข้าสู่ภายในได้อย่างมีประสิทธิภาพ
 								</p>
+
+								<p className="mt-4 text-gray-500">
+									ทุกหลักสูตร เรียนฟรี ไม่มีค่าใช้จ่าย
+									สนใจติดต่อ
+									<Link href="/contact" passHref>
+										<a className="text-blue-400">
+											{" "}
+											คลิกที่นี่
+										</a>
+									</Link>
+								</p>
 							</div>
 
 							<BlockTemplate>
@@ -280,6 +292,8 @@ export default function RegisterPage() {
 							<BlockTemplate>
 								<h2 className="underline">
 									หลักสูตรและกิจกรรมอื่นๆ
+									<br />
+									(หลังจากเรียนหลักสูตรพื้นฐานแล้ว)
 								</h2>
 								<p>
 									นอกจากหลักสูตรการฝึกสมาธิแบบราชาโยคะแล้ว
@@ -397,6 +411,7 @@ export default function RegisterPage() {
 													พัฒนากลยุทธ์ที่มีประสิทธิภาพสําหรับการสร้างความสัมพันธ์ที่ดี
 													ปล่อยวางความกลัวและความก้าวร้าวรุนแรง
 												</li>
+
 												<li>
 													เพิ่มพลังอํานาจให้ตัวเอง,
 													สร้างทางเลือกที่เหมาะสมเพื่อรักษาสมดุลภายใ

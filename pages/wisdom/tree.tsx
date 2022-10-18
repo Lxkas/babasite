@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 export default function TreeInTimePage() {
 	return (
 		<div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
 			<article className="prose prose-h1:mb-0 prose-p:mt-2">
 				<div className="mt-4">
-					<h1>ต้นไม้แห่งมนุษยชาติ และวงจรเวลา</h1>
+					<h1>ต้นไม้แห่งมนุษยชาติ</h1>
 				</div>
 				<br />
 				<div>
@@ -52,6 +54,12 @@ export default function TreeInTimePage() {
 							เรื่องราวจะเริ่มต้นอีกครั้ง
 							เช่นที่เคยเป็นมาแล้วนับครั้งไม่ถ้วน
 						</p>
+						<Image
+							width={2600}
+							height={3900}
+							src="/assets/images/wisdom/tree.jpg"
+							alt="Tree glowing"
+						/>
 						<p>
 							หลังความปั่นป่วนและการทำลายสิ่งที่เสื่อมโทรมทั้งหมดจบสิ้นลง
 							ทุกดวงวิญญาณจะได้กลับบ้าน และหลังจากพักผ่อน

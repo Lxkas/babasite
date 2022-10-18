@@ -1,7 +1,7 @@
-import { useRouter } from "next/router";
 import translation from "@/public/assets/translations/wisdom/soul.json";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export default function SoulPage() {
 	const { locale, locales } = useRouter();
@@ -19,21 +19,23 @@ export default function SoulPage() {
 		<div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
 			<article className="prose prose-h1:mb-0 prose-p:mt-2">
 				<div>
+					<br />
 					<h1>{currentLocaleStrings[0].title}</h1>
 					<div>
 						<span>
 							<p>{currentLocaleStrings[0].soul_body}</p>
 						</span>
 						<Image
-							width={500}
-							height={800}
-							src="https://images.unsplash.com/photo-1653918193057-f2de2e7f60ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
+							width={3200}
+							height={2400}
+							src="/assets/images/wisdom/shanti.jpg"
 							alt="asdad"
 						/>
 					</div>
 				</div>
 
 				<div>
+					<br />
 					<h1>{currentLocaleStrings[0].personality}</h1>
 					<div>
 						<p>{currentLocaleStrings[0].personality_body}</p>
