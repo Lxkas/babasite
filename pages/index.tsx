@@ -504,11 +504,38 @@ const Home: NextPage = () => {
 			{hasWindow && <AtAGlanceComponent />}
 			{hasWindow && <TestimonialComponent />}
 
-			{/* Virtuescope */}
+			{/* Circle buttons */}
 			<section className="w-full p-2">
-				<Link href={"/virtuescope"} passHref>
+				{/* <Link href={"/virtuescope"} passHref>
 					<a>วงล้อคุณธรรม</a>
-				</Link>
+				</Link> */}
+
+				<div className="mt-8 grid grid-cols-3 md:flex md:flex-row md:items-center md:justify-center">
+					<CircleButton
+						imgUrl="/assets/images/home/circle_buttons/circle.png"
+						text="วงล้อคุณธรรม"
+					/>
+					<CircleButton
+						imgUrl="/assets/images/home/circle_buttons/ebook.png"
+						text="อีบุ๊คน่าสนใจ"
+					/>
+					<CircleButton
+						imgUrl="/assets/images/home/circle_buttons/flowers.png"
+						text="ดอกไม้คุณธรรม"
+					/>
+					<CircleButton
+						imgUrl="/assets/images/home/circle_buttons/jewels.png"
+						text="เพชรพลอยแห่งแสงสว่าง"
+					/>
+					<CircleButton
+						imgUrl="/assets/images/home/circle_buttons/pure.png"
+						text="อาหารบริสุทธิ์"
+					/>
+					<CircleButton
+						imgUrl="/assets/images/home/circle_buttons/seamsi.png"
+						text="เซียมซีดีทุกใบ"
+					/>
+				</div>
 			</section>
 		</div>
 	);
@@ -558,5 +585,16 @@ function AudioNowComponent({ playAudio, audionow, currentUrl }: any) {
 		// 		</div>
 		// 	</div>
 		// </div>
+	);
+}
+
+function CircleButton({ text, imgUrl }: any) {
+	return (
+		<div className="relative aspect-square w-32 cursor-pointer rounded-full transition-all duration-150 hover:-translate-y-2 md:w-64">
+			<Image src={imgUrl} alt={`${text} button`} layout="fill" />
+			<div className="-mt-2 flex w-full items-center justify-center">
+				<span className="text-xs md:text-xl">{text}</span>
+			</div>
+		</div>
 	);
 }
