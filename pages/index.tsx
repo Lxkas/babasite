@@ -251,8 +251,26 @@ const Home: NextPage = () => {
 								layout="fill"
 							/>
 
-							<div className="absolute">
-								<div className="flex flex-col items-center text-white">
+							<div className="absolute cursor-default">
+								<div className="flex flex-col items-center justify-center">
+									<div className="text-4xl text-white md:text-6xl lg:text-8xl">
+										<span className="text-yellow-200">
+											ชีวิตดี เริ่มที่
+										</span>{" "}
+										ความคิด
+									</div>
+									<div className="text-2xl text-yellow-200 md:text-4xl lg:text-6xl xl:text-8xl">
+										คิด
+										<span className="text-white">
+											อย่างไรให้เป็นสุข
+										</span>
+									</div>
+
+									<div className="mt-16 text-xl text-white md:text-4xl">
+										สอบถาม เรียนฟรี ราชาโยคะ โทร 081-5670784
+									</div>
+								</div>
+								{/* <div className="flex flex-col items-center text-white">
 									<p className="text-4xl font-extrabold xl:text-8xl">
 										<span className="text-yellow-200">
 											ชีวิตดี เริ่มที่
@@ -273,7 +291,7 @@ const Home: NextPage = () => {
 											081-5670784
 										</span>
 									</p>
-								</div>
+								</div> */}
 							</div>
 						</div>
 					</SwiperSlide>
@@ -287,8 +305,27 @@ const Home: NextPage = () => {
 								layout="fill"
 							/>
 
-							<div className="absolute">
-								<div className="flex flex-col items-center text-teal-800">
+							<div className="absolute cursor-default">
+								<div className="flex flex-col items-center justify-center">
+									<div className="text-4xl text-teal-800 md:text-6xl lg:text-8xl">
+										มี
+										<span className="text-white">
+											ความรัก
+										</span>{" "}
+										ความเคารพ
+									</div>
+									<div className="text-2xl text-teal-800 md:text-4xl lg:text-6xl xl:text-8xl">
+										รู้ค่าในตนเอง อย่าง
+										<span className="text-white">
+											ก้าวกระโดด
+										</span>
+									</div>
+
+									<div className="mt-16 text-xl text-white md:text-4xl">
+										สอบถาม เรียนฟรี ราชาโยคะ โทร 081-5670784
+									</div>
+								</div>
+								{/* <div className="flex flex-col items-center text-teal-800">
 									<span className="text-4xl font-extrabold xl:text-8xl">
 										มี
 										<span className="text-white">
@@ -309,6 +346,65 @@ const Home: NextPage = () => {
 									<span className="text-4xl">
 										สอบถาม เรียนฟรี ราชาโยคะ โทร 081-5670784
 									</span>
+								</div> */}
+							</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
+							<div className="relative flex h-[580px] w-full items-center justify-center py-4">
+								<Image
+									src={"/assets/images/home/b.png"}
+									quality={100}
+									alt="Forest"
+									className="-z-20 object-cover"
+									layout="fill"
+								/>
+
+								<div className="absolute cursor-default">
+									<div className="flex flex-col items-center justify-center">
+										<div className="text-4xl text-black md:text-6xl lg:text-8xl">
+											มีความ
+											<span className="text-orange-600">
+												มั่นคง
+											</span>
+											ภายใน
+										</div>
+										<div className="text-2xl text-black md:text-4xl lg:text-6xl xl:text-8xl">
+											และความ
+											<span className="text-orange-600">
+												มั่นใจ
+											</span>
+											ในตนเอง
+										</div>
+
+										<div className="mt-16 text-xl text-black md:text-4xl">
+											สอบถาม เรียนฟรี ราชาโยคะ โทร
+											081-5670784
+										</div>
+									</div>
+									{/* <div className="flex flex-col items-center text-white">
+									<p className="text-4xl font-extrabold xl:text-8xl">
+										<span className="text-yellow-200">
+											ชีวิตดี เริ่มที่
+										</span>
+										ความคิด
+									</p>
+									<p className="px-16 text-xl xl:text-4xl">
+										<span className="text-8xl">
+											คิด
+											<span className="text-yellow-200">
+												อย่างไรให้เป็นสุข
+											</span>{" "}
+										</span>
+										<br />
+										<br />
+										สอบถาม เรียนฟรี ราชาโยคะ โทร{" "}
+										<span className="font-extrabold">
+											081-5670784
+										</span>
+									</p>
+								</div> */}
 								</div>
 							</div>
 						</div>
@@ -316,47 +412,55 @@ const Home: NextPage = () => {
 					<SwiperSlide>
 						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
 							<Image
-								src={"/assets/images/home/3.png"}
+								src={"/assets/images/home/e.png"}
 								quality={100}
 								alt="Forest"
 								className="-z-20 object-cover"
 								layout="fill"
 							/>
+							<div className="absolute cursor-default">
+								<div className="flex flex-col items-center justify-center">
+									<div className="text-4xl text-yellow-800 md:text-6xl lg:text-8xl">
+										ชีวิตที่
+										<span className="text-yellow-100">
+											สว่างไสว
+										</span>
+									</div>
+									<div className="text-2xl text-yellow-800 md:text-4xl lg:text-6xl xl:text-8xl">
+										และ
+										<span className="text-yellow-100">
+											เบาสบาย
+										</span>
+										ไร้กังวล
+									</div>
 
-							{/* <div className="absolute">
-								<div className="flex flex-col items-center text-white">
-									<h1 className="text-4xl font-extrabold xl:text-8xl">
-										ความสงบ
-									</h1>
-									<p className="px-16 text-xl xl:text-4xl">
-										มีบางสิ่งที่คุณสามารถทําได้เพื่อช่วยสร้างสันติสุขในโลก
-										นั่นคือการทําให้ตัวเองสงบสุข
-									</p>
+									<div className="mt-16 text-xl text-yellow-800 md:text-4xl">
+										สอบถาม เรียนฟรี ราชาโยคะ โทร 081-5670784
+									</div>
 								</div>
-							</div> */}
-						</div>
-					</SwiperSlide>
-					<SwiperSlide>
-						<div className="relative flex h-[580px] w-full items-center justify-center py-4">
-							<Image
-								src={"/assets/images/home/4.png"}
-								quality={100}
-								alt="Forest"
-								className="-z-20 object-cover"
-								layout="fill"
-							/>
-
-							{/* <div className="absolute">
-								<div className="flex flex-col items-center text-white">
-									<h1 className="text-4xl font-extrabold xl:text-8xl">
-										ความรัก
-									</h1>
-									<p className="px-16 text-xl xl:text-4xl">
-										แม้ว่าฉันอาจจะไม่เห็นผลของความรักได้ในทันที
-										แต่ความรักนั้นทำงานเสมอ
+								{/* <div className="flex flex-col items-center text-white">
+									<p className="text-4xl font-extrabold xl:text-8xl">
+										<span className="text-yellow-200">
+											ชีวิตดี เริ่มที่
+										</span>
+										ความคิด
 									</p>
-								</div>
-							</div> */}
+									<p className="px-16 text-xl xl:text-4xl">
+										<span className="text-8xl">
+											คิด
+											<span className="text-yellow-200">
+												อย่างไรให้เป็นสุข
+											</span>{" "}
+										</span>
+										<br />
+										<br />
+										สอบถาม เรียนฟรี ราชาโยคะ โทร{" "}
+										<span className="font-extrabold">
+											081-5670784
+										</span>
+									</p>
+								</div> */}
+							</div>
 						</div>
 					</SwiperSlide>
 				</Swiper>
