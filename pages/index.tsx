@@ -619,7 +619,7 @@ const Home: NextPage = () => {
 					<a>วงล้อคุณธรรม</a>
 				</Link> */}
 
-				<div className="mt-8 grid grid-cols-3 md:flex md:flex-row md:items-center md:justify-center">
+				<div className="mt-8 grid grid-cols-3 lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-x-8">
 					<CircleButton
 						imgUrl="/assets/images/home/circle_buttons/circle.png"
 						text="วงล้อคุณธรรม"
