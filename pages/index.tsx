@@ -479,6 +479,7 @@ const Home: NextPage = () => {
 							<Link href="/meditation/register">
 								<Image
 									src="/assets/images/registration/basic.gif"
+									alt="Basic"
 									width={3000}
 									height={1000}
 								/>
@@ -491,6 +492,7 @@ const Home: NextPage = () => {
 							<Link href="/meditation/register">
 								<Image
 									src="/assets/images/home/anger.jpg"
+									alt="Anger Management"
 									width={3000}
 									height={1000}
 								/>
@@ -503,6 +505,7 @@ const Home: NextPage = () => {
 							<Link href="/meditation/register">
 								<Image
 									src="/assets/images/home/stress.jpg"
+									alt="Stress Management"
 									width={3000}
 									height={1000}
 								/>
@@ -518,6 +521,7 @@ const Home: NextPage = () => {
 									src="/assets/images/home/positive.jpg"
 									width={3000}
 									height={1000}
+									alt="Positive Thinking"
 								/>
 							</Link>
 						</div>
@@ -530,6 +534,7 @@ const Home: NextPage = () => {
 									src="/assets/images/home/respect.jpg"
 									width={3000}
 									height={1000}
+									alt="Respect"
 								/>
 							</Link>
 						</div>
