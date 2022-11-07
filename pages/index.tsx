@@ -474,7 +474,7 @@ const Home: NextPage = () => {
 					className="h-full w-full"
 				>
 					<SwiperSlide>
-						<div className="relative flex h-full w-full items-center justify-center bg-black">
+						<div className="relative flex h-full w-full cursor-pointer items-center justify-center bg-black">
 							{/* TODO: Make these local images, and make them components */}
 							<Link href="/meditation/register">
 								<Image

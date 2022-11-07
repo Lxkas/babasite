@@ -214,6 +214,7 @@ export default function SiteFooter() {
 									App on Your Mobile Devices
 								</span>
 							</h2>
+
 							<div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
 								<div className="inline-flex rounded-md">
 									<a
@@ -246,6 +247,17 @@ export default function SiteFooter() {
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<div>
+					หรือท่านสามารถดาวน์โหลดแอพพลิเคชั่น{" "}
+					<Link
+						href="https://www.jankifoundation.org/happidote/"
+						passHref
+					>
+						<a className="text-blue-400">Happidote</a>
+					</Link>{" "}
+					ได้ฟรีด้วยเช่นกัน
 				</div>
 
 				{/* Newsletter section */}

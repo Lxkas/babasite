@@ -7,7 +7,7 @@ export default function AtAGlanceComponent() {
 				controls
 				width={"100%"}
 				height={"100%"}
-				url="https://www.youtube.com/watch?v=LhAIZ3gidlo"
+				url="https://www.youtube.com/watch?v=K4kl-EWm9O4"
 			></ReactPlayer>
 		</div>
 	);

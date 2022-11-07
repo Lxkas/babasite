@@ -191,7 +191,7 @@ export default function WhatIsRajaYoga() {
 						มีความสัมพันธ์ที่ดี มีความสุข และเข้มแข็งยิ่งขึ้น
 						และเปลี่ยนชีวิตของเราให้เป็นไปในทางบวกให้มากที่สุด
 					</p>
-					<div className="relative mt-4 aspect-video 2xl:absolute 2xl:right-48 2xl:top-0 2xl:w-1/6 2xl:bg-white 2xl:p-4">
+					<div className="relative mt-4 aspect-video">
 						{hasWindow && (
 							<>
 								<p className="mb-1 font-bold text-black">
