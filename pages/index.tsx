@@ -623,26 +623,32 @@ const Home: NextPage = () => {
 					<CircleButton
 						imgUrl="/assets/images/home/circle_buttons/circle.png"
 						text="วงล้อคุณธรรม"
+						url="/virtuescope"
 					/>
 					<CircleButton
 						imgUrl="/assets/images/home/circle_buttons/ebook.png"
 						text="อีบุ๊คน่าสนใจ"
+						url="/ebook"
 					/>
 					<CircleButton
 						imgUrl="/assets/images/home/circle_buttons/flowers.png"
 						text="ดอกไม้คุณธรรม"
+						url="https://unshakeable.me/flowersofvirtue/"
 					/>
 					<CircleButton
 						imgUrl="/assets/images/home/circle_buttons/jewels.png"
 						text="เพชรพลอยแห่งแสงสว่าง"
+						url="https://unshakeable.me/JewelsOfLight/"
 					/>
 					<CircleButton
 						imgUrl="/assets/images/home/circle_buttons/pure.png"
 						text="อาหารบริสุทธิ์"
+						url="https://unshakeable.me/purefood/"
 					/>
 					<CircleButton
 						imgUrl="/assets/images/home/circle_buttons/seamsi.png"
 						text="เซียมซีดีทุกใบ"
+						url="http://www.brahmakumaris.or.th/seamsi/"
 					/>
 				</div>
 			</section>
@@ -697,13 +703,18 @@ function AudioNowComponent({ playAudio, audionow, currentUrl }: any) {
 	);
 }
 
-function CircleButton({ text, imgUrl }: any) {
+function CircleButton({ text, imgUrl, url }: any) {
 	return (
-		<div className="relative aspect-square w-32 cursor-pointer rounded-full transition-all duration-150 hover:-translate-y-2 md:w-64">
-			<Image src={imgUrl} alt={`${text} button`} layout="fill" />
-			<div className="-mt-2 flex w-full items-center justify-center">
-				<span className="text-xs md:text-xl">{text}</span>
-			</div>
-		</div>
+		<Link href={url} target="_blank" passHref>
+			<a
+				target="_blank"
+				className="relative aspect-square w-32 cursor-pointer rounded-full transition-all duration-150 hover:-translate-y-2 md:w-64"
+			>
+				<Image src={imgUrl} alt={`${text} button`} layout="fill" />
+				<div className="-mt-2 flex w-full items-center justify-center">
+					<span className="text-xs md:text-xl">{text}</span>
+				</div>
+			</a>
+		</Link>
 	);
 }
