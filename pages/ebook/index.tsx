@@ -44,13 +44,13 @@ function EbookEntry({ title, image, link }: EbookEntryProps) {
 				<h4 className="text-lg font-bold">{title}</h4>
 				<p className="mt-1">
 					<div className="flex flex-row gap-x-4">
-						<button
+						{/* <button
 							type="button"
 							onClick={() => window.open(link)}
 							className="inline-flex items-center rounded border border-gray-300 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-1 focus:ring-orange-500 focus:ring-offset-2"
 						>
 							Preview
-						</button>
+						</button> */}
 						<button
 							type="button"
 							className="inline-flex items-center rounded border border-gray-300 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-1 focus:ring-orange-500 focus:ring-offset-2"
