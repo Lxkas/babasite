@@ -267,7 +267,10 @@ const Home: NextPage = () => {
 									</div>
 
 									<div className="mt-16 text-xl text-white md:text-4xl">
-										สอบถาม เรียนฟรี ราชาโยคะ โทร 081-5670784
+										สอบถาม เรียนฟรี ราชาโยคะ โทร{" "}
+										<span className="font-sans font-extrabold">
+											081-5670784
+										</span>
 									</div>
 								</div>
 								{/* <div className="flex flex-col items-center text-white">
@@ -288,7 +291,9 @@ const Home: NextPage = () => {
 										<br />
 										สอบถาม เรียนฟรี ราชาโยคะ โทร{" "}
 										<span className="font-extrabold">
+											<span className="font-sans font-extrabold">
 											081-5670784
+										</span>
 										</span>
 									</p>
 								</div> */}
@@ -322,7 +327,10 @@ const Home: NextPage = () => {
 									</div>
 
 									<div className="mt-16 text-xl text-white md:text-4xl">
-										สอบถาม เรียนฟรี ราชาโยคะ โทร 081-5670784
+										สอบถาม เรียนฟรี ราชาโยคะ โทร{" "}
+										<span className="font-sans font-extrabold">
+											081-5670784
+										</span>
 									</div>
 								</div>
 								{/* <div className="flex flex-col items-center text-teal-800">
@@ -344,7 +352,9 @@ const Home: NextPage = () => {
 										<br />
 									</span>
 									<span className="text-4xl">
-										สอบถาม เรียนฟรี ราชาโยคะ โทร 081-5670784
+										สอบถาม เรียนฟรี ราชาโยคะ โทร <span className="font-sans font-extrabold">
+											081-5670784
+										</span>
 									</span>
 								</div> */}
 							</div>
@@ -379,8 +389,10 @@ const Home: NextPage = () => {
 										</div>
 
 										<div className="mt-16 text-xl text-black md:text-4xl">
-											สอบถาม เรียนฟรี ราชาโยคะ โทร
-											081-5670784
+											สอบถาม เรียนฟรี ราชาโยคะ โทร{" "}
+											<span className="font-sans font-extrabold">
+												081-5670784
+											</span>
 										</div>
 									</div>
 									{/* <div className="flex flex-col items-center text-white">
@@ -401,7 +413,9 @@ const Home: NextPage = () => {
 										<br />
 										สอบถาม เรียนฟรี ราชาโยคะ โทร{" "}
 										<span className="font-extrabold">
+											<span className="font-sans font-extrabold">
 											081-5670784
+										</span>
 										</span>
 									</p>
 								</div> */}
@@ -435,7 +449,10 @@ const Home: NextPage = () => {
 									</div>
 
 									<div className="mt-16 text-xl text-yellow-800 md:text-4xl">
-										สอบถาม เรียนฟรี ราชาโยคะ โทร 081-5670784
+										สอบถาม เรียนฟรี ราชาโยคะ โทร{" "}
+										<span className="font-sans font-extrabold">
+											081-5670784
+										</span>
 									</div>
 								</div>
 								{/* <div className="flex flex-col items-center text-white">
@@ -456,7 +473,9 @@ const Home: NextPage = () => {
 										<br />
 										สอบถาม เรียนฟรี ราชาโยคะ โทร{" "}
 										<span className="font-extrabold">
+											<span className="font-sans font-extrabold">
 											081-5670784
+										</span>
 										</span>
 									</p>
 								</div> */}
@@ -643,7 +662,7 @@ const Home: NextPage = () => {
 					<CircleButton
 						imgUrl="/assets/images/home/circle_buttons/pure.png"
 						text="อาหารบริสุทธิ์"
-						url="https://unshakeable.me/purefood/"
+						url="https://www.facebook.com/YummyYogi/"
 					/>
 					<CircleButton
 						imgUrl="/assets/images/home/circle_buttons/seamsi.png"
