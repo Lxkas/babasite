@@ -185,7 +185,7 @@ export default function Virtuescope() {
 								className="text-bold mt-4 w-full rounded-md bg-orange-600 p-2 text-white 2xl:w-1/2"
 								onClick={spin}
 							>
-								{winning == -1 ? "Spin" : "Spin Again"}
+								{winning == -1 ? "คลิกที่นี่" : "หมุนอีกรอบ"}
 							</button>
 						</div>
 					</div>
