@@ -155,7 +155,7 @@ export default function Virtuescope() {
 					</motion.div>
 				</div>
 				<div className="grid grid-cols-12 grid-rows-6 p-4">
-					<div className="col-span-12 row-span-1" />
+					<div className="col-span-12 row-span-1 hidden lg:block" />
 					<div className="col-span-12 row-span-4 grid grid-rows-6">
 						<div className="row-span-1">
 							คุณธรรมเปรียบเสมือนความสว่างไสวงดงามของชีวิต
@@ -173,7 +173,9 @@ export default function Virtuescope() {
 							<span className="text-4xl uppercase">
 								{choices[winning]?.name}
 							</span>
-							<span>{choices[winning]?.description}</span>
+							<span className="text-xl">
+								{choices[winning]?.description}
+							</span>
 						</div>
 
 						<div className="row-span-1">
