@@ -667,7 +667,7 @@ const Home: NextPage = () => {
 					<CircleButton
 						imgUrl="/assets/images/home/circle_buttons/seamsi.png"
 						text="เซียมซีดีทุกใบ"
-						url="http://www.brahmakumaris.or.th/seamsi/"
+						url="/seamsi"
 					/>
 				</div>
 			</section>
