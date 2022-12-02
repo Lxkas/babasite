@@ -292,8 +292,6 @@ export default function RegisterPage() {
 							<BlockTemplate>
 								<h2 className="underline">
 									หลักสูตรและกิจกรรมอื่นๆ
-									<br />
-									(หลังจากเรียนหลักสูตรพื้นฐานแล้ว)
 								</h2>
 								<p>
 									นอกจากหลักสูตรการฝึกสมาธิแบบราชาโยคะแล้ว
