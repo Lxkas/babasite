@@ -101,7 +101,7 @@ const navItemsRight: NavItemPropType[] = [
 			{
 				dropdownType: "normal",
 				text: "หนังสือ e-book",
-				href: "/",
+				href: "/ebook",
 			},
 			{
 				dropdownType: "normal",
