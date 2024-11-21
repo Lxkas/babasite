@@ -20,16 +20,19 @@ export default function ContactUsPage() {
 							<br />
 							<Link
 								href="https://facebook.com/baanpinthu"
+								className="text-blue-400"
 								passHref
 							>
-								<a className="text-blue-400">
-									www.facebook.com/baanpinthu
-								</a>
+								www.facebook.com/baanpinthu
 							</Link>
 							<br />
 							LINE ID : bupsaman{" "}
-							<Link href="http://line.me/ti/p/~bupsaman" passHref>
-								<a className="text-blue-400">หรือคลิกที่นี่</a>
+							<Link
+								href="http://line.me/ti/p/~bupsaman"
+								className="text-blue-400"
+								passHref
+							>
+								หรือคลิกที่นี่
 							</Link>
 						</li>
 						<li>นครปฐม 086-4486700, 097-2383251</li>
@@ -46,7 +49,7 @@ export default function ContactUsPage() {
 							href="https://www.brahmakumaris.org/centre-locator"
 							passHref
 						>
-							<a>https://www.brahmakumaris.org/centre-locator</a>
+							https://www.brahmakumaris.org/centre-locator
 						</Link>
 					</li>
 					<li>
@@ -54,9 +57,7 @@ export default function ContactUsPage() {
 							href="https://www.brahmakumaris.org/meditation/retreat-centres"
 							passHref
 						>
-							<a>
-								https://www.brahmakumaris.org/meditation/retreat-centres
-							</a>
+							https://www.brahmakumaris.org/meditation/retreat-centres
 						</Link>
 					</li>
 				</ul>

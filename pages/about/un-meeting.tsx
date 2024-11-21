@@ -121,9 +121,10 @@ export default function UNMeetingPage() {
 						เพื่ออ่านข้อมูลเพิ่มเติมเกี่ยวกับกิจกรรมของเรากับสหประชาชาติ{" "}
 						<Link
 							href="https://www.brahmakumaris.org/about-us/united-nations/un-faqs"
+							className="text-blue-700"
 							passHref
 						>
-							<a className="text-blue-700">คลิกที่นี่</a>
+							คลิกที่นี่
 						</Link>
 					</p>
 				</div>

@@ -81,18 +81,19 @@ function LanguageItem(props: { text: string; href: string; locale: string }) {
 		<Menu.Item>
 			{({ active }) => (
 				<div>
-					<Link href={href} passHref locale={locale}>
-						<a
-							className={classNames(
-								active
-									? "bg-gray-100 text-gray-900"
-									: "text-gray-700",
-								"block px-4 py-2 text-sm"
-							)}
-						>
-							{/* @ts-ignore */}
-							{textMap[text]}
-						</a>
+					<Link
+						href={href}
+						passHref
+						locale={locale}
+						className={classNames(
+							active
+								? "bg-gray-100 text-gray-900"
+								: "text-gray-700",
+							"block px-4 py-2 text-sm",
+						)}
+					>
+						{/* @ts-ignore */}
+						{textMap[text]}
 					</Link>
 				</div>
 			)}
@@ -253,9 +254,10 @@ export default function SiteFooter() {
 					หรือท่านสามารถดาวน์โหลดแอพพลิเคชั่น{" "}
 					<Link
 						href="https://www.jankifoundation.org/happidote/"
+						className="text-blue-400"
 						passHref
 					>
-						<a className="text-blue-400">Happidote</a>
+						Happidote
 					</Link>{" "}
 					ได้ฟรีด้วยเช่นกัน
 				</div>

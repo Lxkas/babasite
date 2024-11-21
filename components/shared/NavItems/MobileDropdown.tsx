@@ -38,11 +38,10 @@ function MobileDropdownItem(props: {
 									<Link
 										key={option.text + i}
 										href={option.href}
+										className="p-1"
 										passHref
 									>
-										<a className="p-1" href={option.href}>
-											{option.text}
-										</a>
+										{option.text}
 									</Link>
 								);
 							})}
@@ -61,7 +60,7 @@ export default function MobileDropDown(props: {
 		focusableElement?:
 			| HTMLElement
 			| MutableRefObject<HTMLElement | null>
-			| undefined
+			| undefined,
 	) => void;
 }) {
 	return (
@@ -86,21 +85,16 @@ export default function MobileDropDown(props: {
 											<Link
 												key={item.text + i}
 												href={item.href}
-											>
-												<a
-													className="p-2"
-													onClick={() => {
-														console.log("???");
+												className="p-2"
+												onClick={() => {
+													console.log("???");
 
-														if (
-															props.closeFunction
-														) {
-															props.closeFunction();
-														}
-													}}
-												>
-													{item.text}
-												</a>
+													if (props.closeFunction) {
+														props.closeFunction();
+													}
+												}}
+											>
+												{item.text}
 											</Link>
 										);
 									case "innerdropdown":

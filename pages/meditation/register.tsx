@@ -118,12 +118,12 @@ function SignUpComponent() {
 export default function RegisterPage() {
 	const { locale } = useRouter();
 	const [currentLocaleStrings, setCurrentLocaleStrings] = useState(
-		translation.translation.filter((p) => p.locale === locale)
+		translation.translation.filter((p) => p.locale === locale),
 	);
 
 	useEffect(() => {
 		setCurrentLocaleStrings(
-			translation.translation.filter((p) => p.locale === locale)
+			translation.translation.filter((p) => p.locale === locale),
 		);
 	}, [locale]);
 
@@ -255,11 +255,13 @@ export default function RegisterPage() {
 								<p className="mt-4 text-gray-500">
 									ทุกหลักสูตร เรียนฟรี ไม่มีค่าใช้จ่าย
 									สนใจติดต่อ
-									<Link href="/contact" passHref>
-										<a className="text-blue-400">
-											{" "}
-											คลิกที่นี่
-										</a>
+									<Link
+										className="text-blue-400"
+										href="/contact"
+										passHref
+									>
+										{" "}
+										คลิกที่นี่
 									</Link>
 								</p>
 							</div>

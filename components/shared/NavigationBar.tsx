@@ -149,16 +149,15 @@ function NavItem(props: NavItemPropType) {
 	const { text, href } = props;
 
 	return (
-		<Link href={href}>
-			<a
-				className={`inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-gray-700 ${
-					router.pathname == href
-						? "border-orange-500"
-						: "hover:border-gray-300"
-				}`}
-			>
-				{text}
-			</a>
+		<Link
+			className={`inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:text-gray-700 ${
+				router.pathname == href
+					? "border-orange-500"
+					: "hover:border-gray-300"
+			}`}
+			href={href}
+		>
+			{text}
 		</Link>
 	);
 }

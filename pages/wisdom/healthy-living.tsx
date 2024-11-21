@@ -67,10 +67,11 @@ export default function GowKnowsPage() {
 							<br />
 							ข้อมูลเพิ่มเติมเกี่ยวกับสูตรอาหารมังสวิรัติ{" "}
 							<Link
+								className="text-blue-400"
 								href="https://www.facebook.com/YummyYogi/"
 								passHref
 							>
-								<a className="text-blue-400">yummy yogi</a>
+								yummy yogi
 							</Link>
 							<br />
 							<br />

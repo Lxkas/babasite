@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 
-import { Autoplay, Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Stats from "@/components/shared/Stats";
@@ -724,16 +724,16 @@ function AudioNowComponent({ playAudio, audionow, currentUrl }: any) {
 
 function CircleButton({ text, imgUrl, url }: any) {
 	return (
-		<Link href={url} target="_blank" passHref>
-			<a
-				target="_blank"
-				className="relative aspect-square w-32 cursor-pointer rounded-full transition-all duration-150 hover:-translate-y-2 md:w-64"
-			>
-				<Image src={imgUrl} alt={`${text} button`} layout="fill" />
-				<div className="-mt-2 flex w-full items-center justify-center">
-					<span className="text-xs md:text-xl">{text}</span>
-				</div>
-			</a>
+		<Link
+			href={url}
+			target="_blank"
+			passHref
+			className="relative aspect-square w-32 cursor-pointer rounded-full transition-all duration-150 hover:-translate-y-2 md:w-64"
+		>
+			<Image src={imgUrl} alt={`${text} button`} layout="fill" />
+			<div className="-mt-2 flex w-full items-center justify-center">
+				<span className="text-xs md:text-xl">{text}</span>
+			</div>
 		</Link>
 	);
 }

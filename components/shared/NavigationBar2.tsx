@@ -224,17 +224,17 @@ function NavItem(props: NavItemPropType) {
 	const router = useRouter();
 
 	return (
-		<Link href={props.href} passHref>
-			<a
-				className={classNames(
-					"inline-flex items-center rounded-md py-2 px-3 text-sm font-medium",
-					router.pathname == props.href
-						? "bg-black/10"
-						: "hover:bg-black/10"
-				)}
-			>
-				{props.text}
-			</a>
+		<Link
+			href={props.href}
+			passHref
+			className={classNames(
+				"inline-flex items-center rounded-md py-2 px-3 text-sm font-medium",
+				router.pathname == props.href
+					? "bg-black/10"
+					: "hover:bg-black/10",
+			)}
+		>
+			{props.text}
 		</Link>
 	);
 }
@@ -243,23 +243,23 @@ function Nav2MobileNavItem(props: NavItemPropType) {
 	const router = useRouter();
 
 	return (
-		<Link href={props.href} passHref>
-			<a
-				onClick={() => {
-					if (props.closeFunction) {
-						props.closeFunction();
-					}
-				}}
-				className={classNames(
-					"block rounded-md py-2 px-3 text-base font-medium text-gray-900",
-					router.pathname == props.href
-						? "bg-black/10"
-						: "hover:bg-black/10"
-				)}
-				aria-current="page"
-			>
-				{props.text}
-			</a>
+		<Link
+			href={props.href}
+			passHref
+			onClick={() => {
+				if (props.closeFunction) {
+					props.closeFunction();
+				}
+			}}
+			className={classNames(
+				"block rounded-md py-2 px-3 text-base font-medium text-gray-900",
+				router.pathname == props.href
+					? "bg-black/10"
+					: "hover:bg-black/10",
+			)}
+			aria-current="page"
+		>
+			{props.text}
 		</Link>
 	);
 }
@@ -274,7 +274,7 @@ export default function NavigationBar2() {
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
 	const menuRef = useClickOutside(() =>
-		setShouldShowBottomPart(!hasScrolled)
+		setShouldShowBottomPart(!hasScrolled),
 	);
 
 	function handleScroll() {
@@ -310,7 +310,7 @@ export default function NavigationBar2() {
 						hasScrolled
 							? colors.backgroundScroll
 							: colors.background,
-						hasScrolled ? "shadow-xl" : ""
+						hasScrolled ? "shadow-xl" : "",
 					)}
 				>
 					<div className="relative mx-auto flex h-full max-w-7xl cursor-pointer justify-between">
@@ -386,7 +386,7 @@ export default function NavigationBar2() {
 								<button
 									onClick={() =>
 										setShouldShowBottomPart(
-											!shouldShowBottomPart
+											!shouldShowBottomPart,
 										)
 									}
 								>
@@ -435,7 +435,7 @@ export default function NavigationBar2() {
 						hasScrolled ? "" : "lg:mt-px",
 						shouldShowBottomPart
 							? "opacity-100 shadow-xl transition-opacity duration-150"
-							: "pointer-events-none opacity-0 transition-all duration-150"
+							: "pointer-events-none opacity-0 transition-all duration-150",
 					)}
 				>
 					<nav
@@ -445,7 +445,7 @@ export default function NavigationBar2() {
 						<div
 							className={classNames(
 								"flex w-full items-center px-2",
-								hasScrolled ? "text-black" : "text-white"
+								hasScrolled ? "text-black" : "text-white",
 							)}
 						>
 							<div className="flex gap-x-2">
@@ -512,7 +512,7 @@ export default function NavigationBar2() {
 			<nav
 				className={classNames(
 					"bg-white",
-					mobileNavOpen ? "lg:hidden" : "hidden"
+					mobileNavOpen ? "lg:hidden" : "hidden",
 				)}
 				aria-label="Global"
 				id="mobile-menu"

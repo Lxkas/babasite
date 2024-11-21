@@ -34,7 +34,7 @@ function useOnClickOutside(ref: any, handler: any) {
 		// ... callback/cleanup to run every render. It's not a big deal ...
 		// ... but to optimize you can wrap handler in useCallback before ...
 		// ... passing it into this hook.
-		[ref, handler]
+		[ref, handler],
 	);
 }
 
@@ -67,11 +67,10 @@ function DropdownItem(props: {
 									<Link
 										key={option.text + i}
 										href={option.href}
+										className="p-1"
 										passHref
 									>
-										<a className="p-1" href={option.href}>
-											{option.text}
-										</a>
+										{option.text}
 									</Link>
 								);
 							})}
@@ -133,7 +132,7 @@ export default function Dropdown(props: { text: string; data: any }) {
 			<div
 				className={classNames(
 					dropdownOpen ? "" : "hidden",
-					"absolute top-full left-0 h-min w-44 text-gray-700 shadow-lg"
+					"absolute top-full left-0 h-min w-44 text-gray-700 shadow-lg",
 				)}
 			>
 				<div className="flex flex-col bg-white">
@@ -141,8 +140,12 @@ export default function Dropdown(props: { text: string; data: any }) {
 						switch (item.dropdownType) {
 							case "normal":
 								return (
-									<Link key={item.text + i} href={item.href}>
-										<a className="p-2">{item.text}</a>
+									<Link
+										className="p-2"
+										key={item.text + i}
+										href={item.href}
+									>
+										{item.text}
 									</Link>
 								);
 							case "innerdropdown":

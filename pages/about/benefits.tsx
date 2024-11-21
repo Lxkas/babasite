@@ -289,7 +289,7 @@ export default function BenefitsPage() {
 						ท่านสามารถติดต่อสอบถามเพิ่มเติม
 						และนัดหมายเพื่อการศึกษาราชาโยคะได้ที่{" "}
 						<Link href={"/contact"} passHref>
-							<a>ติดต่อเรา</a>
+							ติดต่อเรา
 						</Link>
 					</p>
 				</div>
