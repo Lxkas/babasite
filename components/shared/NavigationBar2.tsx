@@ -315,7 +315,7 @@ export default function NavigationBar2() {
 				>
 					<div className="relative mx-auto flex h-full max-w-7xl cursor-pointer justify-between">
 						<div className="relative z-10 flex px-2 lg:px-0">
-							<div className="flex flex-shrink-0 items-center pl-2 lg:pl-1 xl:pl-0">
+							<div className="flex shrink-0 items-center pl-2 lg:pl-1 xl:pl-0">
 								<Link href="/">
 									<img
 										className="block h-16 w-auto"
@@ -401,7 +401,7 @@ export default function NavigationBar2() {
 								</button>
 							)}
 
-							<div className="relative ml-4 flex-shrink-0">
+							<div className="relative ml-4 shrink-0">
 								{/* <div>
 								<button
 									type="button"

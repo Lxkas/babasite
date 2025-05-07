@@ -23,7 +23,7 @@ function downloadPdf(pdfUrl: string, pdfName: string) {
 function EbookEntry({ title, image, link }: EbookEntryProps) {
 	return (
 		<div className="sm:flex">
-			<div className="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
+			<div className="mb-4 shrink-0 sm:mb-0 sm:mr-4">
 				<Image src={image} alt="Book Cover" width={175} height={262} />
 				{/* <svg
 					className="h-16 w-16 border border-gray-300 bg-white text-gray-300"

@@ -129,7 +129,7 @@ function StepComponent({
 			<div className="block">
 				<div className="flex items-center px-4 py-4 sm:px-6">
 					<div className="flex min-w-0 flex-1 items-center">
-						<div className="flex-shrink-0 self-start">
+						<div className="shrink-0 self-start">
 							<img
 								className="h-24 w-24 rounded-full"
 								src={icon}
@@ -143,7 +143,7 @@ function StepComponent({
 								</p>
 								<p className="mt-2 flex items-center text-sm text-black">
 									{/* <svg
-																className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
+																className="mr-1.5 h-5 w-5 shrink-0 text-gray-400"
 																xmlns="http://www.w3.org/2000/svg"
 																viewBox="0 0 20 20"
 																fill="currentColor"
@@ -174,7 +174,7 @@ function StepComponent({
 									</div>
 									<p className="mt-2 flex items-center text-sm text-gray-500">
 										{/* <svg
-																	className="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400"
+																	className="mr-1.5 h-5 w-5 shrink-0 text-green-400"
 																	xmlns="http://www.w3.org/2000/svg"
 																	viewBox="0 0 20 20"
 																	fill="currentColor"
