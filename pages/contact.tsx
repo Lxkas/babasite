@@ -10,7 +10,6 @@ export default function ContactUsPage() {
 					หรือเรียนรู้เกี่ยวกับราชาโยคะ และหลักสูตรอื่นๆของเราได้
 				</p>
 				<br />
-				<p className="font-bold">ในประเทศไทย:</p>
 				<span className="prose">
 					<ul role="list">
 						<li>
@@ -35,9 +34,6 @@ export default function ContactUsPage() {
 								หรือคลิกที่นี่
 							</Link>
 						</li>
-						<li>นครปฐม 086-4486700, 097-2383251</li>
-						<li>เชียงใหม่ 081-8813178, 081-9602577</li>
-						<li>ปัตตานี 085-3858217, 089-1970108</li>
 					</ul>
 				</span>
 
