@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import NavigationBar2 from "./shared/NavigationBar2";
 import SiteFooter from "./shared/SiteFooter";
 
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 const randomImages = [
 	"https://www.brahmakumaris.org/images/headers/Head8banner.jpg",
@@ -100,17 +101,6 @@ export default function Layout({ children }: any) {
 					name="viewport"
 					content="initial-scale=1.0, width=device-width"
 				/>
-
-				<GoogleTagManager gtmId="AW-17060814569" />
-
-				<noscript>
-					<iframe
-						src="https://www.googletagmanager.com/ns.html?id=AW-17060814569"
-						height="0"
-						width="0"
-						style={{ display: "none", visibility: "hidden" }}
-					></iframe>
-				</noscript>
 			</Head>
 			<NavigationBar2 />
 			<div className="block w-auto mb-2 overflow-hidden h-36 lg:h-72">
@@ -121,6 +111,7 @@ export default function Layout({ children }: any) {
 				/>
 			</div>
 			<main>{children}</main>
+			<GoogleAnalytics gaId="AW-17060814569" />
 			<SiteFooter />
 		</>
 	);
