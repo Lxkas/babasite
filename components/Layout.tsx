@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import NavigationBar2 from "./shared/NavigationBar2";
 import SiteFooter from "./shared/SiteFooter";
 
+import { GoogleTagManager } from "@next/third-parties/google";
+
 const randomImages = [
 	"https://www.brahmakumaris.org/images/headers/Head8banner.jpg",
 	"https://images.unsplash.com/photo-1526276828468-fa777352f5aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -98,6 +100,17 @@ export default function Layout({ children }: any) {
 					name="viewport"
 					content="initial-scale=1.0, width=device-width"
 				/>
+
+				<GoogleTagManager gtmId="AW-17060814569" />
+
+				<noscript>
+					<iframe
+						src="https://www.googletagmanager.com/ns.html?id=AW-17060814569"
+						height="0"
+						width="0"
+						style={{ display: "none", visibility: "hidden" }}
+					></iframe>
+				</noscript>
 			</Head>
 			<NavigationBar2 />
 			<div className="block w-auto mb-2 overflow-hidden h-36 lg:h-72">

@@ -16,6 +16,7 @@
 		"@mantine/hooks": "^8.0.0",
 		"@mdx-js/loader": "^3.1.0",
 		"@next/mdx": "^15.3.2",
+		"@next/third-parties": "^15.3.2",
 		"@tailwindcss/postcss": "^4.1.5",
 		"@types/nodemailer": "^6.4.17",
 		"@types/react-scroll": "^1.8.10",
