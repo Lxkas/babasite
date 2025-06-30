@@ -91,7 +91,7 @@ const navItemsRight: NavItemPropType[] = [
 			{
 				dropdownType: "normal",
 				text: "เซียมซีดีทุกใบ",
-				href: "http://www.brahmakumaris.or.th/seamsi/",
+				href: "/seamsi/",
 			},
 			{
 				dropdownType: "normal",
@@ -313,12 +313,12 @@ export default function NavigationBar2() {
 						hasScrolled ? "shadow-xl" : "",
 					)}
 				>
-					<div className="relative mx-auto flex h-full max-w-7xl cursor-pointer justify-between">
+					<div className="relative flex justify-between h-full mx-auto cursor-pointer max-w-7xl">
 						<div className="relative z-10 flex px-2 lg:px-0">
-							<div className="flex shrink-0 items-center pl-2 lg:pl-1 xl:pl-0">
+							<div className="flex items-center pl-2 shrink-0 lg:pl-1 xl:pl-0">
 								<Link href="/">
 									<img
-										className="block h-16 w-auto"
+										className="block w-auto h-16"
 										src={
 											hasScrolled
 												? "https://www.brahmakumaris.org/images/bk-logo.png"
@@ -329,7 +329,7 @@ export default function NavigationBar2() {
 								</Link>
 							</div>
 						</div>
-						<div className="relative z-0 flex flex-1 items-center justify-center px-2 sm:absolute sm:inset-0">
+						<div className="relative z-0 flex items-center justify-center flex-1 px-2 sm:absolute sm:inset-0">
 							<div className="w-full sm:max-w-xs">
 								{/* Search was here */}
 							</div>
@@ -340,7 +340,7 @@ export default function NavigationBar2() {
 									setMobileNavOpen(!mobileNavOpen);
 								}}
 								type="button"
-								className="m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-gray-500 focus:outline-none"
+								className="inline-flex items-center justify-center p-2 m-2 text-gray-400 rounded-md hover:text-gray-500 focus:outline-none"
 								aria-controls="mobile-menu"
 								aria-expanded="false"
 							>
@@ -364,7 +364,7 @@ export default function NavigationBar2() {
 									/>
 								</svg>
 								<svg
-									className="hidden h-6 w-6"
+									className="hidden w-6 h-6"
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
 									viewBox="0 0 24 24"
@@ -405,7 +405,7 @@ export default function NavigationBar2() {
 								{/* <div>
 								<button
 									type="button"
-									className="flex rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+									className="flex bg-white rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
 									id="user-menu-button"
 									aria-expanded="false"
 									aria-haspopup="true"
@@ -414,7 +414,7 @@ export default function NavigationBar2() {
 										Open user menu
 									</span>
 									<img
-										className="h-8 w-8 rounded-full"
+										className="w-8 h-8 rounded-full"
 										src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
 										alt=""
 									/>
@@ -439,7 +439,7 @@ export default function NavigationBar2() {
 					)}
 				>
 					<nav
-						className="mx-auto hidden max-w-7xl lg:flex lg:space-x-8 lg:py-2"
+						className="hidden mx-auto max-w-7xl lg:flex lg:space-x-8 lg:py-2"
 						aria-label="Global"
 					>
 						<div
@@ -455,7 +455,7 @@ export default function NavigationBar2() {
 											return (
 												<div
 													key={navItem.text + i}
-													className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium"
+													className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent"
 												>
 													<Dropdown
 														text={navItem.text}
@@ -476,14 +476,14 @@ export default function NavigationBar2() {
 								})}
 							</div>
 
-							<div className="ml-auto flex space-x-2">
+							<div className="flex ml-auto space-x-2">
 								{navItemsRight.map((navItem, i) => {
 									switch (navItem.navType) {
 										case "dropdown":
 											return (
 												<div
 													key={navItem.text + i}
-													className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium"
+													className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent"
 												>
 													<Dropdown
 														text={navItem.text}
@@ -517,7 +517,7 @@ export default function NavigationBar2() {
 				aria-label="Global"
 				id="mobile-menu"
 			>
-				<div className="space-y-1 px-2 pt-2 pb-3">
+				<div className="px-2 pt-2 pb-3 space-y-1">
 					{navItemsLeft.map((navItem, i) => {
 						switch (navItem.navType) {
 							case "dropdown":
@@ -541,8 +541,8 @@ export default function NavigationBar2() {
 						}
 					})}
 				</div>
-				<div className="border-t border-gray-200 pt-4 pb-3">
-					<div className="mt-3 space-y-1 px-2">
+				<div className="pt-4 pb-3 border-t border-gray-200">
+					<div className="px-2 mt-3 space-y-1">
 						{navItemsRight.map((navItem, i) => {
 							switch (navItem.navType) {
 								case "dropdown":
