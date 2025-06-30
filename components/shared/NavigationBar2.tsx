@@ -86,18 +86,18 @@ const navItemsRight: NavItemPropType[] = [
 			{
 				dropdownType: "normal",
 				text: "บัตรดอกไม้คุณธรรม",
-				href: "https://unshakeable.me/flowersofvirtue",
+				href: "https://unshakeable.me/flower_blessings",
 			},
 			{
 				dropdownType: "normal",
 				text: "เซียมซีดีทุกใบ",
 				href: "/seamsi/",
 			},
-			{
-				dropdownType: "normal",
-				text: "เพชรพลอยแห่งแสงสว่าง",
-				href: "https://unshakeable.me/JewelsOfLight",
-			},
+			// {
+			// 	dropdownType: "normal",
+			// 	text: "เพชรพลอยแห่งแสงสว่าง",
+			// 	href: "https://unshakeable.me/JewelsOfLight",
+			// },
 			{
 				dropdownType: "normal",
 				text: "หนังสือ e-book",
